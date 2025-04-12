@@ -23,7 +23,9 @@ Redeye does not come without some costs, however. Installation is not trivial, s
 
 Please be sure to read through this document before attempting to install Redeye in your code.
 
-**NOTE**: While I have attempted to be accurate in this document, there may still be errors. The example program `testredeye.src` in the `6502:examples` directory is known to work, and should be used as a reference if you are having difficulties.
+> ### Note 
+>
+> While I have attempted to be accurate in this document, there may still be errors. The example program `testredeye.src` in the `6502:examples` directory is known to work, and should be used as a reference if you are having difficulties.
 
 ## Overview
 
@@ -33,7 +35,9 @@ To get to a normal communication state, the system needs information about other
 
 When all units agree about the state of the system, and a user has requested logon termination, the request is acknowledged and the process ends. If a user has requested termination, but units don't agree, termination will be delayed, and may be denied awaiting another termination request. After logon is complete, Redeye shuts down completely allowing the game that needs the space to overwrite the logon specific code before starting up normal communication.
 
-**NOTE**: The term "game frame" or sometimes just "frame" is used in document. This is not to be confused with the 60Hz video frame, or the 240Hz audio frame in the Lynx. A "game frame" (usually) consists of one pass through the main loop of the game, including reading of inputs and generating a display. The game frame is frequently longer than one video frame and they may not be related to each other in any way.
+> ### Note 
+>
+> The term "game frame" or sometimes just "frame" is used in document. This is not to be confused with the 60Hz video frame, or the 240Hz audio frame in the Lynx. A "game frame" (usually) consists of one pass through the main loop of the game, including reading of inputs and generating a display. The game frame is frequently longer than one video frame and they may not be related to each other in any way.
 
 The `testredeye.src` program can be assembled and downloaded to see a very simple example of Redeye usage.
 
@@ -49,19 +53,21 @@ To install Redeye, you need to include the following files in your code:
 
 ```
 6502:include/msgmgr.i
+
 6502:macros/msgmgr.mac
+
 6502:src/comlink.src 
 6502:src/comlink_logon.src
 6502:src/msgmgr.src
 6502:src/comlink_variables.src
 6502:src/msgmgrRam.src
 ```
+
 The file `comlink_logon.src` can be included within a segment that is overwritten after logon is complete. The other `.src` files must be included where they will be resident both during logon and normal communication. The files `comlink_variables.src` and `msgmgrRam.src` reserve space for variables and are best included either at the beginning or end of a segment so that space does not have to be reserved in the cartridge ROM. Also be aware that `msgmgr.src` includes some self-modifying code.
 
 The Redeye system files require that the user define the following constants and swithes before including:
 
 - `SERIALPORT_USER` - This switch should be defined to let the system know that you use the serial (Redeye) port.
-
 - `GAME_ID` - The unique game ID number. Range: 1 to 65534
    The following numbers are in use: 
    |||   
@@ -87,7 +93,9 @@ The Redeye routines also require that you provide (but not write to) the followi
 - `NumberOfPlayers` - number of players logged in -1
 - `PlayerNumber` - player number assigned to this unit
 
-NOTE: At this point, if you only want to pass around joystick and button information in your program, you might want to skip down to the [Quick installation]() subsection.
+> ### Note
+> 
+> At this point, if you only want to pass around joystick and button information in your program, you might want to skip down to the [Quick installation]() subsection.
 
 To start the logon process, call the system routine `start_logon`. The logon process will run unattended from the interrupt routines. The game should give some feedback to the user about what is going on. The following variables are used for communication to/from the logon code:
 
