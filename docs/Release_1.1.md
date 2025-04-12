@@ -74,18 +74,17 @@ All files have had the old Apple IIe emulation system support removed. The emula
   Removed broken write-cart code.  
   Tightened code.
 - `6502:src/display.src`  
-  `TIMEOUT` macro moved to display.mac .
+  `TIMEOUT` macro moved to `display.mac`.
 - `6502:src/sys.src`  
-  INITINT now required before use of `INITEOF`, `INITEOL`, or `SET_DISPLAY...` macros.  
-  Fixed references so this file can be included before   `INITINT` macro invoked.  
+  `INITINT` now required before use of `INITEOF`, `INITEOL`, or `SET_DISPLAY...` macros.  
+  Fixed references so this file can be included before `INITINT` macro invoked.  
   Tightened code.
 
 A new file `6502:src/tunpack.src` has been added. This code is used to unpack ROM files packed with the `TOPACK` utility. Full documentation for this utility will come with a later release. Several programs have used this unpacker even though it hasn't been an official part of the system. The version with this release fixes a bug in the cartridge read routines.
 
 ## Handy: changes
 
-New versions of `Howdebug` and `Mandebug` (Howard/Howdie and Mandy/Pinky versions of `Handebug`) are being included. `Howdebug` has a fix in it that in conjunction with a hardware fix prevents the Howard board from getting lost when an IRQ and NMI happen simultaneously. `Howdebug` and `Handebug` have some additional settings in `handy:handebug.config` file.  `PORTLOOP` and `TIMEOUT` are two constants used for timing during communication. On a standard Amiga 2000, they should be set to 50 and 1 respectively. On a 2500 with a 68020 accelerator board, they should be set to 200 and 1. Faster systems in the
-future with 68030s or 68040s or other hardware modifications may require some other settings. A new copy of `handebug.config` is included.
+New versions of `Howdebug` and `Mandebug` (Howard/Howdie and Mandy/Pinky versions of `Handebug`) are being included. `Howdebug` has a fix in it that in conjunction with a hardware fix prevents the Howard board from getting lost when an IRQ and NMI happen simultaneously. `Howdebug` and `Handebug` have some additional settings in `handy:handebug.config` file.  `PORTLOOP` and `TIMEOUT` are two constants used for timing during communication. On a standard Amiga 2000, they should be set to 50 and 1 respectively. On a 2500 with a 68020 accelerator board, they should be set to 200 and 1. Faster systems in the future with 68030s or 68040s or other hardware modifications may require some other settings. A new copy of `handebug.config` is included.
 
 The last release may have had a problem with `ASMSTRIP`, so a more recent version is being included.
 
@@ -120,9 +119,7 @@ Copy Handy:Howdebug Handy:Handebug
 Copy Handy:Mandebug Handy:Handebug
 ```
 
-Edit your source files to update them.  Remove (delete or comment out) any lines that include files that have been removed from `6502:`. The constants `HANDYIO` and `HANDYMATH` no longer need to be defined, and should be removed from your code. The `GETINPUT` macro no longer exists, and
-references to it should be removed from your code. The macro `HBRK` has been added. `HBRK` drops a `$13` byte into your code, which causes the Howard board to break immediately upon execution, but is otherwise a one-byte one-cycle
-NOP for the 65C02.
+Edit your source files to update them.  Remove (delete or comment out) any lines that include files that have been removed from `6502:`. The constants `HANDYIO` and `HANDYMATH` no longer need to be defined, and should be removed from your code. The `GETINPUT` macro no longer exists, and references to it should be removed from your code. The macro `HBRK` has been added. `HBRK` drops a `$13` byte into your code, which causes the Howard board to break immediately upon execution, but is otherwise a one-byte one-cycle `NOP` for the 65C02.
 
 ## Amiga tips
 

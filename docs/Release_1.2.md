@@ -14,8 +14,7 @@ This document contains the following sections:
 - What to do to use this release
 - Tips and Gotchas
 
-Release 1.2 was distributed to the programmers at Epyx, and based on
-their experiences installing Redeye, some changes have been made to release 1.2a so that installation should be much easier.
+Release 1.2 was distributed to the programmers at Epyx, and based on their experiences installing Redeye, some changes have been made to release 1.2a so that installation should be much easier.
 
 Let me know if you have any problems, questions or comments.
 
@@ -28,16 +27,13 @@ Have fun,
 
 ## Contents of Handy release 1.2a
 
-This release contains this documentation, an Amiga disk (Quarterback
-V2.2 format) and a new keyboard template (I sent out the wrong one last time).
+This release contains this documentation, an Amiga disk (Quarterback V2.2 format) and a new keyboard template (I sent out the wrong one last time).
 
-The Quarterback disk "Handy Release 1.2a" contains a complete
-replacement for the `6502:` directory, the new program `VAL` in the `C2:` directory, and the files `Release_1.1` and `Release_1.2` (documentation for last release and this release) in the top level directory.
+The Quarterback disk "Handy Release 1.2a" contains a complete replacement for the `6502:` directory, the new program `VAL` in the `C2:` directory, and the files `Release_1.1` and `Release_1.2` (documentation for last release and this release) in the top level directory.
 
 ## 6502: changes
 
-New files have been added to the `6502:` directory for the Redeye
-(ComLynx) communication routines:
+New files have been added to the `6502:` directory for the Redeye (ComLynx) communication routines:
 
 - `6502:include/msgmgr.i`
 
@@ -49,8 +45,7 @@ New files have been added to the `6502:` directory for the Redeye
 - `6502:src/msgmgr.src`
 - `6502:src/msgmgrRam.src`
 
-The following changes were made to existing files in the `6502:`
-directory:
+The following changes were made to existing files in the `6502:` directory:
 
 - `6502:include/harddefs.i`  
   Removed `MAGRDYx` definitions (`MAGTAPE` features are removed from new chips)  
@@ -73,7 +68,7 @@ directory:
 - `6502:src/hsfx.src`  
   Updated for new IRQ handler
 - `6502:src/sys.src`  
-  IRQ handler rewritten; only 1 IRQ at a time handled; if `SERIALPORT_USER` defined then quick check made for serial IRQ; IRQ routines must now exit with PLX PLA RTI instead of RTS
+  IRQ handler rewritten; only 1 IRQ at a time handled; if `SERIALPORT_USER` defined then quick check made for serial IRQ; IRQ routines must now exit with `PLX PLA RTI` instead of `RTS`
 - `6502:src/sysdata.src`  
   Added shadow `INTSET_RAM` for IRQ handler  
   Removed `BufferAddrL`, `BufferAddrH` variables
@@ -111,8 +106,7 @@ When all units agree about the state of the system, and a user has requested log
 
 ### TESTREDEYE.SRC Example
 
-The `testredeye.src` program can be assemled and downloaded to see a
-very simple example of Redeye usage.
+The `testredeye.src` program can be assemled and downloaded to see a very simple example of Redeye usage.
 
 The first screen that comes up is the logon screen. It displays a message in the center of the display ("LOGON IN PROGRESS") and two single hex digits below the message. The digit on the left shows the player number currently assigned to this unit, and the right digit shows 1 less than the total number of units logged in. Pressing A or B button on any unit should exit logon, and enter the "game".
 
