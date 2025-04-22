@@ -1,0 +1,7 @@
+# Cartridge Boot
+
+The first "file" in the Lynx ROM is expected to be a Boot screen (to give the user something to look at while the cartridge is booting). The file consists of 32 bytes of palette information (which will be copied directly to the hardware registers in order, the first byte going to `GREENO`) followed by a sprite SCB. The sprite SCB can (and probably will) be the first SCB in a chain that will direct SUZY on how to construct the Boot screen. The Boot screen should cover the entire screen (frequently done by making the first sprite in the list one which erases the whole screen). The Boot screen will be displayed until control is handed off to the game code or until the user presses the A or B button. If the user presses the A or B button, the screen will be left in memory intact, but the colors of the palette will all be set to `$00` (black). The Boot screen file must be loaded to memory starting at or after location `$2400` and must end before location `$FC00`. The Boot screen will be constructed and displayed at location `$0400`.
+
+The second file is the inital game code. This file will be loaded and then branched to (at its load address) after the cartridge security has been verified. This file must load starting at or after location `$0400` and must end before location `$FC00`.
+
+The Boot screen can be tested in development (assuming that the system has been updated with Handy Release 1.3a) by using the `CART LOAD` and `BOOT CART` functions of Handebug. The Boot screen should display for a few seconds before jumping to the game.
