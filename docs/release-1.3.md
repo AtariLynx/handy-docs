@@ -18,7 +18,7 @@ Since not too many files were changed in this update, and no files were removed,
 
 The cartridge code and tools have been modified to support ROMs larger than 128K, and >128K ROM emulation on the Howard board (Remember to install more RAM). Support for >128K ROM emulation will be coming soon for the Mandy/Pinky systems.
 
-A new version of the assembler and `Handyrom` are included with this release. I have fixed several bugs in the assembler, two of which could explain many of the mysterious guru's that people have been experiencing all the time. If you still have problems with the assembler, and can reproduce the conditions under which it fails, please get the information to me so that I have a chance to fix it.
+A new version of the assembler and *Handyrom* are included with this release. I have fixed several bugs in the assembler, two of which could explain many of the mysterious guru's that people have been experiencing all the time. If you still have problems with the assembler, and can reproduce the conditions under which it fails, please get the information to me so that I have a chance to fix it.
 
 Let me know if you have any problems, questions or comments.
 
@@ -37,7 +37,7 @@ The Quarterback disk "Handy Release 1.3a" contains updates for the `6502:` direc
 
 ## 6502: changes
 
-The cartridge code has been modified to support cartridges larger than 128K, and in the process has been streamlined for size and speed. Many small errors were fixed in the HMusic and HSFX drivers, and some amount of optimization was also done. Programs  assembled with the new cartridge code can only be run from systems with the new `cartgo.bin` and `howardcartgo.bin` files in the `Handy:` directory.
+The cartridge code has been modified to support cartridges larger than 128K, and in the process has been streamlined for size and speed. Many small errors were fixed in the HMusic and HSFX drivers, and some amount of optimization was also done. Programs assembled with the new cartridge code can only be run from systems with the new `cartgo.bin` and `howardcartgo.bin` files in the `Handy:` directory.
 
 The following changes were made to files in the `6502:` directory:
 
@@ -92,7 +92,7 @@ The following changes were made to files in the `6502:` directory:
 
 ## Handy: changes
 
-The tools have been updated to support ROMs larger than 128K. Code assembled with the `6502:` update needs the new version of `HandyRom`, and needs `cartgo.bin` and `howardcartgo.bin` to be updated on the system to be run from. The files `cartgo.bin` and `howardcartgo.bin` (used by the `BOOT CART` command in `Mandebug` and `Handebug`) now also provide a closer simulation of the actual boot conditions provided in a final cartridge.
+The tools have been updated to support ROMs larger than 128K. Code assembled with the `6502:` update needs the new version of `HandyRom`, and needs `cartgo.bin` and `howardcartgo.bin` to be updated on the system to be run from. The files `cartgo.bin` and `howardcartgo.bin` (used by the `BOOT CART` command in *Mandebug* and *Handebug*) now also provide a closer simulation of the actual boot conditions provided in a final cartridge.
 
 The following changes were made to files in the `Handy:` directory:
 
@@ -127,7 +127,7 @@ The following changes were made to files in the `Handy:` directory:
 - Copy the directory `6502` to `6502.old`  
   `Copy 6502 6502.old all`
 
-Run Quarterback, and restore all of the files to your hard disk. If you keep `6502`, `Handy` or `Sound` on separate hard disks or partitions, you will have to selectively restore them separately to appropriate disks.
+Run *Quarterback*, and restore all of the files to your hard disk. If you keep `6502`, `Handy` or `Sound` on separate hard disks or partitions, you will have to selectively restore them separately to appropriate disks.
 
 Edit your source files to update them (there should be few if any changes needed). The macro `SETCARTOFFSET` no longer exists. Code that used to use it needs to be rewritten.  If the routines `AllocAudio` or `GrabAudio` are used, `GRABAUDIO_USER` needs to be defined. `USER_HSFX` support has been added. If `USER_HSFX` is defined, then the HSFX driver will call the user supplied routine `user_hsfx` every audio frame.
 
@@ -137,7 +137,7 @@ The `PLAY` script should now work properly.
 
 ## Tips and Gotchas
 
-Symbols in the assembler (and in `HandyRom`) have 32 bit values. This is true for the intermediate expressions in all calculations, with one exception. Division in the assembler is a 32/16 bit signed divide. For example, the following line:
+Symbols in the assembler (and in *HandyRom*) have 32 bit values. This is true for the intermediate expressions in all calculations, with one exception. Division in the assembler is a 32/16 bit signed divide. For example, the following line:
 
 ```
 label	.EQ 200000/100000
@@ -145,4 +145,4 @@ label	.EQ 200000/100000
 
 should set label to the value `2`, but instead sets it to `-6` (`$fffa`).
 
-A good programming practice is to make sure that ALL variables are initialized to a known state before entering the main loop in your code. In my programs, I do this by zeroing all of my variables in a loop, and then setting the ones that should be non-zero. Almost every program developed for the Lynx has had at least one bug at some time due to uninitialized variables. These bugs can be very nasty to have to track down.
+A good programming practice is to make sure that **all** variables are initialized to a known state before entering the main loop in your code. In my programs, I do this by zeroing all of my variables in a loop, and then setting the ones that should be non-zero. Almost every program developed for the Lynx has had at least one bug at some time due to uninitialized variables. These bugs can be very nasty to have to track down.

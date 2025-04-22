@@ -5,15 +5,15 @@ Confidential and Proprietary
 
 ## Update Notes
 
-These revisions of `Handebug`/`Mandebug` ver 1.50 are the latest and greatest of this software. These revisions correct some bugs that were created in the previous revision (ver 1.45) and some cosmetic changes to problems that have been annoying us here at Atari Corp.
+These revisions of *Handebug*/*Mandebug* ver 1.50 are the latest and greatest of this software. These revisions correct some bugs that were created in the previous revision (ver 1.45) and some cosmetic changes to problems that have been annoying us here at Atari Corp.
 
 Please make sure you read through this entire document before you do anything. This is for your own good, trust me!
 
 ## Contents of LYNX release 1.60
 
-LYNX release 1.60 contains this documentation and an update disk in Quarterback v4.3 format.  The update disk contains updates to the programs `Handebug`, `Mandebug` (found in your `6502:` directory) and a copy of this document `Release_1.60`.
+LYNX release 1.60 contains this documentation and an update disk in Quarterback v4.3 format.  The update disk contains updates to the programs *Handebug*, *Mandebug* (found in your `6502:` directory) and a copy of this document `Release_1.60`.
 
-`Handebug`/`Mandebug` bug fixes and changes:
+*Handebug*/*Mandebug* bug fixes and changes:
 1. The `DATA` window is refreshed whenever you switch to it. In the old version (1.45), the screen would not update thus you may have been looking at current memory values but more likely you were not.
 2. There are independent display addresses for the `CODE` and `DATA` windows. This is nice for keeping the `DATA` window looking at a memory address while you step through code in the `CODE` window.
 3. You can now search the symbol table on numeric value by "editing" the value field.  The `SYMBOLS` window would only let you search in the name field in previous versions.
@@ -51,7 +51,7 @@ You can confirm that your updated programs were placed in the correct directory 
 "extra stuff" in the file. Once you have saved the **new** `handebug.config` file, you will be unable to use this config file with an old version of `Handebug`/`Mandebug`; but this way all of your preferences (directory, ROM size, color setup, etc.) will be
 maintained for the new version of these programs.
 
-This is my first release, but I have tried to maintain the same style in this document you are familiar with from previous update releases. If you have any questions concerning this update or if you find problems with either the new versions of `Handebug`/`Mandebug`,
+This is my first release, but I have tried to maintain the same style in this document you are familiar with from previous update releases. If you have any questions concerning this update or if you find problems with either the new versions of *Handebug*/*Mandebug*,
 please do not hesitate to call our BBS at (408)745-2157.
 
 Thank You.
