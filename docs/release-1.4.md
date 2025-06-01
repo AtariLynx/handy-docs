@@ -1,4 +1,4 @@
-# Handy release 1.4 
+# HANDY release 1.4 
 
 15-Nov-90  
 Confidential and Proprietary
