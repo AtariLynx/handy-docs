@@ -9,12 +9,12 @@ It's been a while since there has been an official release, so a number of thing
 
 This document contains the following sections:
 
-- Update notes
-- Contents of Handy release 1.1
-- `6502:` changes
-- `Handy:` changes
-- What to do to use this release
-- Amiga use tips
+- [Update notes](#update-notes)
+- [Contents of Handy release 1.1](#contents-of-handy-release-11)
+- [`6502:` changes](#6502-changes)
+- [`Handy:` changes](#handy-changes)
+- [What to do to use this release](#what-to-do-to-use-this-release)
+- [Amiga use tips](#amiga-tips)
 
 The `6502:` development directory has undergone some major overhaul. I've probably made some minor mistake somewhere, so please let me know if you have any problems.
 
@@ -29,7 +29,7 @@ Have fun,
 
 Handy release 1.1 contains this documentation, an update disk in Quarterback v2.2 format, and a new keyboard template. The update disk contains a complete replacement for the `6502` directory, updates to `Howdebug`, `Mandebug`, `handebug.config` and `asmstrip` in the `Handy` directory, new programs `FIND` and `UNDELETE` in the `C2` directory, and a copy of this document `Release_1.1` in the root directory.
 
-## 6502: changes
+## `6502:` changes
 
 The `examples` directory has been completely redone. See the file `6502:examples/readme` for a description of the current files.
 
@@ -82,7 +82,7 @@ All files have had the old Apple IIe emulation system support removed. The emula
 
 A new file `6502:src/tunpack.src` has been added. This code is used to unpack ROM files packed with the `TOPACK` utility. Full documentation for this utility will come with a later release. Several programs have used this unpacker even though it hasn't been an official part of the system. The version with this release fixes a bug in the cartridge read routines.
 
-## Handy: changes
+## `Handy:` changes
 
 New versions of `Howdebug` and `Mandebug` (Howard/Howdie and Mandy/Pinky versions of `Handebug`) are being included. `Howdebug` has a fix in it that in conjunction with a hardware fix prevents the Howard board from getting lost when an IRQ and NMI happen simultaneously. `Howdebug` and `Handebug` have some additional settings in `handy:handebug.config` file.  `PORTLOOP` and `TIMEOUT` are two constants used for timing during communication. On a standard Amiga 2000, they should be set to 50 and 1 respectively. On a 2500 with a 68020 accelerator board, they should be set to 200 and 1. Faster systems in the future with 68030s or 68040s or other hardware modifications may require some other settings. A new copy of `handebug.config` is included.
 

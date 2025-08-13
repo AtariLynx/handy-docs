@@ -1,14 +1,14 @@
 # HANDY Release 0.9 
 
 4 July 1989
-Confidential and proprietary
+Confidential and Proprietary
 
 This document describes the V 0.9 release of the Handy development environment. It includes these sections:
 
-- MUTE the Music
-- Other `6502:` Changes
-- *HandyAsm* 1.08
-- What You Must Do To Start Using This Release
+- [`MUTE` the Music](#mute-the-music)
+- [Other `6502:` changes](#other-6502-changes)
+- [*HandyAsm* 1.08](#handyasm-108-macros)
+- [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
 ## `MUTE` the Music
 
@@ -18,7 +18,7 @@ The `MUTE` macro acts as a toggle. You can detect whether music is currently mut
 
 The `INITHMUSIC` call causes music to become non-muted.
 
-## Other 6502: Changes
+## Other `6502:` Changes
 
 The `GETSWITCH` and `GETJOY` macros no longer perform the `AUTO_TIMEOUT` reset functions. This logic has been moved to the `TIMEOUT` macro defined in `display.src`. Also, the `SWITCHES`-reading logic has been corrected to test explicitly for the `PAUSE_SWITCH` bit.
 
@@ -92,6 +92,7 @@ now takes:
 	#IFDEF SYMBOL 1 | SYMBOL 2 ; 
 		Do stuff 
 	#ENDIF
+```
 
 The old way of doing listings is restored. To get the new kind of listing, which requires the presence of an accurate `.bin` file, you must use the `+C` (for Complete listing) command-line argument.
 
@@ -101,6 +102,6 @@ Flat `.TF` symbol references are now allowed. Any `.TF` segment can refer to ano
 
 Note that the current listing generated with `+c` will generate bogus addresses when referencing external `.TF` symbols. It'll be fixed real soon now, honest, would we lie?
 
-## What You Must Do To Start Using This Release
+## What you must do to start using this release
 
 You must ask me to install it on your system. After the installation, the old `6502:` directory will be renamed to `SYS:6502.0.8` and the old `1.04` release of the assembler will be renamed to `asm.old`.

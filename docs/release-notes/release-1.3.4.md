@@ -7,12 +7,12 @@ Confidential and Proprietary
 
 This document contains the following sections:
 
-- Update notes
-- Contents of Handy release 1.3.4a 
-- `Handy:` changes
-- `6502:` changes
-- *TileRead* tile reader program
-- What to do to use this release
+- [Update notes](#update-notes)
+- [Contents of Handy release 1.3.4a](#contents-of-handy-release-134a) 
+- [`Handy:` changes](#handy-changes)
+- [`6502:` changes](#6502-changes)
+- [*TileRead* tile reader program](#tileread-tile-reader-program)
+- [What to do to use this release](#what-to-do-to-use-this-release)
 
 This is a small incremental release. Some minor changes were made to the assembler and some optimization features were added to Redeye. A couple of new useful utilities (*TileRead* and *RomSplit*) are also included.
 
@@ -29,7 +29,7 @@ This release contains this documentation, an updated copy of the Redeye document
 
 The Quarterback disk "Handy Release 1.3.4a" contains an update for *Asm* (version 1.12) and the new program *RomSplit* in the `Handy:` directory, updates for some files in the `6502:` subdirectories, the files `Release_1.3.4` (a copy of this document) and `Redeye.doc` (an updated document with some corrections) in the top level directory, and a new subdirectory *TileRead* with Chuck Sommerville's tile reader program, source and (very brief) documentation.
 
-## Handy: changes
+## `Handy:` changes
 
 Version 1.12 of *Asm* has had some minor bug fixes and changes. A bug has been fixed in macro argument expansions. A change has also been made so +hat macro arguments can now be passed with an embedded space or tab character. The maximum number of include files has been increased from 400 to 2500 (yes, somebody couldn't live with ONLY 400 include files).
 
@@ -47,7 +47,7 @@ ROMSPLIT <infile> <outfile1> <outfile2> <outfile3> <outfile4>
 
 where `infile` is the 512K file you want to split up, and `outfile1-4` are where the split pieces are to be written.
 
-## 6502: changes
+## `6502:` changes
 
 Support for some new features were added to Redeye. Read the updated Redeye documentation for details.
 

@@ -7,12 +7,12 @@ Confidential and Proprietary
 
 This document contains the following sections:
 
-- Update notes
-- Contents of Handy release 1.3a
-- `6502:` changes
-- `Handy:` changes
-- What to do to use this release
-- Tips and Gotchas
+- [Update notes](#update-notes)
+- [Contents of Handy release 1.3a](#contents-of-handy-release-13a)
+- [`6502:` changes](#6502-changes)
+- [`Handy:` changes](#handy-changes)
+- [What to do to use this release](#what-to-do-to-use-this-release)
+- [Tips and Gotchas](#tips-and-gotchas)
 
 Since not too many files were changed in this update, and no files were removed, this is an incremental update (files that were not changed are not included).
 
@@ -35,7 +35,7 @@ This release contains this documentation and an Amiga disk (Quarterback V2.2 for
 
 The Quarterback disk "Handy Release 1.3a" contains updates for the `6502:` directory, updates for the `Handy:` directory, an update for the files `lxfast.src` and `lxfast.bin` in the `Sound:` directory, and the file `Release_1.3` (documentation for this release) in the top level directory.
 
-## 6502: changes
+## `6502:` changes
 
 The cartridge code has been modified to support cartridges larger than 128K, and in the process has been streamlined for size and speed. Many small errors were fixed in the HMusic and HSFX drivers, and some amount of optimization was also done. Programs assembled with the new cartridge code can only be run from systems with the new `cartgo.bin` and `howardcartgo.bin` files in the `Handy:` directory.
 
@@ -90,7 +90,7 @@ The following changes were made to files in the `6502:` directory:
 - `6502:src/tunpack.src`  
   Updated for compatibility with new `cart.src`
 
-## Handy: changes
+## `Handy:` changes
 
 The tools have been updated to support ROMs larger than 128K. Code assembled with the `6502:` update needs the new version of `HandyRom`, and needs `cartgo.bin` and `howardcartgo.bin` to be updated on the system to be run from. The files `cartgo.bin` and `howardcartgo.bin` (used by the `BOOT CART` command in *Mandebug* and *Handebug*) now also provide a closer simulation of the actual boot conditions provided in a final cartridge.
 

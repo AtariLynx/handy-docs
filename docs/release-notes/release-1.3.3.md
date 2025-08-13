@@ -7,13 +7,13 @@ Confidential and Proprietary
 
 This document contains the following sections:
 
-- Update notes
-- Contents of Handy release 1.3.3
-- Assembler changes
-- `6502:` changes
-- Cartridge boot
-- New RAM cartridge macros
-- What to do to use this release
+- [Update notes](#update-notes)
+- [Contents of Handy release 1.3.3](#contents-of-handy-release-133)
+- [Assembler changes](#assembler-changes)
+- [`6502:` changes](#6502-changes)
+- [Cartridge boot](#cartridge-boot)
+- [New RAM cartridge macros](#new-ram-cartridge-macros)
+- [What to do to use this release](#what-to-do-to-use-this-release)
 
 This is a small incremental release. A minor bug was fixed in the assembler, and support for battery backed up RAM cartridges was added to the system code.
 
@@ -40,7 +40,7 @@ The assembler had a bug if the user specified an output buffer size of larger th
 
 In addition several typos were corrected in the documentation for the assembler. The most notable errors in the document were the omission of the description of the `.SY` (include symbol file) directive, and the `.PC` and `.PD` directives had their descriptions swapped.
 
-## 6502: changes
+## `6502:` changes
 
 `RAMCART_USER` support has been added to the system code. Macros have been added to enable reading and writing to the battery backed up RAM cartridge.
 

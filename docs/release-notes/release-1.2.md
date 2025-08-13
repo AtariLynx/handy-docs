@@ -7,12 +7,12 @@ Confidential and Proprietary
 
 This document contains the following sections:
 
-- Update notes
-- Contents of Handy release 1.2a
-- `6502:` changes
-- REDEYE!
-- What to do to use this release
-- Tips and Gotchas
+- [Update notes](#update-notes)
+- [Contents of Handy release 1.2a](#contents-of-handy-release-12a)
+- [`6502:` changes](#6502-changes)
+- [REDEYE!](#redeye)
+- [What to do to use this release](#what-to-do-to-use-this-release)
+- [Tips and Gotchas](#tips-and-gotchas)
 
 Release 1.2 was distributed to the programmers at Epyx, and based on their experiences installing Redeye, some changes have been made to release 1.2a so that installation should be much easier.
 
@@ -31,7 +31,7 @@ This release contains this documentation, an Amiga disk (Quarterback V2.2 format
 
 The Quarterback disk "Handy Release 1.2a" contains a complete replacement for the `6502:` directory, the new program `VAL` in the `C2:` directory, and the files `Release_1.1` and `Release_1.2` (documentation for last release and this release) in the top level directory.
 
-## 6502: changes
+## `6502:` changes
 
 New files have been added to the `6502:` directory for the Redeye (ComLynx) communication routines:
 

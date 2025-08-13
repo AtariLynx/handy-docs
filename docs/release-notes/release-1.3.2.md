@@ -7,10 +7,10 @@ Confidential and Proprietary
 
 This document contains the following sections:
 
-- Update notes
-- Contents of Handy release 1.3.2
-- Assembler changes
-- What to do to use this release
+- [Update notes](#update-notes)
+- [Contents of Handy release 1.3.2](#contents-of-handy-release-132)
+- [Assembler changes](#assembler-changes)
+- [What to do to use this release](#what-to-do-to-use-this-release)
 
 This is a small incremental release. Some minor features were added to the assembler, and a new set of documentation for the assembler has been typed up.
 

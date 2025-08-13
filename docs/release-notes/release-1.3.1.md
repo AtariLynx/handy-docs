@@ -7,11 +7,11 @@ Confidential and Proprietary
 
 This document contains the following sections:
 
-- Update notes
-- Contents of Handy release 1.3.1
-- `6502:` changes
-- `Handy:` changes
-- What to do to use this release
+- [Update notes](#update-notes)
+- [Contents of Handy release 1.3.1](#contents-of-handy-release-131)
+- [`6502:` changes](#6502-changes)
+- [`Handy:` changes](#handy-changes)
+- [What to do to use this release](#what-to-do-to-use-this-release)
 
 This is a small incremental release.  Some minor adjustments were made to HSFX (to minimize speaker "clicks" between different notes or sound effects). `Cartload.bin` has been updated to be able to handle ROM emulation of larger than 128K on the Mandy/Pinky systems.
 
@@ -30,7 +30,7 @@ This release contains this documentation and an Amiga disk (Quarterback V2.2 for
 
 The Quarterback disk "Handy Release 1.3.1" contains the file `hsfx.src` in the `6502:src` directory, the files `cartload.bin` and `hsfxedit.bin` in the `Handy:` directory, the file `lxfast.bin` in the `Sound:` directory, and the file `Release_1.3.1` in the top level directory.
 
-## 6502: changes
+## `6502:` changes
 
 The HSFX driver has been modified to improve speaker "clicks" between notes or sound effects. If a sound being terminated was using the integrate mode of the hardware, the volume (DC bias) on the channel is returned to zero one volume increment each audio frame.
 
@@ -39,7 +39,7 @@ The following changes were made to files in the `6502:` directory:
 - `6502:src/hsfx.src`  
   See above note
 
-## Handy: changes
+## `Handy:` changes
 
 The file `cartload.bin` (used by the `LOAD CART` command in the Mandy/Pinky version of `Handebug`) has been updated to support ROM emulation of larger than 128K carts.
 
