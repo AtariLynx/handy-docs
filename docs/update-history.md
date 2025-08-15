@@ -2,7 +2,7 @@
 
 All software has already been incorporated into your diskette package.
 
-**Lynx Sound Overview**: This document is an overview for those who have had trouble seeing the forest for the trees. You should also read page 29 of the Handy hardware specification and the Handy audio hardware overview starting on page 35 of the ```Handy software programmer's guide``` and notes. And of course ```Handy appendix 2``` hardware addresses `FD20` through `FD50`.
+**Lynx Sound Overview**: This document is an overview for those who have had trouble seeing the forest for the trees. You should also read page 29 of the Handy hardware specification and the Handy audio hardware overview starting on page 35 of the [Handy software programmer's guide](./handy-software-programmers-guide/handy-software-programmers-guide.md) and notes. And of course ```Handy appendix 2``` hardware addresses `FD20` through `FD50`.
 
 ## 1. What in the world were we thinking when we designed the sound hardware?
 
