@@ -8,11 +8,11 @@ This document describes the V0.8.3 release of the Handy development environment.
 - [Auto-Timeout](#auto-timeout)
 - [New CART rules](#new-cart-rules)
 - [New Cartdefs.i definitions](#new-cartdefsi-definitions)
-- Other 6502: Changes
-- HandyAsm 1.04
-- Handebug 1.59
-- New Hardware Manual Pages
-- What You Must Do To Start Using This Release
+- [Other 6502: changes](#other-6502-changes)
+- [HandyAsm 1.04](#handyasm-104)
+- [Handebug 1.59](#handebug-159)
+- [New hardware manual pages](#new-hardware-manual-pages)
+- [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
 ## Auto-Timeout
 
