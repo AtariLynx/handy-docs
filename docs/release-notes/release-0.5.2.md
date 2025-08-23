@@ -5,10 +5,10 @@ Confidential and Proprietary
 
 This document describes the V 0.5.2 release of Handy development environment. It includes these sections:
 
-- [*Handebug* V1.38](#handebug-v138)
+- [Handebug V1.38](#handebug-v138)
 - [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
-# *Handebug* V1.38
+# Handebug V1.38
 
 New *Handebug* template, now numbered 1.38. Clever little boys, aren't we?
 

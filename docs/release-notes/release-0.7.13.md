@@ -1,13 +1,13 @@
-HANDY Release 0.7.13
+# HANDY Release 0.7.13
 
 5 April 1989  
 Confidential and Proprietary
 
 This document describes the V0.7.13 release of the Handy development environment. It includes these sections:
 
-- HandyASM V0.23
-- Handycraft 1.55
-- What You Must Do To Start Using This Release
+- [HandyASM V0.23](#handyasm-v023)
+- [Handycraft 1.55](#handycraft-155)
+- [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
 ## HandyAsm V0.23
 

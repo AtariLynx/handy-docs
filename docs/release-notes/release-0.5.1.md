@@ -5,18 +5,18 @@ Confidential and Proprietary
 
 This document describes the V0.5.1 bug fix release of Handy development environment. It includes these sections:
 
-- [*Handebug* V1.34](#handebug-v134)
-- [*Handycraft* V1.29](#handycraft-v129)
+- [Handebug V1.34](#handebug-v134)
+- [Handycraft V1.29](#handycraft-v129)
 - [Revisions to `6502:` Directory](#revisions-to-6502-directory)
 - [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
-## *Handebug* V1.34
+## Handebug V1.34
 
 Bug fixes:
 - Low memory isn't trashed
 - Structure display updated correctly
 
-## *Handycraft* V1.29
+## Handycraft V1.29
 
 Bug fixes:
 - Sprites might appear for you now. I dunno, maybe

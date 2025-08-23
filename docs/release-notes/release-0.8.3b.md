@@ -7,7 +7,7 @@ This document describes the V0.8.3b enhancement release of the Handy development
 
 There's a new `display.mac` with better `WAITEOF` / `WAITEOL` macros.
 
-Everyone must use the `INITINT` macro now. Usage of the `INITINT` macro is described in the [Other 6502: Changes](./release-0.8.md#other-6502-changes) section, page 2 of [Handy Release 0.8](./release-0.8.md). Also, to correctly debug in conjunction with `INITINT`, you must define the constant `BRK_USER`. When `BRK_USER` is defined, you are declaring that you want the system to process `BRK` opcodes.
+Everyone must use the `INITINT` macro now. Usage of the `INITINT` macro is described in the [Other `6502:` Changes](./release-0.8.md#other-6502-changes) section, page 2 of [Handy Release 0.8](./release-0.8.md). Also, to correctly debug in conjunction with `INITINT`, you must define the constant `BRK_USER`. When `BRK_USER` is defined, you are declaring that you want the system to process `BRK` opcodes.
 
 Until we move to the Howard board, you must declare `BRK_USER` or else you won't be able to set breakpoints. After we move to Howard, the only reason to use `BRK` instruction will be to implement a fast "go subroutine" technique or something like that.
 

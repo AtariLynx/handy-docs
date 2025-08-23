@@ -7,7 +7,7 @@ This document describes the V0.8.1 release of the Handy development environment.
 
 - [New SPRITES and RESPRITE](#new-sprites-and-resprite)
 - [Changing the tick duration of the audio clock](#changing-the-tick-duration-of-the-audio-clock)
-- [Other 6502: changes](#other-6502-changes)
+- [Other `6502:` changes](#other-6502-changes)
 - [Handebug 1.58](#handebug-158)
 - [Handycraft 1.58](#handycraft-158)
 - [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)

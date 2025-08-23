@@ -10,8 +10,8 @@ This document describes the V0.7 release of Handy development environment. It in
 
 - [Handycraft V1.46](#handycraft-v146)
 - [Handebug V1.46](#handebug-v146)
-- [HANDY: Notes](#handy-notes)
-- [6502: Notes](#6502-notes)
+- [`HANDY:` Notes](#handy-notes)
+- [`6502:` Notes](#6502-notes)
 - [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
 ## Handycraft V1.46

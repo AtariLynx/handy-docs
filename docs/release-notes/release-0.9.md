@@ -18,7 +18,7 @@ The `MUTE` macro acts as a toggle. You can detect whether music is currently mut
 
 The `INITHMUSIC` call causes music to become non-muted.
 
-## Other `6502:` Changes
+## Other `6502:` changes
 
 The `GETSWITCH` and `GETJOY` macros no longer perform the `AUTO_TIMEOUT` reset functions. This logic has been moved to the `TIMEOUT` macro defined in `display.src`. Also, the `SWITCHES`-reading logic has been corrected to test explicitly for the `PAUSE_SWITCH` bit.
 

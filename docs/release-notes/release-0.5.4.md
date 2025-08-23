@@ -7,13 +7,13 @@ Out of our way, we've got code to write!
 
 This document describes the V0.5.4 release of Handy development environment. It includes these sections:
 
-- [*Handycraft* V1.35](#handycraft-v135)
-- [*Handebug* V1.40](#handebug-v140)
-- [*HSFX* 0.2](#hsfx-02)
+- [Handycraft V1.35](#handycraft-v135)
+- [Handebug V1.40](#handebug-v140)
+- [HSFX 0.2](#hsfx-02)
 - [ASM Notes](#asm-notes)
 - [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
-## *Handycraft* V1.35
+## Handycraft V1.35
 
 Only as many bytes as necessary are output in the SCB palette. If you have 4-color imagery, only 2 bytes of palette data will be output.
 
@@ -34,7 +34,7 @@ New Sprite Particulars Options:
 - Output Data Depth  
   When your sprite image data is being written out, you can force Handycraft to use more bits per pixel of output data than would normally be used. *Handycraft* figures out the minimum requirement. You can type in a number that's larger than the minimum. If you enter a number that's smaller than the minimum, *Handycraft* ignores your foolishness.
 
-New Sprite Type Requester:
+New `Sprite Type` requester:
 
 There's a brand new requester, the `Sprite Type requester`, which allows you select the type of your sprite. These reflect the 8 current Handy sprite types.
 
@@ -46,7 +46,7 @@ Bug fixes:
 - You can now scale sprites larger than 127 times original size
 - Bringing up the `Memory Manager Buffer Size` requester in low-memory conditions won't crash the system now
 
-## *Handebug* V1.40
+## Handebug V1.40
 
 Ta dah! The *Handebug* select/copy mechanism now works. Now you can select data and then easily and conveniently copy it to another location. The implications of this are many, and the goodness of this will be great.
 
@@ -62,7 +62,7 @@ Soon, you'll be able to select/copy the symbols in the code/symbol display. We m
 
 The only problem is that you must make sure to select a window before trying to paste into it. This is a particular problem when you're trying to paste into the Structure Editor window. The great and manly and sophisticated Heliosmouse users will have no problem with this, but the others will have to remember to click before depositing.
 
-## *HSFX* 0.2
+## HSFX 0.2
 
 Multiple sound effects are now supported, and sound effect names are now copied and supported.
 

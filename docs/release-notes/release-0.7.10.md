@@ -5,11 +5,11 @@ Confidential and Proprietary
 
 This document describes the V0.7.10 release of the Handy development environment. It includes these sections:
 
-- HandyASM V0.09
-- Handebug 1.51
-- New Print Utility
-- Handy Games Names Reminder
-- What You Must Do To Start Using This Release
+- [HandyASM V0.09](#handyasm-v009)
+- [Handebug 1.51](#handebug-v151)
+- [New Print utility](#new-print-utility)
+- [Handy Games Names reminder](#handy-games-names-reminder)
+- [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
 ## HandyASM V0.09
 
@@ -52,7 +52,7 @@ Bug fix:
 
 - When you're display a symbolic disassembly and you edit a memory location that immediately follows a label, you no longer get multiple copies of the label for each nybble that you type.
 
-## New Print Utility
+## New Print utility
 
 I've installed a new print utility on the boot disk of the Amiga next to our printer. It's called `pr` and it prints bordered pages with page numbers and stuff. You invoke it from the CLI, specifying the name of the file or files that you want printed. The program also allows wild-cards. Enter `pr` with `nop` argument to see the options.
 

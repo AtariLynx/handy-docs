@@ -5,8 +5,8 @@ Confidential and Proprietary
 
 This document describes the V0.7.12 release of the Handy development environment. It includes these sections:
 
-- HandyASM V0.17
-- What you must do to start using this release
+- [HandyASM V0.17](#handyasm-v017)
+- [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
 ## HandyAsm V0.17
 

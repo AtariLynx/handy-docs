@@ -6,7 +6,7 @@ Confidential and Proprietary
 This document describes the V0.8.2 release of the Handy development environment. It includes these sections:
 
 - [Chip systems](#chip-systems)
-- [Other 6502: changes](#other-6502-changes)
+- [Other `6502:` changes](#other-6502-changes)
 - [Handycraft 1.59](#handycraft-158)
 - [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
