@@ -15,7 +15,7 @@ approximately 400K of additional RAM
 
 All of the basic debugger functions are available from the main display. *Handebug* is graphically oriented, and most functions are accessible via the mouse. Keyboard equivalences are also provided where appropriate. Due to their nature, some advanced features are only accessible via either the mouse or the keyboard.
 
-Almost all fields can also be edited via the keyboard. Data can only be entered in the correct format. A field containing decimal data will not accept keydata outside the range of `0`-`9`. Changes made by the keyboard are immediately transmitted to the Lynx, when appropriate. The special keys `-` and `+` or `=` can be used to decrement or increment the value in a field. The cursor can be moved on the display by either clicking on the appropriate position with the mouse, or using the arrow keys to move around. `Shift-arrow` keys can be used to move between groups of fields.
+Almost all fields can also be edited via the keyboard. Data can only be entered in the correct format. A field containing decimal data will not accept keydata outside the range of `0`-`9`. Changes made by the keyboard are immediately transmitted to the Lynx, when appropriate. The special keys `-` and `+` or `=` can be used to decrement or increment the value in a field. The cursor can be moved on the display by either clicking on the appropriate position with the mouse, or using the arrow keys to move around. `Shift`-arrow keys can be used to move between groups of fields.
 
 The mouse can also be used to transfer data from one field to another. Double-clicking on a displayed value with the `LEFT` mouse button will usually copy that value to an internal paste buffer and temporarily display the selected value at the top of the display. Clicking on a field with the `RIGHT` mouse button will usually cause the value in the internal paste buffer to be deposited into that field, with any corresponding changes sent to the Lynx. A few fields don't respond to one or both of these actions.
 
@@ -53,7 +53,7 @@ If you really screwed up the file names, or if you just decide you don't really 
 
 |Gadget|Key||
 |---|---|---|
-|[GO]|`F1`|Initiate program execution from the beginning|
+|[Go]|`F1`|Initiate program execution from the beginning|
 |[Continue]|`F2`|Continue execution from current PC|
 |[Step]|`F3`|Single Step the program|
 |[Step Flat]|`F4`|Single Step through function calls|
@@ -64,7 +64,7 @@ If you really screwed up the file names, or if you just decide you don't really 
 |[BootStrap]|`F9`|Boot a non-Howard board system|
 |[LoadSymbols]||Load an assembler symbol table file|
 ||`F10`|NMI|
-||`Shift-F1`|"Hide" Handebug - shut down `Handebug` display|
+||`Shift-F1`|"Hide" *Handebug* - shut down `Handebug` display|
 ||`Shift-F2`|Device/Volume name preferences|
 ||`Shift-F3`|Customize screen colors|
 ||`Shift-F4`|Download ROM image (Game Cart)|
@@ -86,7 +86,7 @@ If you really screwed up the file names, or if you just decide you don't really 
 
 ## Handebug display
 
-*Handebug* initially creates a display on a custom screen, which seperates it from the `Workbench` and other screens. This has the benefit of not cluttering up the `Workbench` display, which will probably be cluttered enough with your own windows for editing, assembling, or whatever. Unfortunately, this also requires an additional 32K of precious CHIP ram. If the display isn't needed, this can be recovered by "hiding Handebug", as described later.
+*Handebug* initially creates a display on a custom screen, which seperates it from the `Workbench` and other screens. This has the benefit of not cluttering up the `Workbench` display, which will probably be cluttered enough with your own windows for editing, assembling, or whatever. Unfortunately, this also requires an additional 32K of precious CHIP ram. If the display isn't needed, this can be recovered by "hiding *Handebug*", as described later.
 
 The display screen consists of `Memory Watch` fields and `Breakpoint` fields on the right, a general-purpose data display on the left, a `Register` content display at top-center, a set of fields to control structure displays at the bottom right, and a set of operation gadgets in the middle. The data display has gadgets at the bottom that can be used to switch it among code, data, symbols, trace-ram, and ROM
 
@@ -100,7 +100,7 @@ When the `Code` option is specified the display will contain a disassembled list
 
 The disassembled instruction mnemonics may not be edited. However, the operand field of the disassembly may be selected by double-clicking on it. The expression is evaluated using the current memory and register contents.
 
-If an area of memory is selected that has not been fetched from the Lynx since the last `GO` or `Continue` command, then that memory will be read from Handy and the display will be updated. The display is not updated after a `Step` or `Step Flat` command. If a self-modifying instruction is single-stepped it will not display correctly until after that section of memory has been displayed as `Data` or until after the next `GO` or `Continue` command.
+If an area of memory is selected that has not been fetched from the Lynx since the last `Go` or `Continue` command, then that memory will be read from Handy and the display will be updated. The display is not updated after a `Step` or `Step Flat` command. If a self-modifying instruction is single-stepped it will not display correctly until after that section of memory has been displayed as `Data` or until after the next `Go` or `Continue` command.
 
 The display can be made to follow the current PC. If this option is selected, then each time *Handebug* gets control or switches to the `Code` display the display range is checked to make sure the current `PC` is within the displayed range. If it is not, the display is shifted to that address.
 
@@ -114,11 +114,11 @@ Only HEX data will be accepted in the address of HEX data fields. Any 7-bit ASCI
 
 ### Symbol Display...
 
-This mode is used to display the currently loaded symbol table. If no symbols are loaded the `Load Symbols` file requester is automatically displayed. Symbols can be either loaded automatically when *Handebug* is first loaded or when a file is downloaded to the Lynx, or manually by selecting the `Symbols` display or clicking on the `LoadSymbols` gadget. When symbols are loaded they can either be merged with an existing set of symbols or the symbol list can be reset.
+This mode is used to display the currently loaded symbol table. If no symbols are loaded the `Load Symbols` file requester is automatically displayed. Symbols can be either loaded automatically when *Handebug* is first loaded or when a file is downloaded to the Lynx, or manually by selecting the `Symbols` display or clicking on the `Load Symbols` gadget. When symbols are loaded they can either be merged with an existing set of symbols or the symbol list can be reset.
 
 The display order can be either alphabetic or numeric. When the Symbol display is selected, `Ctrl-A` causes the display to be sorted alphabetically, and `Ctrl-N` causes it to be sorted numerically. If possible, the line containing the cursor will remain constant during these operations, with the rest of the display changing around it.
 
-Either field in the display can be selected, with the corrresponding numeric value being stored for subsequent pasting into another field. Neither field can be the recipient of a paste operation. However, the symbol name field can be edited. As the characters are entered the display will position the display to the first symbol to match the characters entered so far. This allows you to position the display to a particular symbol by placing the cursor in the name field and typing the symbol name.
+Either field in the display can be selected, with the corresponding numeric value being stored for subsequent pasting into another field. Neither field can be the recipient of a paste operation. However, the symbol name field can be edited. As the characters are entered the display will position the display to the first symbol to match the characters entered so far. This allows you to position the display to a particular symbol by placing the cursor in the name field and typing the symbol name.
 
 Locating a particular routine is as simple as selecting the symbol from the `Symbol` display, switching to the `Code` display, and pasting the value into the address field of the display.
 
@@ -134,7 +134,7 @@ Each line is broken into five fields. The first field is the cycle number. The s
 
 Currently none of the fields may be selected for the paste buffer. The cycle number field may be edited to allow direct positioning of the display. Also, the standard scrolling mechanisms work.
 
-Trace Ram may be searched for any combination of values by using the `Search Trace Ram` interface. Invoked via `Ctrl-F1`, this interface will search any specified range of Trace ram in either direction for any set of conditions that can be specified in the `Bus Monitor` interface. Searching can be aborted by pressing any key or mouse button, and if continued will start where it was aborted. When a set of conditions is found the display is positioned to that relative cycle.
+Trace RAM may be searched for any combination of values by using the `Search Trace Ram` interface. Invoked via `Ctrl-F1`, this interface will search any specified range of Trace RAM in either direction for any set of conditions that can be specified in the `Bus Monitor` interface. Searching can be aborted by pressing any key or mouse button, and if continued will start where it was aborted. When a set of conditions is found the display is positioned to that relative cycle.
 
 ### ROM Display...
 
@@ -158,11 +158,11 @@ Conditional breakpoints are not possible with the standard breakpoints. However,
 
 ### Registers
 
-The `Register` fields are used to display and modify the contents of the Lynx registers. These fields are updated whenever normal communications are re-established, and are downloaded just prior to continuing execution. If the `Go` operation was specified the `PC` is also loaded with contents of the field to the right of the `GO` gadget. All of the registers may be modified, and may contain any valid hex data. In addition, there are a set of singe-character gadgets at the bottom of the display that reflect the current state of the status (`P`) register. The `P` register may be modified by changing the states of these gadgets.
+The `Register` fields are used to display and modify the contents of the Lynx registers. These fields are updated whenever normal communications are re-established, and are downloaded just prior to continuing execution. If the `Go` operation was specified the `PC` is also loaded with contents of the field to the right of the `Go` gadget. All of the registers may be modified, and may contain any valid hex data. In addition, there are a set of singe-character gadgets at the bottom of the display that reflect the current state of the status (`P`) register. The `P` register may be modified by changing the states of these gadgets.
 
 ### Structure Display
 
-The Structure Display/Edit creates another window above the normal `Handebug` display that is used for intelligent displays of structure contents. Structures can be defined before loading Handebug, and the display will format the data and display it with appropriate titles.
+The `Structure Display`/`Edit` creates another window above the normal `Handebug` display that is used for intelligent displays of structure contents. Structures can be defined before loading *Handebug*, and the display will format the data and display it with appropriate titles.
 
 Structure types `0` through `F` are reserved for standard system structures. You are free to define any of your own starting with number `10`.
 
@@ -189,6 +189,7 @@ STRUCTURE      - designates the start of a structure definition
 
    FIELD         - designates the start of a field definition
      POSITION x,y  - specifies character coordinates of the field
+
     |TYPE HEX      - specifies field to be displayed as HEX data
 one |TYPE DEC      - specifies field to be displayed as DECIMAL data
 TYPE|TYPE BIN      - specifies field to be displayed as BINARY data
@@ -196,6 +197,7 @@ only|TYPE TEXT     - specifies field to be used as a pointer to a string
     |TYPE DBYTE    - specifies 2-byte field displayed in HEX as low/high
     |TYPE POINTER  - field to be displayed as HEX data with bytes swapped
     |TYPE STRUCT x - field is a POINTER to another structure of type x
+
 one |SIZE 8        - specifies field is only 1 byte long
 SIZE|SIZE 16       - specifies field is 2 bytes long
 only|SIZE string length - for TYPE TEXT, the number of characters to display
@@ -213,7 +215,7 @@ Structure number `1` is a Sprite Control Block. Its definition may be used as an
 
 ## Downloading and uploading files
 
-Downloading data to the Lynx is a breeze. First, select the `Download` gadget or press the corresponding function key . This will bring up the `Download File` requestor. From this requestor you may select the file to download by selecting names or gadgets or typing names and/or paths.
+Downloading data to the Lynx is a breeze. First, select the `Download` gadget or press the corresponding function key. This will bring up the `Download File` requestor. From this requestor you may select the file to download by selecting names or gadgets or typing names and/or paths.
 
 When the requestor appears it will immediately begin loading file names from a a drive/volume and directory. This may not be the directory or volume you want. You do not have to wait for it to finish. You can specify another volume or directory at any time by selecting gadgets, names, or typing in the appropriate field.
 
@@ -221,7 +223,7 @@ You can get a file from any directory without ever taking your hands off the mou
 
 If you prefer, you can directly specify any or all of the disk, directory, and filename by selecting the appropriate string fields and typing them yourself. **You do not have to wait for file name loading to stop**.
 
-Once you have entered or selected the filename, press `OK` or double-click the filename to proceed. *Handebug* will open the file and transfer it to Handy. If a symbol file was created by using the `+S` option of the assembler *Handebug* can also read the symbol file and merge the symbols into the symbol table at this time. If an execution address was specified with the `.RUN` directive the field to the right of the `GO` gadget will be changed to the new execution  address. If the `PC` is zero it will also be initialized.
+Once you have entered or selected the filename, press `OK` or double-click the filename to proceed. *Handebug* will open the file and transfer it to Handy. If a symbol file was created by using the `+S` option of the assembler *Handebug* can also read the symbol file and merge the symbols into the symbol table at this time. If an execution address was specified with the `.RUN` directive the field to the right of the `Go` gadget will be changed to the new execution  address. If the `PC` is zero it will also be initialized.
 
 Unformatted files may be downloaded by selecting the `Raw Data` gadget in the `Download Options` window that opens along with the `Download File` requestor. You may also clear the current symbol table before downloading the file by selecting `Clear Symbols`.
 
@@ -233,7 +235,7 @@ Downloaded data is also stored in *Handebug*'s internal image of Lynx's memory. 
 
 Data from the Lynx memory may also be uploaded in a variety of formats. When the `Upload` command is issued, either via the `Upload` gadget or function key `F6`, a file requester is displayed along with a set of options. These options allow you to specify the range of addresses to upload, whether the data should be saved as ASCII or as raw binary, and whether the data should be formatted or unformatted.
 
-Formatted binary data is similar to an assembler output file and is compatible with any program that processes assembler output. Formatted binary upload files may be downloaded just as assembler output files. Unformatted binary is exactly that; just raw binary data. Formatted ASCII is saved in the form of an assembler .SRC file, allowing it to be modified  and reassembled. Unformatted ASCII is saved in the form of a HEX dump of memory.
+Formatted binary data is similar to an assembler output file and is compatible with any program that processes assembler output. Formatted binary upload files may be downloaded just as assembler output files. Unformatted binary is exactly that; just raw binary data. Formatted ASCII is saved in the form of an assembler `.SRC` file, allowing it to be modified and reassembled. Unformatted ASCII is saved in the form of a HEX dump of memory.
 
 ## Running (and stopping) a program
 
@@ -253,7 +255,7 @@ Once a program is running it has control of the machine and will continue to run
 
 The trivial case is executing with `Single Step` or `Step Flat`. The reasons should be obvious.
 
-The most common and most useful method is by establishing breakpoints at strategic locations in the program. When a program's execution hits a breakpoint it causes control to return to Handebug, which updates its display to reflect the register contents and any changes to the page of memory currently being displayed. All breakpoints are also temporarily removed so that memory can be freely examined or changed.
+The most common and most useful method is by establishing breakpoints at strategic locations in the program. When a program's execution hits a breakpoint it causes control to return to *Handebug*, which updates its display to reflect the register contents and any changes to the page of memory currently being displayed. All breakpoints are also temporarily removed so that memory can be freely examined or changed.
 
 Similar to breakpoints, yet totally different, is the `Bus Monitor`. The `Bus Monitor` is hardware that monitors the system bus for a variety of conditions that can be specified in *Handebug*. When the specified condition is met, control is forcibly returned to *Handebug*. This is incredibly useful when trying to track down random memory trashing, for instance.
 
@@ -261,7 +263,7 @@ Finally, the rudest (and most effective) method of interrupting a program is via
 
 ## Fill memory
 
-*Handebug* can be used to initialize Lynx RAM to a single byte value. The `Fill Memory` requester allows you to specify a starting address, the number of bytes to fill, and a fill value. All entries are expected to be in HEX. The requester is a standard Amiga requester, and therefore does not work the same as the other fields in Handebug. You cannot select values from these fields or paste values into these fields with the mouse. Also, data entry into these fields is **inserted**, not **replaced**. Therefore, if there is already data in the fields you must delete the old characters before entering the new ones.
+*Handebug* can be used to initialize Lynx RAM to a single byte value. The `Fill Memory` requester allows you to specify a starting address, the number of bytes to fill, and a fill value. All entries are expected to be in HEX. The requester is a standard Amiga requester, and therefore does not work the same as the other fields in *Handebug*. You cannot select values from these fields or paste values into these fields with the mouse. Also, data entry into these fields is **inserted**, not **replaced**. Therefore, if there is already data in the fields you must delete the old characters before entering the new ones.
 
 Validity checking is not done until `OK` is selected. If any of the values is not a valid HEX number, or if communications fails during the fill memory process, a cryptic and meaningless message `Ack!` is displayed.
 
@@ -277,7 +279,7 @@ Most of the basic *Handebug* features are still available through this window. T
 
 *Handebug* is the primary interface to the Howard board, a sophisticated hardware support environment for Lynx development. The Howard board contains ROM emulation, trace RAM, and four channels of extremely flexible bus monitor circuitry.
 
-Function key `F7` activates the `Bus Monitor` interface display. The display allows you to specify practically any set of values for the `ADDRESS`, `DATA`, and `CONTROL` busses, with independent delays for each channel. In addition, register values can be checked at each occurence, and sequences of conditions may be established with conditional looping to any point in the sequence. The types of cycles stored in the Trace RAM is also specified on this screen, and can be varied with each event. Trace RAM specifications from each active channel are 'OR'ed at each event. For instance, if one channel specifies tracing `OpCodes` and another specifies tracing `Suzy` and `Video` cycles, then all three will be traced.
+Function key `F7` activates the `Bus Monitor` interface display. The display allows you to specify practically any set of values for the `ADDRESS`, `DATA`, and `CONTROL` busses, with independent delays for each channel. In addition, register values can be checked at each occurence, and sequences of conditions may be established with conditional looping to any point in the sequence. The types of cycles stored in the Trace RAM is also specified on this screen, and can be varied with each event. Trace RAM specifications from each active channel are '`OR`'ed at each event. For instance, if one channel specifies tracing `OpCodes` and another specifies tracing `Suzy` and `Video` cycles, then all three will be traced.
 
 At the upper left of the display are gadgets to manipulate sequences of events. 
 
@@ -294,7 +296,7 @@ Gadgets that conceptually represent different states of the same entity are logi
 
 `DATA` and `ADDRESS` bus specifications are a little more complex. These conditions are specified through three fields. The first two fields represent a range of values. Only one range can be specified per event. To specify multiple ranges you will need to use the other channels. When the first data is entered into the range starting field it is copied to the ending value field to simplify breaking on a single value. Note that if you enter data with the keyboard the values will only match for the first character entered. Pasting with the mouse will copy an entire value to both fields.
 
-The third field represents a mask that is applied to the value occuring within the specified range. Each position that has an `x` represents a bit whose value can be either `0` or `1`, as long as the total value falls within the specified range. When a position has either a `0` or a `1` specified, that bit posotion MUST contain that bit value for the condition to be true. For instance, to break on any odd address between 100 and 500 you wold specify a range with a starting value of `100` and an ending value of `500`, and the mask would have all `x`s except for the last position, which would have a `1` (`xxxxxxxxxxxxxxx1`).
+The third field represents a mask that is applied to the value occuring within the specified range. Each position that has an `x` represents a bit whose value can be either `0` or `1`, as long as the total value falls within the specified range. When a position has either a `0` or a `1` specified, that bit posotion MUST contain that bit value for the condition to be true. For instance, to break on any odd address between 100 and 500 you would specify a range with a starting value of `100` and an ending value of `500`, and the mask would have all `x`s except for the last position, which would have a `1` (`xxxxxxxxxxxxxxx1`).
 
 In addition, the range of values can be specified as either inclusive (`In`), meaning within the values specified, or exclusive (`Out`), meaning outside the range specified. Also, the values wrap. If you specify a range of `500` to `100` `Out`, it means the same as `100` to `50` `In`.
 
@@ -310,7 +312,7 @@ To access the register specifications and looping fields you have to re-size the
 
 ## Communications
 
-*Handebug* communicates with the development hardware through the parallel port. Data transfer is 8-bits wide. The printer control lines `BUSY` and `POUT` are used by *Handebug* and the monitor code to synchronize. When the system has achieved synchronization, then these lines indicate the current state of the ports. `BUSY` low indicates *Handebug* is in output mode. `POUT` low indicates the LYNX is in inout mode.
+*Handebug* communicates with the development hardware through the parallel port. Data transfer is 8-bits wide. The printer control lines `BUSY` and `POUT` are used by *Handebug* and the monitor code to synchronize. When the system has achieved synchronization, then these lines indicate the current state of the ports. `BUSY` low indicates *Handebug* is in output mode. `POUT` low indicates the Lynx is in input mode.
 
 Port operation takes place at the interrupt level on the Amiga. Allowing the interrupt system to handle each character limits throughput to about 5K bytes per second. In order to improve this figure the port is polled once a transfer has started. The polling takes place in a tight loop inside the interrupt handler code. The number of iterations is limited to avoid significantly impacting system performance in other areas. The loop count value is configurable to allow tuning communications. This is primarily applicable to non-Howard board systems attached to Amiga 2500's. In these cases the Lynx hardware is much slower and the loop execution on the Amiga is much faster than a standard Amiga and will time out before the next character can arrive. This results in extremely poor performance. By adjusting the loop value it is possible to tune the system to achieve maximum performance.
 

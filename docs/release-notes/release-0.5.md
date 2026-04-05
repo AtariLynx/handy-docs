@@ -34,7 +34,7 @@ Congratulations, John. It's a good job.
 
 You can edit any data field. Note that if you double-click in any field defined as a pointer to a structure, the structure editor displays that structure.
 
-The structure definition file can be found at `s:handebug.defs`, which with this release contains only the Handebug structure editor's definition of a Sprite Control Block structure. You can define your own structures by adding them to the `s:handebug.defs` file using the rules defined in the structure editor listing that is included in the hardcopy of this release. Structures you define have ID numbers that start at `$10` and go up to `$FF`. `$00` is an error ID number. The system reserves `$01` through `$0F`. The Sprite Control Block is type `$01`.
+The structure definition file can be found at `s:handebug.defs`, which with this release contains only the *Handebug* structure editor's definition of a Sprite Control Block structure. You can define your own structures by adding them to the `s:handebug.defs` file using the rules defined in the structure editor listing that is included in the hardcopy of this release. Structures you define have ID numbers that start at `$10` and go up to `$FF`. `$00` is an error ID number. The system reserves `$01` through `$0F`. The Sprite Control Block is type `$01`.
 
 When you create a structure definition, you ought to try to keep the window completely within the upper `320x200` rectangle of the *Handebug* display. This is because tomorrow we're going to allow the structure window to open on the *Handycraft* display, the dimensions of which are - guess what! - `320x200`.
 
@@ -148,7 +148,7 @@ First, this release breaks your software again so before I do anything you must 
   - Add *tsize*, an application that tells you the number of bytes found in a directory
   - Give you a new copy of the *goodshow* program
   - Update the `readme` file
-- I want to distribute a new file, `s:handebug.defs`, which has the Handebug structure editor's definition of a Sprite Control Block structure
+- I want to distribute a new file, `s:handebug.defs`, which has the *Handebug* structure editor's definition of a Sprite Control Block structure
 
 You must include `6502:macros/zpage.mac` before any zero-page memory allocations and before any `6502:src` files are including in your program. Also, if you make zero-page memory allocations, you must surround these allocations with the macros described in `zpage.mac` (I've supplied you with hardcopy of this file).
 

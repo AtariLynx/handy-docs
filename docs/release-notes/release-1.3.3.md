@@ -64,7 +64,7 @@ title screen. The title screen should cover the entire screen frequently done by
 
 The second file (file `1`) is the initial game code. This file will be loaded and then branched to (at its load address) after the cartridge security has been verified. This file must load starting at or after location `$0400` and must end before location `$FC00`.
 
-The title screen can be tested in development (assuming that the system has been updated with Handy Release 1.3a) by using the `CART LOAD` and `BOOT CART` functions of `Handebug`. The title screen should display for a few seconds before jumping to the game.
+The title screen can be tested in development (assuming that the system has been updated with Handy Release 1.3a) by using the `CART LOAD` and `BOOT CART` functions of *Handebug*. The title screen should display for a few seconds before jumping to the game.
 
 ## New RAM cartridge macros
 

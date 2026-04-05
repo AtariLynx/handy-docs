@@ -41,7 +41,7 @@ The following changes were made to files in the `6502:` directory:
 
 ## `Handy:` changes
 
-The file `cartload.bin` (used by the `LOAD CART` command in the Mandy/Pinky version of `Handebug`) has been updated to support ROM emulation of larger than 128K carts.
+The file `cartload.bin` (used by the `LOAD CART` command in the Mandy/Pinky version of *Handebug*) has been updated to support ROM emulation of larger than 128K carts.
 
 The following changes were made to files in the `Handy:` directory:
 

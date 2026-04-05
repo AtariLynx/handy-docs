@@ -97,7 +97,7 @@ Sorry, you guys missed the 1.00 release. Here's 1.01 for you.
 
 Performance improvements, 5 - 10% depending on your code.
 
-New "rule" that formalizes current behavior of HandyAsm: you can define and redefine a constant as many times as you like using `.=` (aka `.SET`), but once you use `.EQU` to define or redefine a constant the constant becomes fixed and cannot be redefined.
+New "rule" that formalizes current behavior of *HandyAsm*: you can define and redefine a constant as many times as you like using `.=` (aka `.SET`), but once you use `.EQU` to define or redefine a constant the constant becomes fixed and cannot be redefined.
 
 This allows us to create system constants with default values that can be safely redefined by the programmer. For example, the *HMUSIC* include file now does this: 
 

@@ -50,7 +50,7 @@ If there are other config things you think *Handycraft* should save/restore, let
 
 When you write image files using `w` or `O` or use `I` to get the image size, the byte size of the image data is now written to the display for your reference (at least until you do something that causes it to be erased).
 
-Coming next with Handycraft:
+Coming next with *Handycraft*:
 
 - Doing `TRIM EDGES` correctly, including not wasting a bit-per-pixel on zero when all zeroes will be trimmed, and trimming vertically when the tops and bottoms of quadrants have no significant data
 - Gadgets showing possible and current `Pixel Depth` selections, rather than a string gadget as it is now

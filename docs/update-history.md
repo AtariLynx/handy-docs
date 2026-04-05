@@ -2,7 +2,7 @@
 
 All software has already been incorporated into your diskette package.
 
-**Lynx Sound Overview**: This document is an overview for those who have had trouble seeing the forest for the trees. You should also read page 29 of the Handy hardware specification and the Handy audio hardware overview starting on page 35 of the [Handy software programmer's guide](./handy-software-programmers-guide/handy-software-programmers-guide.md) and notes. And of course ```Handy appendix 2``` hardware addresses `FD20` through `FD50`.
+**Lynx Sound Overview**: This document is an overview for those who have had trouble seeing the forest for the trees. You should also read page 29 of the [[[Handy hardware specification]]] and the [[[Handy audio hardware overview]]] starting on page 35 of the [Handy software programmer's guide](./handy-software-programmers-guide/handy-software-programmers-guide.md) and notes. And of course [[[Handy appendix 2 hardware addresses]]] `FD20` through `FD50`.
 
 ## 1. What in the world were we thinking when we designed the sound hardware?
 
@@ -51,9 +51,9 @@ The shift register (shifter) with taps into an `EXOR` feeding back into the shif
 
 It may not be too helpful but I've attached 2 printouts showing all the possible combinations of the poly counter. Ideally this data would be integrated in a transparent way into *HSFX* - but don't hold your breath.
 
-The first printout lists the combinations in order of shifter period, that is the number of counts until the counter loops back to its initial value. Notice this number ranges from 1 to 4095. Observe that there are 19 different ways to get a period of 4095. All 19 ways have an initial shifter value of 00 and a different set of feedback taps. All will repeat at the same rate, but will sound slightly different (it's actually hard to hear the differences in this example since 4095 is the longest and therefore most random count). Loop counts of 1 are lockup states, and not too interesting. In general the closer the loop count is to 2 the more the tone will sound like a square wave. The closer the count is to 4095 the more the tone will sound like white noise.
+The first printout lists the combinations in order of shifter period, that is the number of counts until the counter loops back to its initial value. Notice this number ranges from `1` to `4095`. Observe that there are 19 different ways to get a period of 4095. All 19 ways have an initial shifter value of `00` and a different set of feedback taps. All will repeat at the same rate, but will sound slightly different (it's actually hard to hear the differences in this example since `4095` is the longest and therefore most random count). Loop counts of `1` are lockup states, and not too interesting. In general the closer the loop count is to `2` the more the tone will sound like a square wave. The closer the count is to `4095` the more the tone will sound like white noise.
 
-The second printout lists the combinations in feedback tap order. So for example a feedback tap setting of `$02E` can count in any one of 8 different sequences depending on the shifter initial value. Initial values of `$000`, `$005`, `$00B` all have a period of 15, but will sound different (let's say they have different timbres). Values of `$002`, `$00E`, `$016` have period 5 and different timbres. `$009` has period 3, and `$03F` is a lockup- period of 1.
+The second printout lists the combinations in feedback tap order. So for example a feedback tap setting of `$02E` can count in any one of 8 different sequences depending on the shifter initial value. Initial values of `$000`, `$005`, `$00B` all have a period of `15`, but will sound different (let's say they have different timbres). Values of `$002`, `$00E`, `$016` have period 5 and different timbres. `$009` has period 3, and `$03F` is a lockup- period of 1.
 
 The output of the poly counter is just a single bit. It is used in one of two ways, depending on whether integrate mode is set or not.
 
@@ -67,20 +67,22 @@ The 3 interpolation choices in *HSFX* can now be understood. Interpolation of fr
 
 Fine by me let's just take a quick look at the hardware.
 
-In Mikey all the timers and sound channels share one piece of hardware. Each timer/ sound channel takes its turn rotating through the hardware. This is why it sometimes takes as long as 1 usec to access these registers, you have to wait for it to take its turn. This is also why the sound and timer registers behave so similarly.
+In Mikey all the timers and sound channels share one piece of hardware. Each timer/ sound channel takes its turn rotating through the hardware. This is why it sometimes takes as long as 1 µsec to access these registers, you have to wait for it to take its turn. This is also why the sound and timer registers behave so similarly.
 
-The prescaler registers `FD24` and `FD26` behave exactly as any timer. `FD25` is almost the same as a timer The only differences being bit 7 where we stuck one of the feedback taps (no interrupts on sound) and bit 5 which controls integrate mode. The lower nibble of `FD27` works the same as a timer, except for bit 3 whose function makes no sense for audio. It won't matter to you, since the only time you'll write to `FD27` is when you are initializing the shifter, and the sound channel has to be turned off then or you won't be able to set both registers of the shifter before they change.
+The prescaler registers `FD24` and `FD26` behave exactly as any timer. `FD25` is almost the same as a timer The only differences being bit `7` where we stuck one of the feedback taps (no interrupts on sound) and bit `5` which controls integrate mode. The lower nibble of `FD27` works the same as a timer, except for bit `3` whose function makes no sense for audio. It won't matter to you, since the only time you'll write to `FD27` is when you are initializing the shifter, and the sound channel has to be turned off then or you won't be able to set both registers of the shifter before they change.
 
 Speaking of the shifter it sits at `FD23` and `FD27`. To repeat, make sure the poly counter isn't clocking before trying to initialize these registers.
 
 The feedback taps are set at `FD21` and bit 7 of `FD25`.
 
-Bit 5 in `FD25` controls integrate mode. `FD20` is the volume control. Remember in integrate mode the volume is added to a running total and sent to the DAC. The running total is kept in `FD22`. In normal mode `FD22` will contain volume or its 2's complement. Notice that you don't normally need to play with `FD22`, it just gets what it needs. If you want to store directly to the DAC then `FD22` is the place to do it. You'll probably want to shut off the audio timer before storing to `FD22`.
+Bit `5` in `FD25` controls integrate mode. `FD20` is the volume control. Remember in integrate mode the volume is added to a running total and sent to the DAC. The running total is kept in `FD22`. In normal mode `FD22` will contain volume or its 2's complement. Notice that you don't normally need to play with `FD22`, it just gets what it needs. If you want to store directly to the DAC then `FD22` is the place to do it. You'll probably want to shut off the audio timer before storing to `FD22`.
 
 ## 5. Stereo, stereo where for art thou stereo.
 
-Originally Lynx was mono. After Mikey was working and ready to produce, it was decided to add simple stereo. The Howard boards were not yet finished, so we went ahead and implemented this stereo on them. This form of stereo was channel switching controlled by `FD50`. Later it was decided to add panning and attenuation registers `FD40` through `FD44`. Attached is a sheet detailing these registers to be added to your ```appendix 2 hardware addresses```. A plug in upgrade board for Howard boards was designed and is available from Atari. As of today 4/25/91 no stereo Lynx have been produced. In fact the potential existence of stereo is still confidential. Klax supports full stereo panning, and digitized sound. Xenophobe supports some amount of stereo, and maybe some other games do too - who can remember?
+Originally Lynx was mono. After Mikey was working and ready to produce, it was decided to add simple stereo. The Howard boards were not yet finished, so we went ahead and implemented this stereo on them. This form of stereo was channel switching controlled by `FD50`. Later it was decided to add panning and attenuation registers `FD40` through `FD44`. Attached is a sheet detailing these registers to be added to your [[[Appendix 2 hardware addresses]]]. A plug in upgrade board for Howard boards was designed and is available from Atari. As of today 4/25/91 no stereo Lynx have been produced. In fact the potential existence of stereo is still confidential. Klax supports full stereo panning, and digitized sound. Xenophobe supports some amount of stereo, and maybe some other games do too - who can remember?
 
 ## 6. As usual Craig, you've taken a difficult subject and made it elegantly simple
 
-True, true. For the answers to more sound hardware questions you can leave messages for me on the Atari Sunnyvale BBS, or call me at Epyx 415-368-3200 Fax 415-369-2999. Craig Nelson @ Epyx.
+True, true. For the answers to more sound hardware questions you can leave messages for me on the Atari Sunnyvale BBS, or call me at Epyx 415-368-3200 Fax 415-369-2999. 
+
+Craig Nelson @ Epyx.

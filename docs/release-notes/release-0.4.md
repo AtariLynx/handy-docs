@@ -12,7 +12,7 @@ This document describing the V0.4 release of Handy development environment inclu
 
 # Handebug V1.30
 
-*Handebug* now talks with Handycraft, allowing you to enter *Handebug* function-key commands from *Handycraft*.
+*Handebug* now talks with *Handycraft*, allowing you to enter *Handebug* function-key commands from *Handycraft*.
 
 New function key definitions. See your new function-key template for details. The template is number V1.29.
 

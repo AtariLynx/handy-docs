@@ -7,13 +7,13 @@ This document describes the *HSFX Editor*.
 
 If you haven't noticed yet, you will soon notice that this document is in-the-works.
 
-This is not intended as a stand-alone document, but rather is destined to become a chapter of the Handy Software Programmer's Guide and Notes. It describes only the components and usage of the HSFX Editor. It doesn't attempt to instruct on Handy audio control or sound creation techniques; before reading this you should read the HSFX and the Handy Audio System Description chapters of the Programmer's Guide.
+This is not intended as a stand-alone document, but rather is destined to become a chapter of the [[[Handy Software Programmer's Guide and Notes]]]. It describes only the components and usage of the HSFX Editor. It doesn't attempt to instruct on Handy audio control or sound creation techniques; before reading this you should read the HSFX and the Handy Audio System Description chapters of the Programmer's Guide.
 
 Also, not everything described in this document is implemented yet.
 
 ## Introduction and Definitions
 
-The program has two main displays, the Main Menu and the Key Frame Editor.
+The program has two main displays, the `Main Menu` and the `Key Frame Editor`.
 
 The `Main Menu` allows you to load and save sound effects and to make global changes to the current sound effect.
 
@@ -23,9 +23,9 @@ A sound effect is comprised of a series of key frames, which key frames contain 
 
 The *HSFX Editor and Driver* support a technique called interpolation, which is the opposite of step. Interpolation refers to the numeric progression from one value to another. If you have specified that you want one of the audio components, volume for example, to be at one value at a given instant and a different value later, you are allowed specify that you want the value to either change abruptly to the new setting or to ramp incrementally once per audio frame from the initial to final setting.
 
-Currently, the HSFX Editor and Driver support only linear interpolation, which is a simple algebraic slope fromone value to another. We are considering adding musical interpolation, which would interpolate from one value to another using the curve that describes moving from one musical note to the next.
+Currently, the *HSFX Editor and Driver* support only linear interpolation, which is a simple algebraic slope fromone value to another. We are considering adding musical interpolation, which would interpolate from one value to another using the curve that describes moving from one musical note to the next.
 
-Using the FllelO Requester.
+Using the `FileIO` Requester.
 
 Rounding errors. Today's technique for avoiding them. Tomorrow's technique for avoiding them.
 
@@ -58,7 +58,7 @@ Selecting a keyframe and drag-selecting multiple adjacent keyframes
 
 ## Key Frame Editor
 
-The Key Frame Editor display has three edit areas:
+The `Key Frame Editor` display has three edit areas:
 
 - There's a L-shaped area that starts top left and flows down then over to bottom-right. This `L` presents a programmable analogue of the Handy sound hardware. The programmer can set values in this edit area that will be converted by the *HSFX* editor into a table of coded instructions, which the *HSFX* driver on Handy can understand and execute.
 

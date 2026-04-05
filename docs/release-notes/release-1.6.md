@@ -17,14 +17,14 @@ LYNX release 1.60 contains this documentation and an update disk in Quarterback 
 1. The `DATA` window is refreshed whenever you switch to it. In the old version (1.45), the screen would not update thus you may have been looking at current memory values but more likely you were not.
 2. There are independent display addresses for the `CODE` and `DATA` windows. This is nice for keeping the `DATA` window looking at a memory address while you step through code in the `CODE` window.
 3. You can now search the symbol table on numeric value by "editing" the value field.  The `SYMBOLS` window would only let you search in the name field in previous versions.
-4. `Handebug` should not assert additional NMI's once it is in debug mode. This used to disturb the stack when the user accidentally hit `F10` (NMI) while in debug, causing a bit of frustration.
+4. *Handebug* should not assert additional NMI's once it is in debug mode. This used to disturb the stack when the user accidentally hit `F10` (NMI) while in debug, causing a bit of frustration.
 5. The `MORE` button on the Bus Monitor now works as expected.
 6. The Bus Monitor's messages for the channels are now alpha and not numeric for consistency.
 7. The Bus Monitor remembers the last channel looked at when re-opening the Bus Monitor window.
 8. "Breaking after n occurrences" should work as expected now in the Bus Monitor.
-9. When using the hide `Handebug` feature with the main display window set to `SYMBOLS` mode, the hide `Handebug` window does not trash in certain situations now. Downloading a file or booting the cart does not trash the window.
+9. When using the `Hide Handebug` feature with the main display window set to `SYMBOLS` mode, the `Hide Handebug` window does not trash in certain situations now. Downloading a file or booting the cart does not trash the window.
 10. Pasting a new value to a non-empty breakpoint slot now updates the gadget properly to the "enabled" state.
-11. If location `0` contained a non-zero value (which occurred if you had an A2091 disk controller), `Handebug` would crash the machine.
+11. If location `0` contained a non-zero value (which occurred if you had an A2091 disk controller), *Handebug* would crash the machine.
 12. Support for faster bus monitor setup is in place, and controlled by the config file entry:
 
 ```

@@ -3,7 +3,7 @@
 Rules of Engagement 
 15 November 1988
 
-To add your own structures to Handebug's structure editor, you must edit the `HANDY:handebug.defs` file using the following format:
+To add your own structures to *Handebug*'s structure editor, you must edit the `HANDY:handebug.defs` file using the following format:
 
 ```
 STRUCTURE

@@ -20,7 +20,7 @@ Are you ready for this? Seems that many of *Handycraft*'s problems over the past
 
 We have to devise a convenient way for your stack size to be increased automatically. Just putting `stack 8000` in your `startup-sequence` isn't enough, as new CLI's don't inherit the stack parameter from the parent CLI's.
 
-For now, you must remember to manually set stack size. If you are using a script file to start up *Handycraft*, then put it there. If you aren't using a script file, you might consider using the one that's now released into your `S:` directory, named `HC`. If you start up *Handycraft* using *X HC* then the stack is set up for you and Handycraft is run.
+For now, you must remember to manually set stack size. If you are using a script file to start up *Handycraft*, then put it there. If you aren't using a script file, you might consider using the one that's now released into your `S:` directory, named `HC`. If you start up *Handycraft* using *X HC* then the stack is set up for you and *Handycraft* is run.
 
 ## Handycraft V1.34
 

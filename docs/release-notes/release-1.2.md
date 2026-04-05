@@ -266,7 +266,7 @@ The logon code takes 745 bytes (765 if `MAX_PLAYERS>8`), which can be reclaimed
 after logon. In addition, the example "glue code" in `redeye_glue.src` takes
 approximately 380 bytes.
 
-During communication, Redeye interrupts happen very frequently. A byte takes 176 usec to send (slightly longer than 1 scan line). Each message, Redeye sends 3 bytes of overhead (1 byte each of size, header and checksum) and any data bytes the message may contain. If there is a problem (someone missed data, or someone is late with their data), extra messages will be sent. If frequent or long lasting interrupts other than Redeye are running in the system, communication overhead can go way up. (The music and sound effects
+During communication, Redeye interrupts happen very frequently. A byte takes 176 µsec to send (slightly longer than 1 scan line). Each message, Redeye sends 3 bytes of overhead (1 byte each of size, header and checksum) and any data bytes the message may contain. If there is a problem (someone missed data, or someone is late with their data), extra messages will be sent. If frequent or long lasting interrupts other than Redeye are running in the system, communication overhead can go way up. (The music and sound effects
 drivers have long interrupts, but both clear interrupt disable to minimize interference with Redeye).
 
 ### Optimization
@@ -335,6 +335,6 @@ There are three lights on the front of the Howard box. The left light (green) ju
 
 `HandyAsm` (or just `asm` as installed on most systems) has a nasty little hidden "feature" (bug). When generating multiple output files with the `.TF` directive (almost all programs will do this when they start getting broken up for cartridge loading), the first `.TF` file that contains a reference to a variable defined within the framework of another `.TF` file will generate a mangled output file. Blue Lightning's workaround was to create a `.TF` file with one external variable reference in it, just to be thrown away.
 
-The assembler is case-sensitive with respect to labels. `Handebug`, however, is not. If code generates the labels `FRED`, `Fred` and `fred`, then Handebug will only remember one of them when loading the symbol table.
+The assembler is case-sensitive with respect to labels. `Handebug`, however, is not. If code generates the labels `FRED`, `Fred` and `fred`, then *Handebug* will only remember one of them when loading the symbol table.
 
-The Howard board needs to have the value `$3000` in the NMI vector to handle NMI properly, but does not initialize this value in the RAM vectors. Code in development can store the value (after using the `INITSYS` macro), or it can be stored manually by entering the hexadecimal values `08 00 30` into memory starting at location `FFF9` from `Handebug`.
+The Howard board needs to have the value `$3000` in the NMI vector to handle NMI properly, but does not initialize this value in the RAM vectors. Code in development can store the value (after using the `INITSYS` macro), or it can be stored manually by entering the hexadecimal values `08 00 30` into memory starting at location `FFF9` from *Handebug*.

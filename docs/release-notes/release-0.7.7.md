@@ -34,7 +34,7 @@ Coming soon:
 
 This release of *Handebug* introduces structure definitions that can be reloaded. `Shift-F7` brings up a file requester that allows you to specify a new `.defs` file from which structure definitions will be read. If a file is selected then the previous definitions are discarded and new ones are loaded. The structure window is closed if it is opened when the new definitions are loaded.
 
-Also, if a window has a size specification and it doesn't specify `x` and `y` coordinates, the window will open in the upper-left corner of the Handebug display. If you don't like that then specify `x,y` coordinates in your structure definition.
+Also, if a window has a size specification and it doesn't specify `x` and `y` coordinates, the window will open in the upper-left corner of the *Handebug* display. If you don't like that then specify `x,y` coordinates in your structure definition.
 
 Bug fix:
 

@@ -49,7 +49,7 @@ There's a small but real chance that 3 things will be showing up on Friday: Mike
 
 Yes, that's right, the first Mikey chips might show up here as early as Friday. To everyone's delight the Mikeys seem to be passing the VTI tests, which makes the chances extremely high that they'll work first time here. Hot damn!
 
-The assembler is now inches away. We're using Steve's Jet Game source as a test suite, and *HandyASM* currently creates an identical binary image in about 1/5 the time. Meanwhile, Carl (the guy who's writing the assembler) is going to be setting up a BBS so we can post bug reports and get new HandyASM's just by calling. I can't wait to get my hands on this puppy.
+The assembler is now inches away. We're using Steve's Jet Game source as a test suite, and *HandyASM* currently creates an identical binary image in about 1/5 the time. Meanwhile, Carl (the guy who's writing the assembler) is going to be setting up a BBS so we can post bug reports and get new *HandyASM*'s just by calling. I can't wait to get my hands on this puppy.
 
 ## Good news bad news
 

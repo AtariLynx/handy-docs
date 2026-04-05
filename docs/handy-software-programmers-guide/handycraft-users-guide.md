@@ -27,4 +27,4 @@ After a while, each programmer will have real Handy hardware at his or her own d
 
 Hit the `HELP` key for a display of the commands you can give to *Handycraft*.
 
-If you run out of memory, try exiting all tools and then rebooting your system. Often the Amiga looks like it has enough memory left but various programs don't behave well and leave memory fragmented, which impedes Handycraft as it sometimes needs large blocks of contiguous memory.
+If you run out of memory, try exiting all tools and then rebooting your system. Often the Amiga looks like it has enough memory left but various programs don't behave well and leave memory fragmented, which impedes *Handycraft* as it sometimes needs large blocks of contiguous memory.

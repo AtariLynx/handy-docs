@@ -4,4 +4,4 @@ The first "file" in the Lynx ROM is expected to be a Boot screen (to give the us
 
 The second file is the inital game code. This file will be loaded and then branched to (at its load address) after the cartridge security has been verified. This file must load starting at or after location `$0400` and must end before location `$FC00`.
 
-The Boot screen can be tested in development (assuming that the system has been updated with Handy Release 1.3a) by using the `CART LOAD` and `BOOT CART` functions of Handebug. The Boot screen should display for a few seconds before jumping to the game.
+The Boot screen can be tested in development (assuming that the system has been updated with Handy Release 1.3a) by using the `CART LOAD` and `BOOT CART` functions of *Handebug*. The Boot screen should display for a few seconds before jumping to the game.

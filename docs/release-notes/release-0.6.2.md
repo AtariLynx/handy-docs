@@ -57,7 +57,7 @@ For you Apple keyboard readers, we support you now too. You can use the normal i
 
 ## Handycraft V1.38
 
-*Handycraft* now supports the auto-recording stuff described above. See the document [[[Handy video tape recording procedures]]] for a description of how to tell Handycraft to do your bidding.
+*Handycraft* now supports the auto-recording stuff described above. See the document [[[Handy video tape recording procedures]]] for a description of how to tell *Handycraft* to do your bidding.
 
 Just doing `x` (without `f` or `F`) ought to work just fine now.
 

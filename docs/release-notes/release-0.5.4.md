@@ -32,7 +32,7 @@ New Sprite Particulars Options:
 - Trim Edges  
   You can now select whether or not you want the outer edges of your sprite to be trimmed. For instance, if you have a circle image, you can elect for the area outside the circle to be trimmed off or left on. The default selection is for edges to be trimmed. 
 - Output Data Depth  
-  When your sprite image data is being written out, you can force Handycraft to use more bits per pixel of output data than would normally be used. *Handycraft* figures out the minimum requirement. You can type in a number that's larger than the minimum. If you enter a number that's smaller than the minimum, *Handycraft* ignores your foolishness.
+  When your sprite image data is being written out, you can force *Handycraft* to use more bits per pixel of output data than would normally be used. *Handycraft* figures out the minimum requirement. You can type in a number that's larger than the minimum. If you enter a number that's smaller than the minimum, *Handycraft* ignores your foolishness.
 
 New `Sprite Type` requester:
 

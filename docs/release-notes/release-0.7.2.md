@@ -14,7 +14,7 @@ This document describes the V0.7.2 release of Handy development environment. It 
 
 ## Handebug V1.47
 
-The major feature added to *Handebug* for this release is the ability to save and restore the current configuration (known and promised for long as "settings" and here she comes at last!). Immediately after being loaded Handebug looks in `HANDY:` for a file named `Handebug.config`. It will process this file to establish colors, the default path for `.bin`, `.sym` and other `.config` files, and other things.
+The major feature added to *Handebug* for this release is the ability to save and restore the current configuration (known and promised for long as "settings" and here she comes at last!). Immediately after being loaded *Handebug* looks in `HANDY:` for a file named `Handebug.config`. It will process this file to establish colors, the default path for `.bin`, `.sym` and other `.config` files, and other things.
 
 RJ sez: by this time tomorrow, no one's *Handebug* will have the old colors!
 
@@ -40,7 +40,7 @@ REGISTER P xx
 REGISTER S xx
 ```
 
-The current configuration can be saved at any time and reloaded later. `Shift-F6` can be used to load or save configurations. When saving a configuration Handebug will save: the current download directory as the `HOME` directory; the last size and position of the `Bring-Back-Handebug` window as the `HIDEWINDOW` values; the last requested download and symbol files as `BINFILE` and `SYMFILE`. For that matter, everything else named above is saved too.
+The current configuration can be saved at any time and reloaded later. `Shift-F6` can be used to load or save configurations. When saving a configuration *Handebug* will save: the current download directory as the `HOME` directory; the last size and position of the `Bring-Back-Handebug` window as the `HIDEWINDOW` values; the last requested download and symbol files as `BINFILE` and `SYMFILE`. For that matter, everything else named above is saved too.
 
 `GO`, `BREAKPOINT` and `MEMWATCH` can be either hex addresses or symbolic references. If they are symbols then a `SYMFILE` must be specified in the config file before the labels. When saving these values *Handebug* will check for a matching label and if found will use the symbol instead of the hex value.
 

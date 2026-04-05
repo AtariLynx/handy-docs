@@ -48,7 +48,7 @@ Example use of this macro:
 
 ```
 ; This call specifies a clock mask of 6, which selects
-; the 64 usec clock, and a preload of 64. This will
+; the 64 µsec clock, and a preload of 64. This will
 ; change the audio clock to tick 240 times per second
 ; (which is the "standard" audio frame rate)
 	LDA #64
@@ -79,7 +79,7 @@ Most of you won't feel the change of this types redefinition. However, there are
 
 ## Handebug 1.58
 
-The `BOOT CART` function now works with breakpoints. After your file `0` is loaded, Handebug establishes any enabled breakpoints before executing the code.
+The `BOOT CART` function now works with breakpoints. After your file `0` is loaded, *Handebug* establishes any enabled breakpoints before executing the code.
 
 The symbol table display now allows you to find a symbol by typing its name (case-insensitive) in the symbol name field. Aah, at last.
 

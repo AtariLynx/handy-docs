@@ -177,12 +177,12 @@ If you do something like this, you probably should edit the `6502:` assignment i
 
 All of the Handy-specific development tools and data files are kept in a logical directory named `HANDY:`. The normal Amiga boot process assigns `HANDY:` to an actual directory and adds it to the Amiga search path. After a normal boot, any of the development tools can be invoked from any directory just by entering the name of the program.
 
-The primary `HANDY:` development tools are detailed in the chapters """HandyAsm User's Guide""", [Handycraft User's Guide](./handycraft-users-guide.md), [Handebug User's Guide](./handebug-users-guide.md), and [HSFX User's Guide](./hsfx-users-guide.md). The software tools kept in `HANDY:` include:
+The primary `HANDY:` development tools are detailed in the chapters [[[HandyAsm User's Guide]]], [Handycraft User's Guide](./handycraft-users-guide.md), [Handebug User's Guide](./handebug-users-guide.md), and [HSFX User's Guide](./hsfx-users-guide.md). The software tools kept in `HANDY:` include:
 
 |||
 |---|---|
 |*HandyAsm*|*HandyAsm* is the Handy 65C02 cross-assembler.|
-|*Handycraft*|*Handycraft* is the Handy sprite tool, used for two main purposes: translating Amiga image graphics files into Handy image data files, and creating Sprite Control Block text files.
+|*Handycraft*|*Handycraft* is the Handy sprite tool, used for two main purposes: translating Amiga image graphics files into Handy image data files, and creating Sprite Control Block text files.|
 |*Handebug*|*Handebug* is the primary Handy development tool. It is a symbolic debugger and a state analyzer rolled into one.|
 |*HSFX*|*HSFX* is the real-time Handy sound effects editor.|
 |*Handypic*|The *Handypic* program accepts as input the name|
@@ -192,7 +192,7 @@ The system data files kept in HANDY: include:
 
 |||
 |---|---|
-|`monitor.bin`|`HANDY:monitor.bin` is the file that contains the Handy side of the debugging code. After you reset a Chip system you BOOTSTRAP the system using Handebug to download the monitor.bin file (as specified in the `xxx` field; note that the xxx field of the BOOTSTRAP requester should be left blank). Note that the Howard board system requires you to download no files at all; after you reset the Howard board, all you have to do is hit Handebug's NMI (F10) to establish communications.|
+|`monitor.bin`|`HANDY:monitor.bin` is the file that contains the Handy side of the debugging code. After you reset a Chip system you BOOTSTRAP the system using *Handebug* to download the monitor.bin file (as specified in the `xxx` field; note that the xxx field of the BOOTSTRAP requester should be left blank). Note that the Howard board system requires you to download no files at all; after you reset the Howard board, all you have to do is hit *Handebug*'s NMI (F10) to establish communications.|
 
 `HANDY:` must be assigned in the `s:startup-sequence.epyx` script file to refer to your Handy directory. The `s:startup-sequence.epyx` script file is executed during the normal Amiga boot. By default (when the Handy software is first installed on your Amiga) `HANDY:` is set to refer to the `SYS:Handy` directory. But, as with any Amiga assignment (such as `6502:`), you are free to change `HANDY:` to refer to any directory of your choosing. However, unlike the `6502:` assignment, you have little reason to change the `HANDY:` assignment so you'll probably just leave it alone.
 
@@ -205,7 +205,7 @@ assign HANDY: SYS:handy
 path HANDY: add
 ```
 
-The `HANDY:` directory may be updated with any system release. Any changes you make to this directory may be destroyed accidently by a later update. Because of this, except for the Handebug file `HANDY:HD.User.defs` (which you are allowed to modify) you should avoid adding to or otherwise modifying this directory.
+The `HANDY:` directory may be updated with any system release. Any changes you make to this directory may be destroyed accidently by a later update. Because of this, except for the *Handebug* file `HANDY:HD.User.defs` (which you are allowed to modify) you should avoid adding to or otherwise modifying this directory.
 
 ## CLI environment
 

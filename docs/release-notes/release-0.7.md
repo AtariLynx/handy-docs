@@ -40,7 +40,7 @@ There's a chance that you can paste 5-plane images into *Handycraft* now without
 
 Other bug fixes:
 
-- Gone, perhaps, is the mysterious scribbling into memory that many people saw as garbage in their imagery. Those who saw garbage in their imagery were the lucky ones, as Handycraft was always writing 16 bits of garbage somewhere, and if not in your imagery then guess where! This was probably the cause of mystery crashes that now might be exorcised.
+- Gone, perhaps, is the mysterious scribbling into memory that many people saw as garbage in their imagery. Those who saw garbage in their imagery were the lucky ones, as *Handycraft* was always writing 16 bits of garbage somewhere, and if not in your imagery then guess where! This was probably the cause of mystery crashes that now might be exorcised.
 - Used to be that if you asked to paste a non-existent file the system would go boom. Not no more, maybe.
 
 Next release:
@@ -61,7 +61,7 @@ Occasionally scrolling may pause for a fraction of a second when a page is being
 
 Symbol loading is so fast it's gonna blind you. Loading a 14.5K symbol file with 900 symbols takes about 5 seconds. Whoosh!
 
-In advance of booting off of real (sort of) Handy ROM, if either field of the `Bootstrap` requester is cleared then the bootstrap downloader will skip that portion of the procedure. This will be used to support getting the `bootload.bin` code from a pseudo cartridge rather than from Handebug.
+In advance of booting off of real (sort of) Handy ROM, if either field of the `Bootstrap` requester is cleared then the bootstrap downloader will skip that portion of the procedure. This will be used to support getting the `bootload.bin` code from a pseudo cartridge rather than from *Handebug*.
 
 Now you can select (double-click) the operand field of a disassembled instruction and the select value will be the result of evaluating the operand expression. If the operand is a simple memory reference, no problem. If the operand is something complex (e.g. `(table+2), Y`) the expression is evaluated before the value is stored. Note that if a register is part of the expression the contents of the register at the time of evaluation will be used in the calculation.
 

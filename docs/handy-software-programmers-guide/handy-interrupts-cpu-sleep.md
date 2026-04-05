@@ -86,7 +86,7 @@ When a software `BRK` is executed, the monitor warm-starts and the communication
 
 The monitor traps both software and hardware interrupts, of course, although the monitor doesn't use any of the hardware interrupts. Instead, if a hardware interrupt occurs the monitor vectors to a handler for that interrupt. This is accomplished by jumping indirect through a table of interrupt routine addresses. The name of the table is `IntTable` and is defined in the file `interrupt.i`. The first two bytes of this table will contain the address of the routine that will be called if interrupt `0` occurs. The next two bytes are for interrupt `1`, et cetera. When *Handebug* boots up, these vectors are set to point to a "safe" routine. Also, every time the *Handebug* `GO` command is selected the vectors are reset to the safe routine. A program that begins to execute can then set any of these vectors to point to an alternate routine, which routine will then be called if the interrupt occurs. If the program executes a `BRK` or hits a breakpoint, and then the programmer selects the *Handebug* `CONTINUE` command the vectors will remain as set by the programmer.
 
-NOTE: Currently (31 Aug '88) these vectors are reset every time you select the Handebug `CONTINUE` command, because `GO` isn't implemented yet! This means that you can't hit the NMI button and then hit `CONTINUE` and expect your interrupt code to be called.
+NOTE: Currently (31 Aug '88) these vectors are reset every time you select the *Handebug* `CONTINUE` command, because `GO` isn't implemented yet! This means that you can't hit the NMI button and then hit `CONTINUE` and expect your interrupt code to be called.
 
 You can cause an interrupt routine of your own to be called by following these steps:
 
