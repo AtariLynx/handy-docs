@@ -541,7 +541,7 @@ When a note is executed, the music driver gets the note frequency by using the p
 
 Here, as in the 6502, the CFW appears in Lo-Hi order.
 
-
+![CFW in Lo-Hi order](cfw-lo-hi-order.png)
 
 Wherever possible commands are accumulated into a single CFW, so often many of these bits will be set together. Each command bit, if set, tells the music driver to look for that command's parameter data following the CFW; if a command's bit is clear, the command's data are omitted. These data appear in the following order. In addition to being the order of parameters, this is the order of execution ... with the exception of the looping. Inner loop ends occur before outer loop ends; outer loop starts occur before inner loop starts; and both levels of loop ends occur before either level of start. In the voice data, the inner level of looping must always appear inside the outer level; the current SPL compiler ensures this.
 
