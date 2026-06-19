@@ -2,18 +2,18 @@
 
 This chapter describes the steps required to make Handy music. This chapter contains the following sections:
 
-- Introduction
-- Overview
-- *HMUSIC* Commands
-- Getting Only the Code You Need
-- Voice Instance Numbers
-- User Calls
-- Priorities of Voices and Sound Effects
-- Miscellaneous
-- Song Data Table Layout
-- Voice Data: Notes and Command Flag Words
-- Creating `ADSR` Using *HSFX*
-- Pitch and Data Table Formats
+- [Introduction](#introduction)
+- [Overview](#overview)
+- [*HMUSIC* Commands](#hmusic-commands)
+- [Getting Only the Code You Need](#getting-only-the-code-you-need)
+- [Voice Instance Numbers](#voice-instance-numbers)
+- [User Calls](#user-calls)
+- [Priorities of Voices and Sound Effects](#priorities-of-voices-and-sound-effects)
+- [Miscellaneous](#miscellaneous)
+- [Song Data Table Layout](#song-data-table-layout)
+- [Voice Data: Notes and Command Flag Words](#voice-data-notes-and-command-flag-words)
+- [Creating `ADSR` Using *HSFX*](#creating-adsr-using-hsfx)
+- [Pitch and Data Table Formats](#pitch-and-data-table-formats)
 
 ## Introduction
 
@@ -41,7 +41,7 @@ Any of your song's notes can be made to trigger a call to a `USER` subroutine in
 
 You add the music driver to your code by including 3 files: `6502:include/hmusic.i`, `6502:macros/hmusic.mac` and `6502:src/hmusic.src`.
 
-## HMUSIC commands
+## HMUSIC Commands
 
 `INITHMUSIC`
 
@@ -125,7 +125,7 @@ If you intend on using `STOPVOICE` to stop an individual voice rather than letti
 
 If you intend on using `SETUSER` to have the system do a `JSR` into your code whenever a `USER` directive is encountered in your song data, you must define `USERCALLS_USER`. Also, you may choose to define the constant `HMUSIC_USERCOUNT` to describe the maximum number of `USER` arguments that may be accumulated in one audio frame (by default `HMUSIC_USERCOUNT` is set to 4).
 
-## Voice instance numbers
+## Voice Instance Numbers
 
 Voices are assigned an instance number when they start playing, which instance number can be used later to stop the voice. When a song is started using `PLAYMUSIC` or `ADDMUSIC`, the voices that first play, if any, are assigned ascending instance numbers starting from `0`. Any voice successfully started later (with the `STARTVOICE` command) gets the next available instance number.
 
@@ -133,7 +133,7 @@ When you want to stop a voice from playing, you call `STOPVOICE` with the instan
 
 You can examine the instance numbers of the current voices by examining both the `VoiceInUse` and `VoiceInstance` arrays. Refer to the `LookupVoiceChannel` code in the [Miscellaneous](#miscellaneous) section below for an example of this.
 
-## User calls
+## User Calls
 
 Song data can have embedded `USER` directives at the start of any note. These `USER` directives can be used to inform the main program when a given note is about to play. This is a mechanism that was created to allow synchronization between music and game events, but which now stands as a general mechanism that can be used for a multitude of purposes.
 
@@ -151,7 +151,7 @@ Here's an example of how you might use the `USER` capability: let's say you have
 
 A final note: here's one that will be hard to remember, in fact will be forgotten and then will cause mystery bugs: if you use `SETUSER` to point into overlay code, you must call `CLEARUSER` before overlaying the code! Otherwise, the next `USER` call will vector into who knows what.
 
-## Priorities of voices and sound effects
+## Priorities of Voices and Sound Effects
 
 Each voice of music and each sound effect played by the system must be assigned a priority number when being added to the system. These priority numbers are used by the system to decide which voice / sound effect gets to play and which gets bumped when there's contention for the audio channels.
 
@@ -196,7 +196,7 @@ This routine tries to find the *HSFX* audio channel that's assigned to a voice w
 		RTS
 ```
 
-## Song data table layout
+## Song Data Table Layout
 
 Each song table is comprised of 3 parts: a set of voice offsets for the song's startup voices (the voices that will start playing at the time the song is added to the *HMUSIC* driver); the offset into the song's data block of the start of each voice's data; and the data for all voices and for the *HSFX* sound effects that the voice's can use.
 
@@ -216,7 +216,7 @@ The next block of data contains the voice/sound effects offsets. It starts with 
 
 The remainder of the song table contains the actual voice and sound effect data. This includes duration and pitch tables and the voicing data that's used to set up the `ADSR` of the voices.
 
-## Voice data: Notes and command flag words
+## Voice Data: Notes and Command Flag Words
 
 Song data consists of CFW's (command flag words) and notes. A rest, by the way, is just one kind of note. Notes are 8-bit values with the sign bit clear; bits `3` - `0` are the index into the current pitch table, and bits `6` - `4` are the index into the current duration table. Voice commands arrive in the 16-bit CFW which has the sign bit of the low-order byte set to designate that this data is a CFW, not a note. CFW's may be followed by one or more parameter data, as described in the table below, and these data may be words or bytes.
 
@@ -330,7 +330,7 @@ Somewhere buried deep in the *HMUSIC* driver's data are four of these 5-keyframe
 |Start Time|End of note. Set by `AGD`/`ASD` and note duration|
 |$0001|CFW signifying end of sound effect|
 
-## Pitch and data table formats
+## Pitch and Data Table Formats
 
 Pitch Tables consist of sixteen frequency words. A frequency word is made by shifting the multiplier value for the Handy hardware to the left by the value of the bit representing base period plus two. For example, a multiplier value of `$FD` with a base period of `64` (bit `6`) appears as `$FD00`. Pitch values of zero indicate a rest.
 
