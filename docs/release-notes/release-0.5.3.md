@@ -40,6 +40,6 @@ See the attached document, named `v1.39.changes.doc`, for details.
 
 Well, this is a pre-release of the audio editor. You can't do much with it yet unless you have ready access to Handy hardware, but it's fun to play with so here it comes.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 To use the new *Handycraft*, you should first set your stack to 6000 (or, better yet, 8000).

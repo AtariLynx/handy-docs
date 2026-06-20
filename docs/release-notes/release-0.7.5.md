@@ -10,7 +10,7 @@ This document describes the V0.7.5 release of Handy development environment. It 
 - [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
 
-## Project summary reminder
+## Project Summary Reminder
 
 Just to remind you, everyone is supposed to submit a summary of and schedule for what of your game needs completing. Be sure to make it sound as if you can get everything done by April Fools Day. Just kidding, be realistic.
 
@@ -59,6 +59,6 @@ Coming soon:
 - Loading *Handycraft* palette from a sprite's brush
 - Better Data Compression
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 Zip.

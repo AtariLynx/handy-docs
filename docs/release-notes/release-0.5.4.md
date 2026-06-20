@@ -72,6 +72,6 @@ Don't use conditional `ELSE`. If you do, your Amiga will blow up real good.
 
 The `.PC` directive works. The `.PD` doesn't seem to work. Could someone verify the truth about this?
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 Smile and be nice, and remember to give lots of treats to the tool creators.

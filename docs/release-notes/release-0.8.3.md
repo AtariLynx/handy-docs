@@ -26,7 +26,7 @@ Soon to be implemented will be a `PAUSED` timeout value, where, if you've set a 
 
 Auto-timeout adds 39 bytes to your code. It lives in the end-of-frame handler, with something like an average of 2.05 opcodes added to the handler execution. The timeout durations are based on 60 frames per second frame rate, so if you run your display at 50 the durations will be a bit longer and if you run at 75 they'll be a bit shorter. You don't need to be a `EOF_USER` to be an `AUTO_TIMEOUT_USER`.
 
-## New CART rules
+## New CART Rules
 
 In order to support the new security system algorithms, there's new rules regarding the cart file data you must provide for the system. Now there are 2 required files. File `1` contains what used to be in file `0`. File `0` now must contain a palette and a list of sprites. The palette will be loaded and then the sprites will be displayed by the cartridge boot code while the security check is being performed on the cart. After the cart passes the security check, the normal boot code, now addressed by file `1`, will be loaded and executed.
 
@@ -48,7 +48,7 @@ This release includes a new `BOOT CART` program, which program will display your
 
 You can freeze your sprite display by loading and executing `HANDY:cartgo.bin`.
 
-## New `Cartdefs.i` definitions
+## New `Cartdefs.i` Definitions
 
 There's 3 new `ROMDIR_FILE1_mumble` definitions. These can be found at the end of the file `6502:examples/cartdefs.i`. You should copy these verbatim into your own `cartdefs.i` file.
 
@@ -65,7 +65,7 @@ The value that you define will be copied to all of the hardware color registers.
 |$A3|Blue-grey|
 |$88|Medium grey|
 
-## Other 6502: changes
+## Other 6502: Changes
 
 Gone: the `LIGHT_OFF` definition and the ability to power down the tube.
 
@@ -99,7 +99,7 @@ Supports new `BOOT CART` program by waiting 10 seconds before timeout.
 
 There are some new hardware manual pages.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 Make your old file `0` be your new file `1`.
 

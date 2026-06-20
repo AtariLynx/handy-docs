@@ -36,6 +36,6 @@ Bug fixes:
 
 One bug fix: palettes output is corrected (blue-red was screwed up in last release).
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 The new assembler is now copied to both `HANDY:HandyAsm` and `HANDY:asm`. This means that with this release you start getting the new assembler as the default. If you want to assemble using the old assembler, first enter the CLI command `OldAsm`. After `OldAsm`, you can use NewAsm to start using the new assembler again.

@@ -49,6 +49,6 @@ Coming soon:
 - Loading *Handycraft* palette from a sprite's brush
 - Better `Deep Compression` (I think. Created by James, and I haven't understood it yet)
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 Zip.

@@ -3,7 +3,7 @@
 28-Jun-90  
 Confidential and Proprietary
 
-## Update notes
+## Update Notes
 
 This document contains the following sections:
 
@@ -28,19 +28,19 @@ Have fun,
   Redwood City, CA 94063  
   (415) 368-3200 x14
 
-## Contents of Handy release 1.3.3
+## Contents of Handy Release 1.3.3
 
 This release contains this documentation, an updated copy of the assembler documentation, and an Amiga disk (Quarterback v2.2 format).
 
 The Quarterback disk "Handy Release 1.3.3" contains an update for `Asm` (version 1.11) in the `Handy:` directory, updates for some files in the `6502:src` and `6502:macros` directories, and the files `Release_1.3.3` (a copy of this document) and `HandyAsm.doc` (the assembler documentation) in the top level directory.
 
-## Assembler changes
+## Assembler Changes
 
 The assembler had a bug if the user specified an output buffer size of larger than 72K (the default), and used the `.PC` or `.PD` directives. The symptom of the bug was that the files included with `.PC` or `.PD` would not be included sometimes. The bug has been corrected in version 1.11 of the assembler.
 
 In addition several typos were corrected in the documentation for the assembler. The most notable errors in the document were the omission of the description of the `.SY` (include symbol file) directive, and the `.PC` and `.PD` directives had their descriptions swapped.
 
-## `6502:` changes
+## `6502:` Changes
 
 `RAMCART_USER` support has been added to the system code. Macros have been added to enable reading and writing to the battery backed up RAM cartridge.
 
@@ -66,7 +66,7 @@ The second file (file `1`) is the initial game code. This file will be loaded an
 
 The title screen can be tested in development (assuming that the system has been updated with Handy Release 1.3a) by using the `CART LOAD` and `BOOT CART` functions of *Handebug*. The title screen should display for a few seconds before jumping to the game.
 
-## New RAM cartridge macros
+## New RAM Cartridge Macros
 
 If you are developing a game that uses the battery backed up RAM cartridge, define the switch `RAMCART_USER` in your source code before including the system includes.The macros `READRAMCART` and `WRITERAMCART` have been added to `cart.mac` to make it easier to access the RAM in the cartridge. 
 
@@ -114,7 +114,7 @@ The following descriptions of the macros are copied from the comments in the fil
 *  times, a subroutine that calls this macro should be considered
 ```
 
-## What to do to use this release
+## What to Do to Use This Release
 
 Run Quarterback, and restore all of the files to your hard disk. If you keep `6502` or `Handy` on separate hard disks or partitions, you will have to selectively restore them separately to appropriate disks.
 

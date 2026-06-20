@@ -39,6 +39,6 @@ To use the math you must do this:
 
 `6502:examples/testmath.src` reflects the above changes.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 If you have started using the math macros, you'll need to make the above changes.

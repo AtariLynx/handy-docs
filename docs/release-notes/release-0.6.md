@@ -58,7 +58,7 @@ By the way, I have analyzed the assembler and I found two major bottle-necks: pr
 
 *Handycraft* needs you to use the new display macros for the emulator to work correctly. Also, if you've been cheating at all with your sprites and display usage, it will probably need fixing now.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 1. Give me permission to install it on your machine.
 2. Make honest displays.

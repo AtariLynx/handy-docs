@@ -39,11 +39,11 @@ A compressed version of the monitor is released. This monitor lives starting at 
 
 By the way, in case you didn't know, the constant `MONITOR_RAM_RESERVED` has always been defined in the `monitor.i` file. This constant describes the first non-zpage RAM location reserved for use by the monitor. With this release, this constant is now set to `$F900`.
 
-## Handy Music soon
+## Handy Music Soon
 
 OK, beta versions of the *Midi-to-SPL* and the *SPL-to-Handy* compilers are now in the hands of the music guys, so after a few days of smoothing they'll have full compositions running on Handy hardware.
 
-## Coming this Friday
+## Coming This Friday
 
 There's a small but real chance that 3 things will be showing up on Friday: Mikey, *HandyASM* and *HandyROM* (the ROM builder).
 
@@ -51,7 +51,7 @@ Yes, that's right, the first Mikey chips might show up here as early as Friday. 
 
 The assembler is now inches away. We're using Steve's Jet Game source as a test suite, and *HandyASM* currently creates an identical binary image in about 1/5 the time. Meanwhile, Carl (the guy who's writing the assembler) is going to be setting up a BBS so we can post bug reports and get new *HandyASM*'s just by calling. I can't wait to get my hands on this puppy.
 
-## Good news bad news
+## Good News Bad News
 
 Hey! The good news is that the manufacturing costs of regular ROM's has gone down by about a buck, so that every normal production ROM we sell makes us an extra buck. Yeah!
 
@@ -59,6 +59,6 @@ The bad news is that the cost of the OTP ROM's (which you'll remember is what we
 
 By the way, don't forget that information about costs and pricing is strictly confidential. I tell you because I feel you deserve to know.
 
-## what you must do to start using this release
+## What You Must Do to Start Using This Release
 
 Zip.

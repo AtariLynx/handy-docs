@@ -33,7 +33,7 @@ FASTBUSMON FALSE ; default - no new howard board support
 FASTBUSMON TRUE  ; enables fast mode for when ROMs are changed
 ```
 
-## What to do to use thise release
+## What to Do to Use This Release
 
 If the two programs in your `Handy:` directory are called:
 

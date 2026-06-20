@@ -18,7 +18,7 @@ The `MUTE` macro acts as a toggle. You can detect whether music is currently mut
 
 The `INITHMUSIC` call causes music to become non-muted.
 
-## Other `6502:` changes
+## Other `6502:` Changes
 
 The `GETSWITCH` and `GETJOY` macros no longer perform the `AUTO_TIMEOUT` reset functions. This logic has been moved to the `TIMEOUT` macro defined in `display.src`. Also, the `SWITCHES`-reading logic has been corrected to test explicitly for the `PAUSE_SWITCH` bit.
 
@@ -102,6 +102,6 @@ Flat `.TF` symbol references are now allowed. Any `.TF` segment can refer to ano
 
 Note that the current listing generated with `+c` will generate bogus addresses when referencing external `.TF` symbols. It'll be fixed real soon now, honest, would we lie?
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 You must ask me to install it on your system. After the installation, the old `6502:` directory will be renamed to `SYS:6502.0.8` and the old `1.04` release of the assembler will be renamed to `asm.old`.

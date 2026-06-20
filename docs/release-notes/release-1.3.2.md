@@ -3,7 +3,7 @@
 17-May-90  
 Confidential and Proprietary
 
-## Update notes
+## Update Notes
 
 This document contains the following sections:
 
@@ -23,13 +23,13 @@ Have fun,
   Redwood City, CA 94063  
   (415) 368-3200 x14
 
-## Contents of Handy release 1.3.2
+## Contents of Handy Release 1.3.2
 
 This release contains this documentation, a copy of the assembler documentation, and an Amiga disk (Quarterback v2.2 format).
 
 The Quarterback disk "Handy Release 1.3.2" contains an update for `Asm` (version 1.10) in the `Handy:` directory, and the files `Release_1.3.2` (a copy of this document) and `HandyAsm.doc` (the assembler documentation) in the top level directory.
 
-## Assembler changes
+## Assembler Changes
 
 The following changes have been made to version 1.10 of the `HandyAsm` assembler:
 
@@ -39,7 +39,7 @@ The following changes have been made to version 1.10 of the `HandyAsm` assembler
 - The `.PAGE` command no longer ejects a page if arguments are passed to set the page height and (optionally) width.
 - The value of the label `ASM.VERSION` (pre-defined by the assembler) is now computed correctly. `ASM.VERSION` is defined to be the assembler version number * `256` + revision number. The current version (1.10) computes as `$10a`. Previously, `ASM.VERSION` was computed as the sum of the version and revision numbers multiplied by `256`.
 
-## What to do to use this release
+## What to Do to Use This Release
 
 Run Quarterback, and restore all of the files to your hard disk.
 

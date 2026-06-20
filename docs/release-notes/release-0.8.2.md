@@ -10,7 +10,7 @@ This document describes the V0.8.2 release of the Handy development environment.
 - [Handycraft 1.59](#handycraft-158)
 - [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
-## Chip systems
+## Chip Systems
 
 Everyone should read this section. If you don't have a *CHIP* system yet, you will have one soon.
 
@@ -24,7 +24,7 @@ To reset a chip system:
 
 Other than these things, chip systems ought to work the same as the breadboard systems.
 
-## Other `6502:` changes
+## Other `6502:` Changes
 
 There's a new `cart.src` which is one of the pieces required for game cartridge code to work correctly on the chip systems. Code that was assembled using the old `cart.src` may not work on chip systems.
 
@@ -38,6 +38,6 @@ It's now possible to sometimes have just *HSFX* code loaded into your program an
 
 When sprite data is written out, the files are no longer appended by `.END` and `;Eat me.`
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 This space intentionally left blank.

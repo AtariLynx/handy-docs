@@ -12,11 +12,11 @@ This document describes the V0.6.1 release of Handy development environment. It 
 - [Handebug V1.41](#handebug-v141)
 - [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
-## HandyFakers take note
+## HandyFakers Take Note
 
 HandyFakers notice: all changes in this document refer to your PseudoSuziness too, so make all changes in both of your codes.
 
-## Video recording
+## Video Recording
 
 Regarding video recording, the operative phrase is: record lots. Every chance you get, if the recorder is sitting idle then grab it and throw some imagery on it. Don't tape over anything that you've put down, even if you think early stuff is too junky to keep. 18 hours before we go to CES I'm going to take what tape we've got and edit up a master, and I want to start with as much material as possible, so record record record. If we start running short of videotape, give me some warning and I'll get us tapes until they come out our ears.
 
@@ -84,7 +84,7 @@ The long-term solution is to provide complete flexibility: three gadgets which l
 
 One quick but pleasant change to `Handebug:` when *Handebug* goes out of communication with the target machine, pages of the data display that are subsequently viewed will be refreshed with dashes rather than junk numbers. This little change will give you undeniable notice that the target is down, rather than leading you to believe that you're looking at valid data.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 You must translate you order for including files, especially as concerns `zpage.mac` and `syszpage.src`, as described under [6502: changes](#6502-changes) above.
 

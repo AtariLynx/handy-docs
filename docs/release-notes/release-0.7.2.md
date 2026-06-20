@@ -63,7 +63,7 @@ In case you haven't noticed, there's a new template with this release. Hope the 
 
 Finally released: the `HPRINT` text generation routines. This collection of code, macros and font data declarations allow you to get easy, low-cost text into your programs. See the [[[Programmer's Guide]]] chapter [[[HPRINT - HANDY PRINT ROUTINES]]] for a description, and see `6502:examples/testhprint.src` for an example of text at work.
 
-## Display fix?
+## Display Fix?
 
 There's a new bunch of minor changes to the display macros. All of it is transparent to you, whether you are an `EOF_USER`, `EOL_USER`, both or neither. The difference is that the display address hardware registers are now hit with new addresses during "vertical retrace" after EOF. This change just may cause the occasional screen glitches that we've seen to go away, as it's suspected that the glitches come from being halfway through updating the two-byte display address while the hardware is also accessing that two-byte display address, resulting in the occasional screenful of junk.
 
@@ -142,6 +142,6 @@ New `S:SavePrefs` script file, does what the old `S:sysconfig` did (which is to 
 
 New `HANDY:asm` release, 1.02, which handles `.CHARSET` files correctly.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 Nothing.

@@ -10,7 +10,7 @@ This document describes the V0.7.7 release of the Handy development environment.
 - [Handebug 1.48](#handebug-v148)
 - [What you must do to start using this release](#what-you-must-do-to-start-using-this-release)
 
-## Project summary reminder
+## Project Summary Reminder
 
 Just to remind you, everyone is supposed to submit a summary of and time projection for the components and details of your game that still need completing.
 
@@ -40,6 +40,6 @@ Bug fix:
 
 - Windows positioned near the right edge of the display no longer open wrapped around to the other side of the display
 
-## What You Must Do To Start Using This Release
+## What You Must Do to Start Using This Release
 
 Zip

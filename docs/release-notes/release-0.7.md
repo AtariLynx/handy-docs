@@ -95,7 +95,7 @@ Do you know that the hardware now provides a bit named `NO_COLLIDE` in `SPR_SYS`
 
 There's a new `S:Handebug.defs` file, which has the new and improved SCB structure definition. Your old one is saved to `S:Handebug.defs.old`.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 If you use any of this release, you must use all of this release. The new `monitor.bin` and *Handebug* need one another to work correctly, and *Handycraft* needs the new `monitor.bin` and `sprite.src`.
 

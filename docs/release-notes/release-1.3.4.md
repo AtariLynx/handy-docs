@@ -90,7 +90,7 @@ The following changes were made to files in the `6502:` directory:
 
 Chuck Sommerville's *TileRead* program is used to read a *DPaint* file and create an array of tile numbers for inclusion in your game source. The files `TileRead` (the executable program) , `TileRead.c` (C source) , `TileRead.doc` (Chuck's very brief documentation) and `Example.pic` (a sample *DPaint* picture) have been included in the `TileRead` directory.
 
-## What to do to use this release
+## What to Do to Use This Release
 
 Run *Quarterback*, and restore all of the files to your hard disk. If you keep `6502` or `Handy` on separate hard disks or partitions, you will have to selectively restore them separately to appropriate disks.
 

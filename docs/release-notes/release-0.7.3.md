@@ -56,6 +56,6 @@ Coming next with *Handycraft*:
 - Gadgets showing possible and current `Pixel Depth` selections, rather than a string gadget as it is now
 - Loading *Handycraft* palette from a sprite's brush
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 Zip

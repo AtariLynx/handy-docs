@@ -12,7 +12,7 @@ Stephen Jungels, Atari
 
 This release contains these release notes, the utility program *DFILT* in the `HANDY:`  directory, the new subdirectory `DigiDemo` in the `6502:Examples` directory, which contains the digitized sound module and example program, and the new subdirectory `DigiSounds` in the `6502:Examples` directory, which contains digital samples used by the demo.
 
-## What you need to do to use this release
+## What You Need to Do to Use This Release
 
 With *Quarterback*, restore the file `HANDY/Dfilt` to the hard disk which contains your `HANDY:` directory. Restore all the files in `6502` to the hard disk which contains your `6502:` directory. None of the files in this release are replacements for existing files, so there are no required changes to your source code if you are not a digitized sound user. If you are, read on.
 

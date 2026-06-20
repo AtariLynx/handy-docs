@@ -3,7 +3,7 @@
 27-Feb-90  
 Confidential and Proprietary
 
-## Update notes
+## Update Notes
 
 It's been a while since there has been an official release, so a number of things are being covered.
 
@@ -25,11 +25,11 @@ Have fun,
     Redwood City, CA 94063  
     (415) 368-3200 x14
 
-## Contents of Handy release 1.1
+## Contents of Handy Release 1.1
 
 Handy release 1.1 contains this documentation, an update disk in Quarterback v2.2 format, and a new keyboard template. The update disk contains a complete replacement for the `6502` directory, updates to `Howdebug`, `Mandebug`, `handebug.config` and `asmstrip` in the `Handy` directory, new programs `FIND` and `UNDELETE` in the `C2` directory, and a copy of this document `Release_1.1` in the root directory.
 
-## `6502:` changes
+## `6502:` Changes
 
 The `examples` directory has been completely redone. See the file `6502:examples/readme` for a description of the current files.
 
@@ -82,13 +82,13 @@ All files have had the old Apple IIe emulation system support removed. The emula
 
 A new file `6502:src/tunpack.src` has been added. This code is used to unpack ROM files packed with the `TOPACK` utility. Full documentation for this utility will come with a later release. Several programs have used this unpacker even though it hasn't been an official part of the system. The version with this release fixes a bug in the cartridge read routines.
 
-## `Handy:` changes
+## `Handy:` Changes
 
 New versions of `Howdebug` and `Mandebug` (Howard/Howdie and Mandy/Pinky versions of `Handebug`) are being included. `Howdebug` has a fix in it that in conjunction with a hardware fix prevents the Howard board from getting lost when an IRQ and NMI happen simultaneously. `Howdebug` and `Handebug` have some additional settings in `handy:handebug.config` file.  `PORTLOOP` and `TIMEOUT` are two constants used for timing during communication. On a standard Amiga 2000, they should be set to 50 and 1 respectively. On a 2500 with a 68020 accelerator board, they should be set to 200 and 1. Faster systems in the future with 68030s or 68040s or other hardware modifications may require some other settings. A new copy of `handebug.config` is included.
 
 The last release may have had a problem with `ASMSTRIP`, so a more recent version is being included.
 
-## What to do to use this release
+## What to Do to Use This Release
 
 - Change directory to the root of your hard disk   
   `cd DH0B:`	; (or whatever you call your hard disk)
@@ -121,7 +121,7 @@ Copy Handy:Mandebug Handy:Handebug
 
 Edit your source files to update them.  Remove (delete or comment out) any lines that include files that have been removed from `6502:`. The constants `HANDYIO` and `HANDYMATH` no longer need to be defined, and should be removed from your code. The `GETINPUT` macro no longer exists, and references to it should be removed from your code. The macro `HBRK` has been added. `HBRK` drops a `$13` byte into your code, which causes the Howard board to break immediately upon execution, but is otherwise a one-byte one-cycle `NOP` for the 65C02.
 
-## Amiga tips
+## Amiga Tips
 
 Wildcards on the Amiga are non-standard, and unfortunately also vary a little bit from program to program. Most Amiga programs accept `?` to stand for any single character, and `#?` to stand for any number of any characters.
 

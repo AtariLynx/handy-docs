@@ -15,7 +15,7 @@ The program *Midi2Spl* is included. Documentation is attached.
 
 People anticipating using 4 Mbit carts (512 Kbyte) should give me a call. We have a different cart addressing scheme in the works (using `AUDIN` as the high order address line) that will make cart loading much faster. This will be the topic of a future release note. 2 Mbit (256 Kbyte) users who are having trouble loading from the cart fast enough may also benefit from this, though rewriting parts of `CART.SRC` so that it loads page aligned blocks will help a lot. Again this may be part of a future release. Call me if you're desperate for it now.
 
-## What to do to use this release
+## What to Do to Use This Release
 
 Make a directory on your hard disk for *quarterback* to restore to, then run *quarterback* with full subdirectories. 
 

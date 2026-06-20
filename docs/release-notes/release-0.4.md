@@ -83,7 +83,7 @@ New macros, `HOFF8`, `VOFF8`, `HOFF16` and `VOFF16`, which you use to set the po
 
 The `testsprite.src` file in `6502:examples` now shows the new SCB layout, usage of the `HOFF8` and `VOFF8` macros, and the new technique required by the `SPRITES` and `PSPRITE` macros.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 Because this release will really break everyone's code, I won't install it on your system until you ask me to, so the first thing you must do to use this release is to ask me to install it on your system.
 

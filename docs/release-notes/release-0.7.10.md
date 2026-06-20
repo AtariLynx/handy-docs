@@ -52,14 +52,14 @@ Bug fix:
 
 - When you're display a symbolic disassembly and you edit a memory location that immediately follows a label, you no longer get multiple copies of the label for each nybble that you type.
 
-## New Print utility
+## New Print Utility
 
 I've installed a new print utility on the boot disk of the Amiga next to our printer. It's called `pr` and it prints bordered pages with page numbers and stuff. You invoke it from the CLI, specifying the name of the file or files that you want printed. The program also allows wild-cards. Enter `pr` with `nop` argument to see the options.
 
-## Handy Games Names reminder
+## Handy Games Names Reminder
 
 You have only until the end of tomorrow to make your Handy Games Names submissions.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 If you want to assemble using the new assembler, first enter the CLI command `NewAsm`. When you want to go back to the old assembler, enter `OldAsm`.

@@ -25,6 +25,6 @@ Also, a reminder: if you hit the `HELP` key you get a summary of all the *Handyc
 
 There's a new `display.src` and `display.mac`, which now support uploading the color palette only when one of the color-modification macros is used.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 Nada.

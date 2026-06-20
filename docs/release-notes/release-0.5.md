@@ -91,7 +91,7 @@ First release of *Handypic*, which can be found in `HANDY:`. Sorry, but I'm too 
 
 Next release of *Handypic* will allow you to cut up the picture into multiple rectangles, and will have an option to create a whole `display.src` program and also to create directly a `.bin` file for you. Real soon now.
 
-## Revisions to `6502:` directory
+## Revisions to `6502:` Directory
 
 New file, `6502:examples/video.src`, which you use in conjunction with *Handypic* to create a still picture on the Handy display from any old IFF ILBM file.
 
@@ -139,7 +139,7 @@ STA SPRSYS_RAM
 STA SPRSYS
 ```
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 First, this release breaks your software again so before I do anything you must give me permission to install the new release on your system. There are several minor changes I'd also like to make to your A2000, all of which should be benign. Please be sure in advance that I can make these changes to your system:
 

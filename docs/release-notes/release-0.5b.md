@@ -64,7 +64,7 @@ For a good time (and a lot of text) use the `D` command to debug the memory mana
 
 *Handycraft* supports the new mnemonic control keys that *Handebug* now accepts. In other words, you can type `Control-C` into *Handycraft* has the same effect as typing `Control-C` to *Handebug*.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 You must be prepared to enjoy yourself.
 

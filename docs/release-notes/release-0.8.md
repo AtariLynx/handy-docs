@@ -50,7 +50,7 @@ In this release of *CART*, there are these restrictions:
 - Don't even think about calling any of the *CART* routines directly. Go through the macros only. The routines are guaranteed to change around significantly over the next several sub-releases, so do yourself a favor and do the right thing.
 - The ability to preload the directory into RAM and then reference it there isn't supported yet, but it will be real soon now, honest.
 
-## Other `6502:` changes
+## Other `6502:` Changes
 
 New system macro and source files. You now must include the macro file `6502:macros/sys.mac` and the source code file `6502:src/sys.src`. Also, before anything else in your program, you should invoke the macro `INITSYS`. See any of the source files in `6502:examples` for an example of this.
 
@@ -84,7 +84,7 @@ The `IODIR` and `IODAT` hardware register bit definitions now have names that re
 
 In `6502:include/monitor.i`, the monitor's zpage-usage constant `MONITOR_ZP_RESERVED` is changed from `$F0` to `$F8`. This frees up 8 zpage bytes, which hopefully will hold you until we get up on the Howard boards.
 
-## Bug fixes:
+## Bug Fixes
 
 - Local labels should work correctly, and should generate error messages correctly. This is in answer to many different bug reports
 - The comments after the `RELOAD_` sprite definitions in `harddefs.i` now say "reload" rather than "reuse." Sorry, Chuck.
@@ -133,7 +133,7 @@ Currently, `LOAD CART` doesn't give you any options regarding where to load your
 
 New version number.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 You must support the new button redefinitions.
 

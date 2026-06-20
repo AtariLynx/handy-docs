@@ -18,7 +18,7 @@ REQUEST OF ALL: this stuff is being rammed out in a big hurry. Some of it might 
 
 WARNING TO ALL: when setting up your video display frame rate, use only the `SETDISP_60` macro. There's some idiosyncratic behavior in the display hardware if you ask for slower frame rates.
 
-## Joystick and button event recording
+## Joystick and Button Event Recording
 
 There's a new `TAPE_RECORDING` capability that we've created. A full description needs to be made for this stuff, but here's the short of it:
 

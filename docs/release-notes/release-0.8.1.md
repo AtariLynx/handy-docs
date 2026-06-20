@@ -22,7 +22,7 @@ The sprite engine needs to be set up once per game frame, when the first sprite 
 
 Note that there's no problem with making multiple `SPRITES` calls per frame, if your control flow is such that you're not sure which `SPRITES` call would be executed first.
 
-## Changing the tick duration of the audio clock
+## Changing the Tick Duration of the Audio Clock
 
 You might want the *HMUSIC* and *HSFX* to have a different audio frame rate (the rate at which the audio clock ticks) than the default one provided by the system. You can do this at any time, as long as you use safe techniques.
 
@@ -67,7 +67,7 @@ Refer to the hardware documentation for a discussion of the sorts of values that
 
 Also, by the way, `AUDIO_TIMER` can be redefined now. `AUDIO_TIMER` is the constant that's used by the system to describe which timer is used by the audio drivers. The default is timer `6`, but you can set it to any reasonable timer.
 
-## Other `6502:` changes
+## Other `6502:` Changes
 
 New `controls.src`, with new game button/switch definitions when running under emulation. First software contribution by Needle-san, ha ha, ha ha ha.
 
@@ -93,6 +93,6 @@ Bug Fix:
 
 - Emulator handles multiple `SPRITES` per display frame correctly.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 Zippo.

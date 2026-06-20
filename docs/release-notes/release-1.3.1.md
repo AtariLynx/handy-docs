@@ -50,7 +50,7 @@ The following changes were made to files in the `Handy:` directory:
 - `Handy:hsfxedit.bin`  
   Reassembled with new version of HSFX
 
-## What to do to use this release
+## What to Do to Use This Release
 
 Run Quarterback, and restore all of the files to your hard disk. If you keep `6502`, `Handy` or `Sound` on separate hard disks or partitions, you will have to selectively restore them separately to appropriate disks.
 

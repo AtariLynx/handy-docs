@@ -24,6 +24,6 @@ Bug fixes:
 - Branch range checking is fixed
 - Operand errors are now detected (no longer can you specify `BRA` without a destination)
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 If you want to assemble using the new assembler, first enter the CLI command `NewAsm`. When you want to go back to the old assembler, enter `OldAsm`.

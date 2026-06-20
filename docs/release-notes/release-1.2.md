@@ -3,7 +3,7 @@
 29-Mar-90  
 Confidential and Proprietary
 
-## Update notes
+## Update Notes
 
 This document contains the following sections:
 
@@ -25,13 +25,13 @@ Have fun,
   Redwood City, CA 94063  
   (415) 368-3200 x14
 
-## Contents of Handy release 1.2a
+## Contents of Handy Release 1.2a
 
 This release contains this documentation, an Amiga disk (Quarterback V2.2 format) and a new keyboard template (I sent out the wrong one last time).
 
 The Quarterback disk "Handy Release 1.2a" contains a complete replacement for the `6502:` directory, the new program `VAL` in the `C2:` directory, and the files `Release_1.1` and `Release_1.2` (documentation for last release and this release) in the top level directory.
 
-## `6502:` changes
+## `6502:` Changes
 
 New files have been added to the `6502:` directory for the Redeye (ComLynx) communication routines:
 
@@ -114,7 +114,7 @@ On the "game" screen, a number of colored arrowhead shapes fly out from the cent
 
 `FLIP` and `RESET` are supported in the example program.
 
-### Installation and use
+### Installation and Use
 
 To install Redeye, you need to include the following files in your code:
 
@@ -202,7 +202,7 @@ Incoming data is more complicated to deal with. Incoming data is accumulated in 
 are set negative when the appropriate frame data has been received. After the
 game code is through with the data from a player, it should reset the `PlayerFlag0` or `PlayerFlag1` value to positive to acknowledge receipt and use of the data. After the flag is reset, the Redeye code may immediately overwrite the data, so it can only be reset after the data is completely used. The `PlayerData0` and `PlayerData1` buffers are read-only and should not be modified by the game code. The array `PlayerDataSize` contains the size of the incoming messages (if `VAR_SIZE_DATA` is set). The routine `getinput` in `redeye_glue.src` shows an example of how to read and acknowledge data.
 
-### Quick installation
+### Quick Installation
 
 For those games that only want to pass around joystick information, the file `redeye_glue.src` in the `6502:examples` directory contains all of the interface code necessary to communicate with Redeye. The example program `testredeye.src` in `6502:examples` includes the sample glue code.
 
@@ -225,7 +225,7 @@ After logon, `NumberOfPlayers` is set to one less than the number of players con
 
 The glue code provided is just an example, but can be used directly by your code in its current state. Feel free to modify it, but make sure that you copy it out of the `6502:` directory first.
 
-### Reset and power-down timeout
+### Reset and Power-Down Timeout
 
 Game reset and Redeye bring up some interesting issues. For the sake of reliability and stability of the communication routines, it is best if units reset together. Redeye will screw up if two games in progress with two or more players are connected together, and this situation is easy to achieve if units can reset locally and then start a new game, while other units have not reset. In general if the circumstances that signal reset are noticed, then one more frame of communication should be allowed before resetting so that all units have a chance to notice the same conditions. The program `testredeye.src` checks for players pressing reset in the game loop `processplayers`, and if found, sets a bit in `restartflag`. After the next time the glue routine `getinput` is called (allowing a complete communication frame), the flag is checked to see if the game should reset. Another situation arises if one player has disconnected or lost power. Communication
 will go down, and if everyone has to wait for a frame of communication before reset can be handled, they cannot reset. In Testredeye the problem is solved by checking for local reset when waiting for incoming data, and if a local reset occurs, starting a timeout until deciding that communication is down and the system should be reset locally.
@@ -233,7 +233,7 @@ will go down, and if everyone has to wait for a frame of communication before re
 Lynx games should turn off after a period of inactivity. This is to both save batteries and to lengthen the lifetime of the system. The switch `AUTO_TIMEOUT_USER` enables some system code in the end of frame IRQ handler that checks for activity on the joystick, and if there is none for a long enough period of time, shuts off power to the system. Redeye games, however, have the potential for situations where one player is inactive while others are continuing on (he's completed a level early, died, or is just waiting
 for other players to catch up) and it would be very frustrating if his unit spontaneously shut off killing everyone's game. The example program solves this with the routine `checkinactivity` , which checks for activity on any unit and uses the system macro `RESET_TIMEOUT` to reset the timeout count. Games that don't pass joystick information may need more sophisticated checks.
 
-### Redeye limitations
+### Redeye Limitations
 
 The Lynx hardware can electrically support up to 18 units connected together. For a number of reasons, 16 seems like a natural software maximum for the number of players. If someone has a specific need for more than 16 players, let me know.
 
@@ -250,7 +250,7 @@ Receipt of the local system's messages must be handshaked in exactly the same wa
 
 Redeye provides synchronization to the game frame, but this is not enough synch for precisely timed events, such as two machines playing different voices of the same piece of music. Due to possible communication problems, the game frame when using Redeye is not guaranteed to happen at any particular rate. In practice, however, no problems have been observed.
 
-### Resource usage
+### Resource Usage
 
 Redeye uses the serial port (timer 4) and two more general purpose timers (timers 1 and 5) during logon. After logon, redeye shuts down all three timers' interrupts. During normal communication, if only one player is playing, the timers are not used. If more than one player, then the serial port (timer 4) and one more general purpose timer (timer 1) are used.
 
@@ -295,7 +295,7 @@ A technique found to be very useful in debugging "Gauntlet the Third Encounter" 
 
 Counters and random number generators should be initialized to a known state immediately following logon. Care should be taken to make sure that counters and random numbers do not change based on local or system specific reasons.
 
-## What to do to use this release
+## What to Do to Use This Release
 
 - Change directory to the root of your hard disk  
   `cd DH0B:` ; (or whatever you call your hard disk)

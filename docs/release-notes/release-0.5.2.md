@@ -36,7 +36,7 @@ Bug fixes:
 - When you download, chances are better that you won't soon crash
 - Strings are updated correctly by the structure editor, really
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 You don't have to do anything, just enjoy!
 
