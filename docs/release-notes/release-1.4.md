@@ -3,7 +3,7 @@
 15-Nov-90  
 Confidential and Proprietary
 
-## Update notes
+## Update Notes
 
 This is my first update note. It is mostly tying up loose ends and should not cause any grief. Feel free to call me at 415-368-3200 Craig Nelson @ Epyx
 

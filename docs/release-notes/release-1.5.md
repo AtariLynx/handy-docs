@@ -2,13 +2,13 @@
 
 10 Dec 90
 
-## Update notes
+## Update Notes
 
 This is my first release. As far as updating your code is concerned, you don't need to do anything to keep up to date with this release. The whole package is devoted to information and an example program for playing back digitized sound on the Lynx. In addition, since there hasn't been any sample code released for controlling stereo Lynxes, I have included code which does stereo panning of the digitized sounds played back in the example program. Have fun with it, and feel free to call me with questions or comments at (408)745-5071. I will also be checking the Atari BBS pretty regularly.
 
 Stephen Jungels, Atari
 
-## Contents of this release
+## Contents of This Release
 
 This release contains these release notes, the utility program *DFILT* in the `HANDY:`  directory, the new subdirectory `DigiDemo` in the `6502:Examples` directory, which contains the digitized sound module and example program, and the new subdirectory `DigiSounds` in the `6502:Examples` directory, which contains digital samples used by the demo.
 

@@ -29,7 +29,7 @@ You should do your recordings while in *Handycraft*'s expanded display mode. How
 - `C` to set your CHIP RAM to a much larger number than before
 - `x` to expand your display
 
-## `6502:` changes
+## `6502:` Changes
 
 New final honest works this time rule regarding zpage and file inclusion: after you include your J include files, and before you include any other files or declare any data or code, you should include `zpage.mac` and then `syszpage.src`, like so:
 

@@ -3,7 +3,7 @@
 04-May-90  
 Confidential and Proprietary
 
-## Update notes
+## Update Notes
 
 This document contains the following sections:
 
@@ -24,13 +24,13 @@ Have fun,
   Redwood City, CA 94063  
   (415) 368-3200 x14
 
-## Contents of Handy release 1.3.1
+## Contents of Handy Release 1.3.1
 
 This release contains this documentation and an Amiga disk (Quarterback V2.2 format).
 
 The Quarterback disk "Handy Release 1.3.1" contains the file `hsfx.src` in the `6502:src` directory, the files `cartload.bin` and `hsfxedit.bin` in the `Handy:` directory, the file `lxfast.bin` in the `Sound:` directory, and the file `Release_1.3.1` in the top level directory.
 
-## `6502:` changes
+## `6502:` Changes
 
 The HSFX driver has been modified to improve speaker "clicks" between notes or sound effects. If a sound being terminated was using the integrate mode of the hardware, the volume (DC bias) on the channel is returned to zero one volume increment each audio frame.
 
@@ -39,7 +39,7 @@ The following changes were made to files in the `6502:` directory:
 - `6502:src/hsfx.src`  
   See above note
 
-## `Handy:` changes
+## `Handy:` Changes
 
 The file `cartload.bin` (used by the `LOAD CART` command in the Mandy/Pinky version of *Handebug*) has been updated to support ROM emulation of larger than 128K carts.
 

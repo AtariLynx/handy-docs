@@ -35,7 +35,7 @@ Ultimately, you'll be able to get an input event recording even from real hardwa
 
 *Handycraft* and now supports the auto-recording stuff described above. See the document [[[Handy video tape recording procedures]]] for a description of how to tell *Handycraft* to do your bidding.
 
-## `6502:` changes
+## `6502:` Changes
 
 In `6502:examples`, `video.src`, `testsprite.src`, `testcontrols.src` and `testmath.src` now start with a `CLI` and `CLD` and `LDX #$FF` and `TXS`. If your code doesn't start with at least `CLI`, you ought to ask yourself why.
 
@@ -63,6 +63,6 @@ Just doing `x` (without `f` or `F`) ought to work just fine now.
 
 There are now two out-of-memory messages. `Out of Darn Memory` is the general one. `Out of Memory Manager CHIP RAM` is the message you get when the Memory Manager needs more CHIP RAM.
 
-## What you must do to start using this release
+## What You Must Do to Start Using This Release
 
 Work hard: 2.5 shopping days left until CES DROP DEAD.

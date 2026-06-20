@@ -10,7 +10,7 @@ This document describes the V0.6.2b bug-fix release of the Handy development env
 
 WARNING TO ALL: when setting up your video display frame rate, use only the `SETDISP_60` macro. There's some idiosyncratic behavior in the display hardware if you ask for slower frame rates.
 
-## `6502:` changes
+## `6502:` Changes
 
 Two bug fixes: all code in `control.src` now is wrapped within `#IFNDEF HANDYIO`; `tapedeck.mac` has a better description of the animation table entries.
 
