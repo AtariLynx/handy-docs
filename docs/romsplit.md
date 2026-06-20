@@ -1,4 +1,4 @@
-# ROMSPLIT program documentation
+# ROMSPLIT Program Documentation
 
 The program `ROMSPLIT` is used to split a 256K or 512K Lynx ROM file into 2 or 4 128K files that can be used to make EPROMs for use in Mandy/Pinky setups. To split a 256K file, just type:
 

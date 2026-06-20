@@ -1,4 +1,4 @@
-# 6502 Cross assembler notes
+# 6502 Cross Assembler Notes
 
 This section discusses the particulars of writing Handy 6502 assembly code.
 

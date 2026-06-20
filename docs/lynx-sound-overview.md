@@ -2,7 +2,7 @@
 
 This document is an overview for those who have had trouble seeing the forest for the trees. You should also read page 29 of the [[[Handy hardware specification]]] and the [[[Handy audio hardware overview]]] starting on page 35 of the [Handy software programmer's guide](./handy-software-programmers-guide/handy-software-programmers-guide.md) and notes. And of course [Handy appendix 2 hardware addresses](./appendices/appendix2-hardware-addresses.md) `FD20` through `FD50`.
 
-## 1. What in the world were we thinking when we designed the sound hardware?
+## 1. What in the World Were We Thinking When We Designed the Sound Hardware?
 
 The original design goals were that the circuits:
 
@@ -27,11 +27,11 @@ Next we gave the CPU direct access to the four 8 bit DACs. A running poly counte
 
 Finally there is a one pole RC filter in hardware on the output at about 4500 Hz. Future stereo versions anticipate a bass boost circuit.
 
-## 2. What in the world were we thinking when we designed the sound software?
+## 2. What in the World Were We Thinking When We Designed the Sound Software?
 
 We were thinking let's use existing Epyx sound tools wherever possible. SPL (Sound Programming Language) was designed by music people for music people, they liked it so we adopted it. Of course music people think music is the most important thing, and they insisted a 240 Hz. update rate was the minimum acceptable for sounds. Many programmers have gawked in disbelief at the size and cpu usage of the sound driver. Well, it all depends on your point of view. Programmers are of course free to write their own drivers to meet their own needs.
 
-## 3. That's great, but I still don't have a clue what sounds will come out of *HSFX*
+## 3. That's Great, but I Still Don't Have a Clue What Sounds Will Come Out of *HSFX*
 
 Ok Ok, here's some more detail. First you should bring up the `HSFX Edit` screen.
 
@@ -43,7 +43,7 @@ Key concept #2: "Frequency" isn't the frequency of the note, but rather the freq
 
 So, starting with the first box, the various options let you select a clocking rate in a straightforward binary manner. I don't really think anyone has a problem with this, if you do, you might as well stop reading since you won't have a prayer of understanding the ----
 
-## Polynomial counter!!!
+## Polynomial Counter!!!
 
 The shift register (shifter) with taps into an `EXOR` feeding back into the shifter together make up the polynomial counter. There is little intuitive about its operation, except that the farther to the left you select taps, the more random the sound can be. (not will be - can be)
 
@@ -61,7 +61,7 @@ In integrate mode, instead of sending the volume register directly to the DAC it
 
 The 3 interpolation choices in *HSFX* can now be understood. Interpolation of frequency will cause a glide from one note to the next. Interpolation of volume makes smooth transitions between loudness. And interpolation of feedback taps makes no sense at all. However it does make an interesting breaking glass sound characteristic of the Lynx. Hey, it was easy to throw it in the driver.
 
-## 4. Enough already, I'll write my own driver. I want to talk directly to Mikey.
+## 4. Enough Already, I'll Write My Own Driver. I Want to Talk Directly to Mikey.
 
 Fine by me let's just take a quick look at the hardware.
 
@@ -75,11 +75,11 @@ The feedback taps are set at `FD21` and bit 7 of `FD25`.
 
 Bit `5` in `FD25` controls integrate mode. `FD20` is the volume control. Remember in integrate mode the volume is added to a running total and sent to the DAC. The running total is kept in `FD22`. In normal mode `FD22` will contain volume or its 2's complement. Notice that you don't normally need to play with `FD22`, it just gets what it needs. If you want to store directly to the DAC then `FD22` is the place to do it. You'll probably want to shut off the audio timer before storing to `FD22`.
 
-## 5. Stereo, stereo where for art thou stereo.
+## 5. Stereo, Stereo Where for Art Thou Stereo.
 
 Originally Lynx was mono. After Mikey was working and ready to produce, it was decided to add simple stereo. The Howard boards were not yet finished, so we went ahead and implemented this stereo on them. This form of stereo was channel switching controlled by `FD50`. Later it was decided to add panning and attenuation registers `FD40` through `FD44`. Attached is a sheet detailing these registers to be added to your [[[Appendix 2 hardware addresses]]]. A plug in upgrade board for Howard boards was designed and is available from Atari. As of today 4/25/91 no stereo Lynx have been produced. In fact the potential existence of stereo is still confidential. Klax supports full stereo panning, and digitized sound. Xenophobe supports some amount of stereo, and maybe some other games do too - who can remember?
 
-## 6. As usual Craig, you've taken a difficult subject and made it elegantly simple
+## 6. As Usual Craig, You've Taken a Difficult Subject and Made It Elegantly Simple
 
 True, true. For the answers to more sound hardware questions you can leave messages for me on the Atari Sunnyvale BBS, or call me at Epyx 415-368-3200 Fax 415-369-2999. 
 

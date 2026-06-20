@@ -4,7 +4,7 @@ Atari Corporation
 Sunnyvale, California 
 94088-3427 (408) 745-2000
 
-# Diskette contents - Lynx development system
+# Diskette Contents - Lynx Development System
 
 ## Handy A2000 Boot Disk: 
 
@@ -14,7 +14,7 @@ Sunnyvale, California
 
 1 *Quarterback* V4.3 disk. A copy of the "boot partition" of the standard hard disk setup used in the development system. Does not contain the file devs/MountList, allowing the contents to be restored directly to a hard disk that has already been partitioned correctly ..
 
-## "Standard" system:
+## "Standard" System:
 
 6 *Quarterback* V4.3.disks. A complete copy of the "standard" development system at Epyx, with the most recently used copies of the development tools,
 

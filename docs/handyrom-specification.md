@@ -22,7 +22,7 @@ Note that an alternate output name can be specified using the `OUT` directive de
 
 The Handy game ROM is comprised of 256 pages, and each page is comprised of a fixed number of bytes. The size of the ROM is declared in the specifications file. The number of bytes per page is derived by dividing ROM size by 256.
 
-## ROM Directory structure
+## ROM Directory Structure
 
 There can be up to 256 files in a ROM, and therefore up to 256 file entries. You won't known until you've gone through all the specification files how many file entries there actually.
 

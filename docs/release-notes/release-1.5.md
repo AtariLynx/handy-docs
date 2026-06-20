@@ -1,4 +1,4 @@
-# HANDY release 1.5
+# HANDY Release 1.5
 
 10 Dec 90
 

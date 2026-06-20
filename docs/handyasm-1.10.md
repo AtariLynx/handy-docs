@@ -7,7 +7,7 @@ This document is proprietary and confidential.
 
 *HandyAsm* is a 65c02 cross assembler, designed to run on an Amiga computer, and used primarily for the development of software for the Lynx hand-held game system. It is assumed that the reader of this document is familiar with the 65c02 instruction set, addressing modes and mnemonics. *HandyAsm* is a one-pass assembler (for speed) with expression resolution at the end.
 
-## Running the assembler & command line options
+## Running the Assembler & Command Line Options
 
 From the CLI prompt, type:
 
@@ -43,7 +43,7 @@ Opcodes, pseudo-ops, directives and macro references all start in the opcode fie
 
 Opcode names, directive names, operators and special constructions (numeric constants, escape sequences, etc.) are not case sensitive. Label names, macro names, strings and character constants are case sensitive.
 
-## Opcode equivalents
+## Opcode Equivalents
 
 The following opcode equivalents are allowed:
 
@@ -72,7 +72,7 @@ Local labels are very similar to normal labels, but only have scope between two 
 
 > **Note**: The label names `A` and `a` are legal, but certain opcodes will use the accumulator addressing mode if either appear alone in the operand field.
 
-## Numeric expression syntax
+## Numeric Expression Syntax
 
 A constant can be either a numeric or character constant. Numeric constants are represented by a string of digits and are assumed to be decimal unless preceded by a base prefix character: dollar sign (`$`) for hex, at symbol (`@`) for octal, and percent sign (`%`) for binary. Character constants are a single character or escape sequence surrounded by either single quotes (`'`) or double quotes (`"`). If a character constant uses single quotes, its value is the ASCII value of the character. If the constant uses double quotes, its value is determined by taking the ASCII value as an index to look up in the `CharSet` table (see the section at the end on strings and the `.CSET` directive) .
 
@@ -135,7 +135,7 @@ A `cexpr` (constant expression) is a numeric expression that must be resolved im
 
 Filenames can include full path names, but cannot contain any imbedded whitespace characters.
 
-## Conditional assembly and macros
+## Conditional Assembly and Macros
 
 Macro and conditional assembly directives can either start in the first column, or can start in the in the opcode field. Conditional assembly directives and macro definitions and macro references can be nested.
 
@@ -193,7 +193,7 @@ To avoid expansion of question mark constructs, the question mark can be precede
 
 > **Note**: The assembler will not complain if a macro is given a name that is the same as an opcode or that starts with a period. However, macros with these names will not be able to be invoked.
 
-## Strings and the .CSET directive
+## Strings and the .CSET Directive
 
 Strings and character constants are translated one character at a time into byte values. Escape codes of two or more characters are provided to allow entry of characters which are difficult to get into a source file. Escape sequences all start with a backslash (`\`) character. The available scape sequences are:
 

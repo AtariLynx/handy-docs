@@ -1,4 +1,4 @@
-# Howard problems
+# Howard Problems
 
 People seem to be having troubles with their Howard boards. If you are also, here are some solutions to common problems:
 

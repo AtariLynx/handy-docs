@@ -1,4 +1,4 @@
-# HPRINT - HANDY print routines
+# HPRINT - HANDY Print Routines
 
 This chapter describes the *HPRINT* Handy print routines and supporting macros. This chapter contains the following sections:
 
@@ -11,7 +11,7 @@ This chapter describes the *HPRINT* Handy print routines and supporting macros. 
 - [Example `HPRINT` usage](#example-hprint-usage)
 - [Plea for feedback](#plea-for-feedback)
 
-## Introduction and overview
+## Introduction and Overview
 
 The *HPRINT* text routines translate text strings into imagery data. You can then display the text imagery as a normal Handy sprite.
 
@@ -70,7 +70,7 @@ If you want to define your own font, here's the rules:
   - `name_nix#.src`
 - In each of the font files, you must declare the characters upside down, one byte per line, and the same number of lines for each character
 
-## Sprite data buffer
+## Sprite Data Buffer
 
 You can create as many *HPRINT* data buffers as you like.
 
@@ -90,7 +90,7 @@ TextBuffer 	.DS { BUF_WIDTH*FONT_HEIGHT } + 1
 			INITLIT TextBuffer, BUF_WIDTH
 ```
 
-## ASCII .CHARSET remapping
+## ASCII .CHARSET Remapping
 
 In order to pack all the characters of a font as tightly together as possible, the *HPRINT* routines take advantage of the assembler's ability to remap ASCII characters by invoking the assembler's `.CHARSET` directive. The `SPACE` character (normally ASCII `$20`) is always mapped to value `$01`, and the font data for `SPACE` is always the first in the array. If you've asked for digits (normally ASCII `$30` through `$39`), these get translated to values `$02` through `$0B` and become the next 10 characters in the font array. Then, when you declare ASCII data the assembler uses the `.CHARSET` translation table and generates remapped data. The *HPRINT* routine then uses these translated data values as absolute indices, thereby resulting in RAM and execution time savings.
 
@@ -110,7 +110,7 @@ If you specify fewer characters than fit in the buffer, `HPRINT` will fill to th
 
 No error checking is done, so if you overwrite the end of your buffer then you get some kind of mean garbage.
 
-## Summary of *HPRINT* macros
+## Summary of *HPRINT* Macros
 
 `INITLIT BufferAddress, LineByteCount`  
 This macro initializes a buffer to look like a completely-literal sprite data block. Note that the buffer is expected to be `LineByteCount"FONT_HEIGHT+1` bytes long.
@@ -124,7 +124,7 @@ This macro includes the elements of the named font according to your `FONT_TYPE`
 `HPRINT TextAddress, TextAddressIndirection, BufferAddress`  
 This is the macro that actually renders the text into the buffer. `TextAddressIndirection` should be zero if `TextAddress` points to a text string, one if `TextAddress` points to a variable that points to a text string. The text string should be null-terminated. `BufferAddress` should point to the completely-literal data buffer that will receive the imagery.
 
-## Example `HPRINT` usage
+## Example `HPRINT` Usage
 
 Coming soon. For now, refer to `6502:examples/testhprint.src`
 
@@ -140,7 +140,7 @@ Also, here's a checklist:
 - invoke the `HPR_CHARSET` macro somewhere near the beginning of your source code
 - use `HPRINT` to create text imagery in your buffer
 
-## Plea for feedback
+## Plea for Feedback
 
 I made some arbitrary decisions. If you would rather have things work differently, let me know. For instance:
 

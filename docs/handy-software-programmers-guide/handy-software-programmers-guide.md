@@ -1,10 +1,10 @@
-# Handy software programmer's guide and notes
+# Handy Software Programmer's Guide and Notes
 
 Robert J. Mical  
 Created: 26 January 1988  
 Last modification: 1 June 1989
 
-### Table of contents
+### Table of Contents
 
 |||
 |---|---|

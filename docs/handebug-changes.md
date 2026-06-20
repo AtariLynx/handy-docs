@@ -250,7 +250,7 @@ V1.45: In a last ditch attempt to break everybody's system, this version of *Han
 
 Don't worry. Be happy.
 
-## Changes for Handebug V1.46
+## Changes for Handebug v1.46
 
 Prior to this release the structure editor would not update display fields that had been modified during a `Single Step` operation. This is now fixed, so that *Handebug* will re-read memory being displayed in the structure display after `Single Stepping`.
 

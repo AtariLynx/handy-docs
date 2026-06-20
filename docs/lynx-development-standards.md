@@ -1,4 +1,4 @@
-# Lynx development standards
+# Lynx Development Standards
 
 To insure consistency and to maintain the high quality of Lynx software, the following standards must be adhered to by all developers:
 
@@ -28,7 +28,7 @@ To insure consistency and to maintain the high quality of Lynx software, the fol
 
 13. The "End of Game" logic should work as follows. When the game ends, there will probably be a Congrats screen, or a Game Over screen if the player didn't make it to the end, or a high score screen. No matter what screen is shown, we highly recommend you construct the end of the game so that the user cannot bypass any "Congrats Text" or High Score screen accidentally. Please make the program work such that a `Restart` is required to return to the title screen from the end screen, OR a timer which ignores all input for a period of time (except timer wouldn't restrict `Restart`) so that the user does not miss any valuable information.
 
-## Comlynx information
+## Comlynx Information
 
 Use the supplied Comlynx (Redeye) code. It works very well. It is bullet proof, quick, efficient and even flexible. If for some reason you feel you must write your own, it must work exactly the same way as ours in all circumstances or it will be rejected. Here are some rules your Comlynx code must follow:
 

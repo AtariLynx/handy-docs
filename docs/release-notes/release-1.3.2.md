@@ -1,4 +1,4 @@
-# HANDY release 1.3.2
+# HANDY Release 1.3.2
 
 17-May-90  
 Confidential and Proprietary

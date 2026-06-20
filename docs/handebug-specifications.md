@@ -1,4 +1,4 @@
-# Handebug specifications document
+# Handebug Specifications Document
 
 Created: 28 June 1988
 Last Modified: 28 June 1988
@@ -8,7 +8,7 @@ Authors :
 
 This is a very early draft of this document. The intention of this document is to provide a specifications guide for the creation of the *Handebug* program. Ultimately, this document will evolve into a *Handebug* User's Guide.
 
-## Large display box
+## Large Display Box
 
 - hex dump 
 - trace dump 
@@ -36,7 +36,7 @@ To add a breakpoint, use the mouse to point to an open slot and start typing.
 To delete a breakpoint, point at it with the mouse and hit the DEL key.  
 To delete all breakpoints, select the Delete All Breakpoints gadget.
 
-## Memory monitor (symbolic)
+## Memory Monitor (Symbolic)
 
 - List of currently defined memory locations (symbolic)
 - Add an address
@@ -51,7 +51,7 @@ To delete all memory monitor locations, select the `Delete All Memory Monitors` 
 
 Editing the data field of a watched location changes the memory in the machine being debugged.
 
-## Download/upload
+## Download/Upload
 
 Selecting the `Download` or `Upload` gadgets causes the `fileio` requester to be presented for the user to name a file.
 
@@ -61,7 +61,7 @@ With `Upload`, a second requester appears which allows the user to specify:
 - Address range to be uploaded
 - Format for upload (hex dump, assembler-compatible listing, binary)
 
-## Bus monitor
+## Bus Monitor
 
 - Set the data `AND` value (mask)
 - Set the lower and upper bound of data
@@ -73,11 +73,11 @@ When the conditions of the bus monitor are satisfied, the system starts to recor
 
 The fields of the bus monitor need to be edittable in the usual way.
 
-## Set trace deferred stop count
+## Set Trace Deferred Stop Count
 
 The `Trace Deferred Stop Count` is used to describe how many memory accesses should be allowed to take place after the bus monitor triggers a trace.
 
-## Single-step
+## Single-Step
 
 - Gadget to execute next instruction
 - Gadget to execute next instruction flat (don't descend into subroutines)
@@ -88,7 +88,7 @@ Once in the debugger, we want to be able to execute the next instruction without
 
 We should use `XText` to get fast updates.
 
-## Text/numeric entry
+## Text/Numeric Entry
 
 The user should be able to move the pointer over any number that is edittable and then simply type to edit that number. This would involve tracking the mouse with a cursor whenever the mouse is over any field that can be editted.
 
@@ -100,13 +100,13 @@ Wherever possible the symbolic names should be used for memory locations. This i
 
 As much as possible actions should be undo-able. This would require some fancy programming, but if we think about undo-ability from the very beginning then it won't be so bad.
 
-## Cursor keys
+## Cursor Keys
 
 Use of the cursor keys should allow the user to move the cursor left, right, up and down from the current position in the current text box. Shift-cursor keys are used to move the cursor a large jump. Shift-left cursor and shift-right cursor should move the cursor to the leftmost and rightmost position of the current text box respectively. The shift-up and shift-down cursor strokes should behave in different ways depending on the current text box: in the large display box, shift-cursor up and down displays either the previous or the next page respectively; in text boxes that don't scroll, the shift-cursor up and down should move the cursor to the top-left and bottom-right corners of the box.
 
 ## Fill
 Selecting `Fill` will cause a requestor to appear that will have fields for fill value, modifier, and range (upper and lower addresses). The modifier is a signed value that will be added to the fill value.
 
-## Current field box (?)
+## Current Field Box (?)
 
 When the mouse is positioned over a valid field, if the left button is pressed then the contents of the field are copied into this box. If the mouse is positioned over an empty field (i.e., breakpoint or memory watch) and the left mouse button is pressed then the contents of this box are transfered to the new field. The field is edittable (`sp`) and must be a valid symbol or address expression. Data may be entered manually. If the return key is pressed while the mouse is over this box the display will position to that address. The box may also be used to specify the starting address for the `GO` button.

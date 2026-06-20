@@ -1,4 +1,4 @@
-# Positioning of the HANDY display and sprites
+# Positioning of the HANDY Display and Sprites
 
 This section describes Handy display and sprite positioning. It contains the following sections:
 
@@ -20,7 +20,7 @@ The Handy display map and sprite positioning is designed to be both convenient t
 
 The Handy display world is an imaginary area that's 512 pixels across by 512 lines tall. You position your sprites relative to the top-left corner of the display world, and you position your Handy display window somewhere within the display world. As you will come to understand, the display worid doesn't really exist other than as a concept and a numeric base used by the sprite hardware.
 
-## HANDY display window
+## HANDY Display Window
 
 The Handy display window is the actual RAM display buffer which is written to by the sprite hardware and read from by the display hardware. The RAM consists of 160 pixels by 102 lines, which in 4-bit display mode is `80` bytes * `120` = `8160` bytes total for the display, and in 2-bit display mode is `40` bytes * `120` lines = `4080` bytes total.
 
@@ -30,7 +30,7 @@ The positioning of the display window within the world is just an imaginary thin
 
 When you ask for your sprites to be rendered, only the sprites that appear within display window will actually be rendered.
 
-## Sprite positioning in the world and the window
+## Sprite Positioning in the World and the Window
 
 ![Sprite positioning](positioning-handy-display-sprites-2.png)
 
@@ -51,7 +51,7 @@ There are two techniques you can use for positioning a sprite, which techniques 
 
 By the way, if you define an entire display world full of sprites, you could show all the sprites simply by panning the display window around within the world. None of the sprite definitions would need to be changed to do this. You need only change `HOFF` and `VOFF` to move the window.
 
-## 8-bit Positioning
+## 8-Bit Positioning
 
 Handy sprites have 9 significant bits horizontally and vertically for positioning, which is great, but we recognize that programmers would rather work with 8-bit rather than 16-bit quantities whenever possible, especially with something done as often as setting the positions of sprites. Fortunately, the Handy display window technique makes it very easy to position sprites with reasonably good off-window clipping using just 8 bits for positioning. Consider the following illustration.
 
@@ -67,7 +67,7 @@ Note that with either technique, in fact with any of the ways you might try to p
 
 Remember that though you may be using only 8 of the 16 position bits of each axis, nevertheless all 16 bits are still used by the hardware so you must initialize the upper 8 bits to zero.
 
-## 16-bit Positioning
+## 16-Bit Positioning
 
 If you are going to use all 9 significant bits when positioning your sprites, you should, for the sake of upward compatibility with future versions of the hardware, make sure that you write complete 16-bit values to the position fields of your sprite control block.
 
@@ -75,7 +75,7 @@ If you want to give your sprite a negative coordinate then you should set all th
 
 Note that it would be ultra-naughty to use the unused position bits for some purpose of your own. This includes you, Peter. Don't goof around! Remember, Uncle Daddy is watching.
 
-## Hardware sprite imagery clipping techniques
+## Hardware Sprite Imagery Clipping Techniques
 
 When a sprite is being drawn, Handy hardware provides two levels of hardware clipping. The clipping effects programmers are allowed to enjoy include:
 

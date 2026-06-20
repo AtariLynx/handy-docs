@@ -1,4 +1,4 @@
-# Sound environment specification manual 
+# Sound Environment Specification Manual 
 
 This document describes the 'Sound Environment File'. This file is always called `sounds.env` and must be in the same directory as all the source files for the sound module. The environment file tells various programs including the SPL compiler, the audition program and Spectrum about the sound module you are trying to create. These tools only search the current directory for a `sounds.env`, so they must be invoked in the directory with the environment file and all the list files and sound source files.
 

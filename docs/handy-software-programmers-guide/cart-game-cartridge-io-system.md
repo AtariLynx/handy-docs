@@ -1,4 +1,4 @@
-# CART - Game cartridge I/O system
+# CART - Game Cartridge I/O System
 
 This chapter describes the tools and techniques known collectively as *CART* that are used to interact with the Handy game cartridge. The chapter is comprised of the following sections:
 
@@ -17,7 +17,7 @@ This chapter describes the tools and techniques known collectively as *CART* tha
 
 A special note to today's Handy programmers: your humble author invented whole bunches of this stuff without input from you and whilst under considerable pressure. Because of this, it's highly probable that the *CART* logic and algorithms will evolve a good deal during the next several weeks, both as we discover better ways to accomplish the tasks tackled by this system and when the Howard board comes together. So please don't hate me if I require you to endure several revisions of these ideas. And remember, this stuff will get better only if you make your opinions known. So read it, use it, and then shout about anything you don't like and anything that could be better!
 
-## Introduction and overview
+## Introduction and Overview
 
 In order to provide Handy programmers with the capability to access game cartridge data quickly and easily, *CART* - the Handy game cartridge system software - was created. The goal of *CART* is to allow convenient access to the Handy cartridge through the use of powerful support tools and a complete body of cartridge I/O commands. The *CART* system gives programmers both high-level "file system" access to the data and low-level direct access to the cartridge hardware.
 
@@ -37,7 +37,7 @@ After you've created your ROM image, you use *Handebug* to download it to your d
 
 Taking a brief look at the hardware, we find that the Handy game cartridge is quite a knobby beast, requiring strange handling techniques which have evolved over time to keep up with the many versions of the Handy storage medium. Fortunately, the cumbersome details of getting the hardware to obey are all hidden from the programmer beneath the tools and the *CART* system software. If you want to know more about how the software interacts with the hardware, refer to the [Physical properties of the game cartridge](#physical-properties-of-the-game-cartridge) section of this chapter. For complete details about game cartridge I/O, refer to the manuals """Handy Specification""" and """Handy Appendix 2: Hardware Addresses."""
 
-## CART File system
+## CART File System
 
 *CART* provides you with several levels of control when reading and writing your cartridge data, starting with low-level I/O control at the bottom and working up through increasing levels of sophistication to the top, the simple yet powerful *CART* file system.
 
@@ -91,7 +91,7 @@ The very first file of your ROM, file `0`, must refer to special boot code. Refe
 
 Finally, a note on using the file system with game cartridge RAM. As noted above, the storage medium of the Handy cartridge can be either ROM or part ROM part RAM. Typically a cartridge will contain only ROM, but it doesn't matter one way or the other. The *CART* file system is designed to handle both.
 
-## If you don't want to use the *CART* file system
+## If You Don't Want to Use the *CART* File System
 
 Some of you will prefer to work with the game cartridge in your own way rather than using the *CART* file system. You are free to use the game cartridge any way you like, of course, but there is one limitation: your ROM image must start with data that looks like a file entry that points to the cold-start boot code described in the [File `0` boot code](#file-0-boot-code) section below. In the absence of this file entry, your program will not boot.
 
@@ -99,7 +99,7 @@ When compiling your ROM image, the way to specify that you don't want a director
 
 Note that even if you declare `ROM_NODIR` *HandyROM* "enforces" the requirement of having at least one file entry in your ROM file by automatically creating the entry and using as boot code the first file included by your HandyROM Specifications File (described below in the ```HANDYROM OVERVIEW``` section). Also, *Handebug* depends on the presence of that first file entry when doing a cold-start boot. But other than that, *HandyROM* and *Handebug* and the lower-level *CART* routines work just fine in the absence of the *CART* file system.
 
-## File `0` boot code
+## File `0` Boot Code
 
 Here's a very important fact about the Handy cold-start procedure and its use of the *CART* file system: for your cartridge to be loadable by the Handy boot software you must provide a special boot file containing some sort of power-up (cold-start) code. At time of cold-start, the Handy system will load and execute this special boot code file. The boot code must meet certain requirements:
 
@@ -110,7 +110,7 @@ Here's a very important fact about the Handy cold-start procedure and its use of
 
 Notice that though the phrase "boot code" is being used, the code doesn't actually have to be boot code but rather can be any code at all, including your main program code if you like. [Well, you can't exactly do just anything you like. Remember that the Handy Software Quality Assurance Board imposes certain restrictions on and reserves the right of final say over what your code can do at time of cold-start].
 
-## *CART* commands
+## *CART* Commands
 
 The *CART* system software provides commands (mostly in the form of macros) that can be used to perform I/O with the Handy game cartridge.
 
@@ -191,7 +191,7 @@ This command restores the cartridge status to its state before either of the abo
 
 There's no reason to not be both a `GETDIR_USER` and an `GETDIRFAST_USER`. It depends on your application. In RAM-tight configurations of your code you might want the slower, smaller `GETDIR` code in memory, but if in other levels of the same program you have RAM to spare you can choose to have the faster, fatter `GETDIRFAST` code around.
 
-## Cart memory variables
+## Cart Memory Variables
 
 This is the list of memory variables set and maintained by *CART*. You may read the values of these variables, but it's not safe to write to them:
 
@@ -201,7 +201,7 @@ This is the list of memory variables set and maintained by *CART*. You may read 
 |`CartOffsetLow`,`High`|Contains the 16-bit offset into the page of the current cartridge address.|
 |`CartDirectory`|Contains a copy of the currently opened file (files are opened using the `OPENFILE` command).<br>Note that `CartDirectory` is defined only if `ROM_NODIR` isn't defined.|
 
-## Example usage of *CART* commands
+## Example Usage of *CART* Commands
 
 Here's a demonstration of the code required to load a file's data into RAM using the easiest of all techniques:
 
@@ -226,7 +226,7 @@ If you know the cart address of your file directories, you can omit the `GETDIR`
 	READFILE			; Load the file's data into RAM
 ```
 
-## HandyROM overview
+## HandyROM Overview
 
 The *HandyROM* program merges your assembly output files into one large binary file, a Handy game cartridge ROM image. *HandyROM* also can create for you a *CART* file system directory structure at the beginning of the ROM.
 
@@ -271,7 +271,7 @@ You are strongly encouraged to create a common file, typically named `cartdefs.i
 
 Following the definitions of the directory structure and all of the required constants come the *HandyROM* directives. The *HandyROM* directives control the inclusion of data into the ROM and the construction of the file system directory. Data is included using either the `BIN` or `RAW` directive. *CART* files are declared using the `FILE` directive. Other *HandyROM* directives allow you to control the layout of your data and the values of your file's directory entry. All of these are specified in the [Summary of HandyROM constants and directives](#summary-of-handyrom-constants-and-directives) section of this chapter.
 
-## Summary of HandyROM constants and directives
+## Summary of HandyROM Constants and Directives
 
 These constants must be defined before the first `FILE` directive is encountered:
 
@@ -327,7 +327,7 @@ After all of the above, you can start using the following *HandyROM* directives.
 |`RAMDEST n`|This *CART* file system directive follows a `FILE` directive, refers to the current file. You can specify where a particular file should be loaded in RAM. You can use `RAMDEST` only if you've defined `ROMDIR_DEST` to specify that your directory will contain RAM destination information. You must use `RAMDEST` to declare the RAM destination for a raw binary file. You may use `RAMDEST` to change the RAM destination of an assembler output file.|
 |`RAW pathname`|This directive causes a raw binary file to be included in the ROM. This data will the next sequential data of the current ROM image|
 
-## Debugging cartridge-based programs
+## Debugging Cartridge-Based Programs
 
 In the beginning of your game development, you will probably start by creating simple versions of your program, downloading these into RAM and executing them immediately. You probably won't write to the cartridge or otherwise using the file system until near the end of the development cycle, and even then you will probably go through a lengthy transition period during which you'll use a software switch to select either a RAM or a cartridge destination for your binary.
 
@@ -338,7 +338,7 @@ When you get to the point where you're interested in trying to create and execut
 Downloading to the game cartridge is completely non-destructive to Handy RAM, which means that you're able to stop your code from executing, download new data to the game cartridge, and then continue. Also, with a single keystroke you can have `Handebug` load and execute a special "boot code" file. The entire procedure for loading your current ROM image into the cartridge and then initiating a cold-start boot requires only 3 keystrokes.
 
 
-## Roadmap to a complete example
+## Roadmap to a Complete Example
 
 This section provides a roadmap to the complete example of using the *CART* system that can be found in the `6502:examples` directory. The files of interest in that directory are:
 
@@ -348,7 +348,7 @@ This section provides a roadmap to the complete example of using the *CART* syst
 
 When you assemble the `testcart.src` file using the command `asm testcart` several binary files are created: the initial file plus an additional file for each `.TF` directive contained in `testcart.src`. These binary files comprise the data of the CART file system files that are created when you build the ROM image file `testcart.rom` using the command `handyrom testcart.hsf`. The ROM image file `testcart.rom` is downloaded to your development system's pseudo-game cartridge using the *Handebug* `LOAD CART` command. After your program is loaded into the cartridge, you can cold-start boot the program using the Handebug `BOOT CART` command.
 
-## Physical properties of the game cartridge
+## Physical Properties of the Game Cartridge
 
 The game cartridge has 2 ports, with independent storage attached to the ports. The storage on port 0 must be ROM, but the storage on port 1 can be either ROM or battery-powered RAM. Each port's maximum storage capacity is 1 megabyte, which means that 2-megabyte cartridges are possible if each port has a 1M part. The minimum capacity of a port is 256 bytes. Because the ports are independent, different sizes of storage medium can be attached to the two ports, allowing odd-sized cartridges (96K, 160K, 192K for instance) to be created.
 

@@ -210,13 +210,13 @@ VAL .EQU { 10 }
 
 He advises us to have a look through our code and purge unneeded `{` / `}` pairs (such as the above) wherever possible. That is, *if* we want faster assemblies.
 
-## Known bugs:
+## Known Bugs
 
 - `#ELSE` doesn't seem to be working yet (not that anyone will notice)
 - `.CSET` isn't working correctly, which will cause `HPRINT` users to get junk text
 - the `??` macro operator is flaky when being used to create a label
 
-## Not implemented yet:
+## Not Implemented Yet
 
 - the `.TF` (for `Target File`) directive
 - using macro arguments by value rather than by text during macro expansion

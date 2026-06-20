@@ -1,4 +1,4 @@
-# HMUSIC - the Handy music driver
+# HMUSIC - The Handy Music Driver
 
 This chapter describes the steps required to make Handy music. This chapter contains the following sections:
 
@@ -103,7 +103,7 @@ This command provides a level of music control which is not required for the sim
 
 These commands provide a level of music control not required for the simple playing of a song, so the source code that supports the commands isn't included in your assembly unless you explicitly declare that you want it. You make this declaration by defining the constant `USERCALLS_USER`. Refer to the section [Getting only the code you need](#getting-only-the-code-you-need) in this chapter for more details.
 
-## Getting only the code you need
+## Getting Only the Code You Need
 
 The *HMUSIC* system consists of standard commands which everyone uses, and more esoteric features, such as the ability to start individual voices of music, which you might not have any use for. It doesn't make sense for the system to include source code to support features you won't be using. So a mechanism is provided by which you can identify the *HMUSIC* functions that you won't be using, the code for which then will be excluded from your assembly. It's possible to cut the size of *HMUSIC* by a few hundred bytes if all you want is simply to play a song.
 
@@ -153,9 +153,9 @@ A final note: here's one that will be hard to remember, in fact will be forgotte
 
 ## Priorities of Voices and Sound Effects
 
-Each voice of music and each sound effect played by the system must be assigned a priority number when being added to the system. These priority numbers are used by the system to decide which voice / sound effect gets to play and which gets bumped when there's contention for the audio channels.
+Each voice of music and each sound effect played by the system must be assigned a priority number when being added to the system. These priority numbers are used by the system to decide which voice/sound effect gets to play and which gets bumped when there's contention for the audio channels.
 
-It's easy for the *HMUSIC* and *HSFX* drivers to get confused if more than one voice / sound effect has the same priority. The safest way to avoid problems is to have each voice of music and each sound effect have a unique priority. There's lots of numbers to play with, so this shouldn't be too hard to accomplish, and it guarantees no collision in the *HMUSIC* and *HSFX* drivers.
+It's easy for the *HMUSIC* and *HSFX* drivers to get confused if more than one voice/sound effect has the same priority. The safest way to avoid problems is to have each voice of music and each sound effect have a unique priority. There's lots of numbers to play with, so this shouldn't be too hard to accomplish, and it guarantees no collision in the *HMUSIC* and *HSFX* drivers.
 
 Note that it's alright for you to launch the same sound effect more than once with the same priority; the problems start when you have different sound effects with the same priority.
 
@@ -264,7 +264,7 @@ Here is the data layout of the Command Flag Word:
 - `End Of Music`  
   No Parameters. This signals the end of the current voice of music. If this voice/track was started via a `Gosub Sound Job`, control is returned to the caller; otherwise the current voice is freed.
 
-## Creating ADSR using HSFX
+## Creating ADSR Using HSFX
 
 ADSR is what the sound of music is all about.
 

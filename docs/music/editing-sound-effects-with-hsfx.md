@@ -1,4 +1,4 @@
-# Editing Sound Effects With HSFX
+# Editing Sound Effects with HSFX
 
 Chris Grigg  
 
@@ -21,13 +21,13 @@ This quickie document is intended for Lynx sound artists and programmers who nee
 
 You're now ready to edit sfx.
 
-## Editing Sfx
+## Editing SFX
 
 This is an acquired skill. The Lynx audio hardware is limited, and it takes persistance to craft a really good sound effect. This is because the link between changes in some parameters and the resulting changes in sound frequently confounds intuition. A good place to start is with the `Music & Six Examples Disk`. Load some sfx, change them, take them apart, etc.
 
 Some combinations of shifter and feedback settings can cause the hardware to emit no net sound. Don't be discouraged if this happens, just manually undo or press on until it starts making sound again.
 
-## General guidelines:
+## General Guidelines
 
 - For noise, interpolate the shifter feedback register. The more different the starting and ending settings, the whiter the noise spectrum.
 - For more high-frequency overtones, use a higher bandwidth in the shifter. For example, `101010101010` is buzzier than `111111111110`.

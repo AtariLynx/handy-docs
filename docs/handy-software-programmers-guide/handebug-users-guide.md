@@ -1,4 +1,4 @@
-# Handebug user's guide
+# Handebug User's Guide
 
 This section presents a user's guide to the *Handebug* program.
 

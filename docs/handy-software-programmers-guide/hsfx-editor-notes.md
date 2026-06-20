@@ -66,7 +66,7 @@ The `Key Frame Editor` display has three edit areas:
 
 - Halfway down the right-hand side is the control section. Here the user can decide to play the current sound effect, return to the main menu, or undo the last operation.
 
-### Hardware analogue
+### Hardware Analogue
 
 The hardware analogue has three areas where the user can control the settings of the audio hardware. These three areas correspond to the three components of Handy audio. The first area allows the user to specify the base frequency for the sound. The second area provides control gadgets for the audio polynomial sequencer. The third area allows control over the sound effect's volume and integration.
 

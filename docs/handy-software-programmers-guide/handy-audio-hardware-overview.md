@@ -1,4 +1,4 @@
-# Handy audio hardware overview
+# Handy Audio Hardware Overview
 
 INCLUDE EXAMPLES someday real soon now.
 
@@ -8,7 +8,7 @@ This information of this chapter is geared toward the sound creator and the audi
 
 Some of the descriptions in this chapter are intended for novice sound programmers; the patience of advanced programmers is requested during these passages.
 
-## Introduction to audio and the Handy audio system
+## Introduction to Audio and the Handy Audio System
 
 ![audio-hardware-overview-1](audio-hardware-overview-1.png)
 
@@ -84,11 +84,11 @@ On the other hand, when the Wave Shape Selector's integration bit is set the Vol
 
 The integration accumulator, you might notice, can float all over the place, and often you won't know where it is at a given instant. The hardware guys assure us that this is OK, that the current value of the accumulator can be ignored because the significance of the Volume Control output is not in the level of the output but in the change of the level. When the output is constant, regardless of the level, no sound will be made. Also, the accumulator clips when it "hits up against the stops" and therefore is constantly justifying itself. As shown in the above illustration, adding a value to an accumulator that's already at the maximum positive value leaves it at the max positive value, rather than causing it to wrap around to a negative value. Subtracting from that accumulator then decreases the output value appropriately. This means that the output wave tends to have the correct shape, although not necessarily centered around zero. See the illustration above for a picture of this logic in action. Note that after clipping, the desired waveform is created indeed although the waveform is offset from the zero position.
 
-## Mixer, Analog stuff, External Volume Control and Speaker
+## Mixer, Analog Stuff, External Volume Control and Speaker
 
 The programmer's ability to affect the audio system ends at the mouth of the mixer. The Mixer accepts the output from each of the four channel's Volume Control components, and, as you might guess, mixes the signals together into a single digital signal. This signal is passed along to the Analog Stuff, which converts the digital signal into analog and then shoots that along to the External Volume Control. There, the user is given final say in the volume level. Finally, the signal makes it to the speaker where the aforementioned compression wave is created, which ripples across the fabric of time-space to beat against the eardrums of all good children. The end.
 
-## Turning a channel on and off
+## Turning a Channel On and Off
 
 There are two ways to stop an audio timer from running. The first stops the timer immediately, the second lets the timer count down and generate a tick one last time before stopping.
 

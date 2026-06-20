@@ -1,4 +1,4 @@
-# Handy interrupts and CPU sleep
+# Handy Interrupts and CPU Sleep
 
 This document describes the Handy interrupts and CPU Sleep capability. It contains the following sections:
 
@@ -6,7 +6,7 @@ This document describes the Handy interrupts and CPU Sleep capability. It contai
 - [CPU Sleep](#cpu-sleep)
 - [Using Interrupts with *Handebug*](#using-interrupts-with-handebug)
 
-## Handy interrupts
+## Handy Interrupts
 
 When a hardware interrupt occurs or the CPU executes a `BRK` instruction, the software routine pointed to by the `BREAK` vector is called after the processor status byte and the return address are pushed on the stack. The `Interrupt Disable` status flag is set before interrupt code begins executing, which means that unless we clear the flag within our interrupt code we won't be interrupted by a hardware interrupt until we execute an `RTI` instruction (except of course for `NMI`, which overrides everything).
 
@@ -78,7 +78,7 @@ WaitForSuzyDone
 	BNE WaitForSuzyDone
 ```
 
-## Using interrupts with Handebug
+## Using Interrupts with Handebug
 
 The *Handebug* monitor (which is the part of *Handebug* that lives in the 6502) controls hardware and software interrupts.
 

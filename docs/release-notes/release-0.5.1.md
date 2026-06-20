@@ -1,4 +1,4 @@
-# HANDY release 0.5.1 
+# HANDY Release 0.5.1 
 
 16 November 1988  
 Confidential and Proprietary

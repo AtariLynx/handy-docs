@@ -1,4 +1,4 @@
-# Handy software development overview
+# Handy Software Development Overview
 
 This section presents an overview of the Handy software development environment. The subsections found below are:
 
@@ -19,7 +19,7 @@ So instead, the universe and all in it are required to endure yet another new ru
 
 Long live Lynx. Long live Handy.
 
-## System philosophy - our gift to you
+## System Philosophy - Our Gift to You
 
 In the beginning, from the beginning ...
 
@@ -35,7 +35,7 @@ All of the software support and powerful features of the hardware are presented 
 
 By taking full advantage of all that our system provides, the programmer should find that most of the hardest programming tasks are rendered trivial. This will leave the programmer with much spare time, which time can be devoted to improving game quality. This is our grandest intent. This is our gift to you. We sure hope you use it.
 
-## Development environment overview
+## Development Environment Overview
 
 This section presents a broad-brush overview of the development environment by describing the individual components of the environment. These components are presented below, in these subsections:
 
@@ -75,7 +75,7 @@ Other than these functions, normal debugging operations cannot be performed thro
 
 The minimum hardware development configuration is a Howard/Howdy connected to an A2000, an A2500, or an A1000. Additional Howard/Howdy and Pinky/Mandy systems can be added to the environment either by linking them by switchbox to the one Amiga or by acquiring additional Amigas.
 
-### System software
+### System Software
 
 To support and simplify the development effort we provide you with files that define a vast assortment of system macros, definitions, drivers and utility routines. Included in this collection are items that range from the obvious such as the hardware register definitions to code as complicated as the music driver and the text-rendering routines.
 
@@ -91,7 +91,7 @@ Also, if you use our stuff then it will be much, much easier for us to support y
 
 Finally, perhaps most importantly, with many programmers learning and exploring the system code we are sure to discover better ways to accomplish the system goals. In fact, this has already been the case: programmer feedback often has lead to extensive increases in code quality and decreases in code size. And these improvements, when reported to the Handy development support group, ultimately are made available to all developers in the Handy community. Meanwhile, with each enhancement the support code becomes increasingly compact and efficient, evolving continually into ever more powerful, highly-tuned system software.
 
-### Software tools
+### Software Tools
 
 The development environment includes a healthy number of software tools. A few of the tools are generic - "text editor" and "paint program," for instance - but the majority of the software tools were created specifically to provide support during the many aspects of Handy software development.
 
@@ -123,7 +123,7 @@ There are many Handy development documents. The primary ones include:
 - """Handy Hardware Specification
 - """Handy Appendix 2: Hardware Addresses
 
-## Where things are on the Amiga
+## Where Things Are on the Amiga
 
 |||
 |---|---|
@@ -207,7 +207,7 @@ path HANDY: add
 
 The `HANDY:` directory may be updated with any system release. Any changes you make to this directory may be destroyed accidently by a later update. Because of this, except for the *Handebug* file `HANDY:HD.User.defs` (which you are allowed to modify) you should avoid adding to or otherwise modifying this directory.
 
-## CLI environment
+## CLI Environment
 
 You probably know that script files are in a logical directory assigned with the name `S:` and if you didn't know when this sentence started you know now.
 

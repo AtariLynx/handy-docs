@@ -1,4 +1,4 @@
-# Handebug documentation
+# Handebug Documentation
 
 Caveat: Just because it's documented doesn't mean it works that way.  
 Date Distributed: 04/02/1990
@@ -19,7 +19,7 @@ Almost all fields can also be edited via the keyboard. Data can only be entered 
 
 The mouse can also be used to transfer data from one field to another. Double-clicking on a displayed value with the `LEFT` mouse button will usually copy that value to an internal paste buffer and temporarily display the selected value at the top of the display. Clicking on a field with the `RIGHT` mouse button will usually cause the value in the internal paste buffer to be deposited into that field, with any corresponding changes sent to the Lynx. A few fields don't respond to one or both of these actions.
 
-## Getting started
+## Getting Started
 
 *Handebug* can only be run from the CLI. To load *Handebug*, type `Handebug` or `Run Handebug` at the CLI prompt. Either method will work, although the second one is recommended since it will run the debugger as a background CLI task, leaving the CLI free to do other things. If you don't `Run` it, the CLI will be tied up executing *Handebug*, forcing you to open yet another CLI window to do other things, like editing or assembling files, and windows require screen (CHIP) memory which is at a premium when *Handycraft* is performing Suzy emulation. In general, the fewer windows open the better.
 
@@ -29,13 +29,13 @@ Once the display is up, *Handebug* attempts to communicate with the Howard board
 
 If *Handebug* doesn't run there are a few things you can check. To initially load, *Handebug* requires about 40K of CHIP memory and about 400K of additional memory. If there is not sufficient memory it will just quit. Once it is running you can shut down the custom screen and recover all but about 4K of the CHIP memory. Also, *Handebug* needs the parallel port. The current Amiga printer drivers hang onto the port, even if you aren't printing. Once you've used (or tried to use) the printer the port is tied up forever. To get around this you must reboot the Amiga.
 
-## Handebug files
+## Handebug Files
 
 Each time *Handebug* is loaded it looks for and reads a file called `Handy:Handebug.config`. This file contains initial default settings for most of the options available in *Handebug*. It is possible to save the current state of *Handebug* in this file. If this file doesn't exist it may be created by saving the current settings via the `Shift-F6` key. This will cause the file to be created with every setting established. The current settings can be reset to their default states at any time, also via `Shift-F6`.
 
 Also read when *Handebug* starts up is a file called `Handy:Handebug.defs`. This file contains the structure definitions used with the Structure Display feature. The current structure definitions can be redefined at any time via the `Shift-F7` key.
 
-## Booting Handy (Non-Howard board users only)
+## Booting Handy (Non-Howard Board Users Only)
 
 Before *Handebug* will communicate in any meaningful way with Lynx, Lynx must be bootstrapped with a communications "Monitor Program". This program communicates with *Handebug* using an established communications protocol. There are several versions of this code, each designed to work with a specific hardware configuration. Before attempting to bootstrap you should make sure that you have set up the correct version.
 
@@ -49,7 +49,7 @@ At this point, select the `OK!` gadget. *Handebug* will read the bootstrap code 
 
 If you really screwed up the file names, or if you just decide you don't really want to bootstrap (maybe you got here by accident), select the `Cancel` gadget and the operation will be canceled. The path and file names will also be restored to the state they were in when you originally selected Bootstrap.
 
-## Primary command summary
+## Primary Command Summary
 
 |Gadget|Key||
 |---|---|---|
@@ -84,7 +84,7 @@ If you really screwed up the file names, or if you just decide you don't really 
 ||`Ctrl-Q`|Quit *Handebug* (immediately)|
 |[Rom]|`Ctrl-R`|Switch the main display to `Lynx ROM`|
 
-## Handebug display
+## Handebug Display
 
 *Handebug* initially creates a display on a custom screen, which seperates it from the `Workbench` and other screens. This has the benefit of not cluttering up the `Workbench` display, which will probably be cluttered enough with your own windows for editing, assembling, or whatever. Unfortunately, this also requires an additional 32K of precious CHIP ram. If the display isn't needed, this can be recovered by "hiding *Handebug*", as described later.
 
@@ -213,7 +213,7 @@ All fields except `TEXT` and `STRUCT` can be edited. `STRUCT` fields are special
 
 Structure number `1` is a Sprite Control Block. Its definition may be used as an example for creating your own definitions.
 
-## Downloading and uploading files
+## Downloading and Uploading Files
 
 Downloading data to the Lynx is a breeze. First, select the `Download` gadget or press the corresponding function key. This will bring up the `Download File` requestor. From this requestor you may select the file to download by selecting names or gadgets or typing names and/or paths.
 
@@ -237,7 +237,7 @@ Data from the Lynx memory may also be uploaded in a variety of formats. When the
 
 Formatted binary data is similar to an assembler output file and is compatible with any program that processes assembler output. Formatted binary upload files may be downloaded just as assembler output files. Unformatted binary is exactly that; just raw binary data. Formatted ASCII is saved in the form of an assembler `.SRC` file, allowing it to be modified and reassembled. Unformatted ASCII is saved in the form of a HEX dump of memory.
 
-## Running (and stopping) a program
+## Running (and Stopping) a Program
 
 The whole purpose of *Handebug* is to allow debugging of programs written for and running on Lynx. You write a program, assemble it, download it, now you need to start it running.
 
@@ -261,7 +261,7 @@ Similar to breakpoints, yet totally different, is the `Bus Monitor`. The `Bus Mo
 
 Finally, the rudest (and most effective) method of interrupting a program is via the `F10` function key, which causes an NMI (Non-Maskable Interrupt). The NMI will stop Lynx in its tracks, no matter what it's doing (hopefully). Generally this is most useful if the program's execution has escaped and gone to the land of no return.
 
-## Fill memory
+## Fill Memory
 
 *Handebug* can be used to initialize Lynx RAM to a single byte value. The `Fill Memory` requester allows you to specify a starting address, the number of bytes to fill, and a fill value. All entries are expected to be in HEX. The requester is a standard Amiga requester, and therefore does not work the same as the other fields in *Handebug*. You cannot select values from these fields or paste values into these fields with the mouse. Also, data entry into these fields is **inserted**, not **replaced**. Therefore, if there is already data in the fields you must delete the old characters before entering the new ones.
 
@@ -275,7 +275,7 @@ Care must be taken to not overwite some areas. On Howard board systems the last 
 
 Most of the basic *Handebug* features are still available through this window. This window allows keyboard operation of the basic command set. File requesters that are required to upload or download data will appear on the `WorkBench` screen. Commands that are an integral part of the display, like switching the display mode, will have no effect. However, it is still possible to interrupt the Lynx via an NMI, download a file, and begin execution. Of course, the small `Handebug` window must be the active window when you attempt this.
 
-## The BUS Monitor (Howard board users only)
+## The Bus Monitor (Howard Board Users Only)
 
 *Handebug* is the primary interface to the Howard board, a sophisticated hardware support environment for Lynx development. The Howard board contains ROM emulation, trace RAM, and four channels of extremely flexible bus monitor circuitry.
 

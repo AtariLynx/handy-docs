@@ -1,8 +1,8 @@
-# Creating a Handy display
+# Creating a Handy Display
 
 This chapter describes the steps required to create a Handy display, with the primary emphasis on the system macros and support code that you should use. All aspects of creating a display are covered, from initializing the display hardware and color palette to rendering sprites, double-buffering, waiting for end-of-frame, and more. The chapter ends with a summary of all of the system's display macros and a few examples of their usage.
 
-## Introduction and overview
+## Introduction and Overview
 
 To create a normal Handy display using sprites, you must:
 
@@ -22,7 +22,7 @@ The Handy display macros take care of all the details of the above steps for you
 
 The sprite rendering and display creation macros can be found in the files `6502:macros/sprite.mac` and `6502:macros/display.mac`. Supporting source code can be found in the files `6502:src/sprite.src` and `6502:src/display.src`. If you are going to use sprites you must include both `sprite.mac` and `sprite.src`. If you are going to create displays you must include both `display.mac` and `display.src`.
 
-## Initializing the display hardware and system software
+## Initializing the Display Hardware and System Software
 
 To initialize the Handy display, you use the `SETDISP` macro or one of its big brothers `SETDISP_60`, `SETDISP_50`, `SETDISP_30`, `SETDISP_25`, `SETDISP_20`, `SETDISP_15` and `SETDISP_10`. These macros, known collectively as the set-display macros, do everything to make a display except actually turn the display on (you do that later after everything is all set up; see [Turning The Display On And Off](#turning-the-display-on-and-off) for details).
 
@@ -44,25 +44,25 @@ If you're going to use hardware collision detection, you need to perform some in
 
 If you're going to be double-buffering, you need to perform some initialization. See the section [Setting Up For Double-Buffering](#setting-up-for-double-buffering) for details.
 
-## Setting the display colors
+## Setting the Display Colors
 
 The `RGB16`, `RGB16_1` and `RGB_AXY` macros set up the Handy color palette for you. `RGB16` and `RGB16_I` allow you to set up all 16 colors at once, while `RGB_AXY` lets you change the values of a single color.
 
 The set-color macros take effect immediately, so if you call them at any time other than during horizontal or vertical retrace you may get display glitches. So, you may ask, how do you wait until horizontal or vertical retrace? See the section [Waiting For End Of Frame And End Of Line](#waiting-for-end-of-frame-and-end-of-line) for details.
 
-## Setting the display's horizontal and vertical offsets
+## Setting the Display's Horizontal and Vertical Offsets
 
 The `HOFF8`, `VOFF8`, `HOFF16` and `VOFF16` macros, known collectively as the set-offset macros, set up the horizontal and vertical offsets of the Handy display window within the imaginary display world. The values that you might choose to provide to these macros is discussed in detail in the """Positioning of the Handy display and sprites""" chapter of this manual.
 
 The set-offset macros take effect immediately. The very next time you render sprites the new offsets will be used.
 
-## Setting up for hardware collisions
+## Setting Up for Hardware Collisions
 
 If you're going to use hardware collision detection, you should use the macro `SETCOLL`, which expects two arguments: the address of a collision buffer that's `DISPLAY_BUFSIZE` big and aligned on a 4-byte boundary, and the offset into your Sprite Control Blocks of the byte that will act as your collision depository. Refer to the """Handy Hardware Specification""" manual for complete details about the meaning of these two values.
 
 Note that the offset to the sprite's collision depository is a 16-bit signed value, which allows you to specify a negative offset to your depository if you want your collision values to be written to memory locations that precede your SCB's. This is a very reasonable thing to do if you have SCB's that vary in size, which they do when you take advantage of the sprite engine's reuse-data ability.
 
-## Declaring a display buffer
+## Declaring a Display Buffer
 
 Handy hardware requires that your display buffers start on an address whose binary representation ends with two bits of zero (any address which is an even multiple of 4) and must be `DISPLAY_BUFSIZE` (currently `8160`, or `$1FE0`) bytes long. You can force your buffer to be aligned on an address that's a multiple of 4 by using the assembler's `.ALIGN` directive, like this:
 
@@ -76,7 +76,7 @@ Bufferl	.DS DISPLAY_BUFSIZE
 Buffer2 .DS DISPLAY_BUFSIZE
 ```
 
-## Rendering sprites
+## Rendering Sprites
 
 Before the first time you render sprites, you must invoke the `INITSUZY` macro. You should do this only once, during the initialization sequence of your program.
 
@@ -90,7 +90,7 @@ You don't need to be double-buffering to use the `SPRITES` macro. However, if yo
 
 The `INITSUZY` and `SPRITES` macros set up the sprite engine hardware in all the required ways, thereby simplifying your usage of the sprite engine. All of the steps performed by these macros are detailed in the """Sprite Engine Initialization""" section of the """Handy Specification""" document.
 
-## About double-buffering
+## About Double-Buffering
 
 Usually, game designers will want to use two buffers for creating their displays. The buffers are alternately used as the display buffer and the render buffer. At any given instant, the display buffer is being displayed to the user while the render buffer is available for sprite rendering. The address of the render buffer can usually be found in a system-maintained variable named `RenderBuffer`, which will be described presently. When the programmer has finished rendering a new display into the render buffer, the render and display buffer roles are swapped. This technique of maintaining two buffers and swapping them as appropriate is known as double-buffering.
 
@@ -100,7 +100,7 @@ The Handy system software provides you with a collection of macros that make it 
 - Render your sprites using `SPRITES`
 - Display your new buffer using `DBUF_DISPLAY`
 
-## Setting up for double-buffering
+## Setting Up for Double-Buffering
 
 You use the `SETDBUF` macro to define your display buffers and to set the system up for double-buffering. `SETDBUF` expects two arguments: the addresses of your two video buffers. One of the buffers will be set up as the render buffer, which you can begin rendering into. This buffer then will be displayed when you first call `DBUF_DISPLAY`.
 
@@ -112,7 +112,7 @@ Any time after invoking `SETDBUF` you can detect which buffer the system believe
 
 If you won't be using double-buffering to create your display - brave, aren't you - you don't need to use the `SETDBUF` macro.
 
-## The double-buffer display dance
+## The Double-Buffer Display Dance
 
 When double-buffering, first you define your buffers using `SETDBUF`, then you render your sprites into the render buffer using `SPRITES`, and finally you invoke the `DBUF_DISPLAY` macro to swap the display and render macros. Easy, eh?
 
@@ -141,7 +141,7 @@ The `WAITEOF` and `WAITNEOF` macros and the `DISPLAY_EOFFLAG` are described in t
 
 After the `DBUF_DISPLAY` macro has done its specific double-buffering work, the address of the new display buffer is written to the hardware display registers by the system's end-of-frame handler.
 
-## Presenting a still picture
+## Presenting a Still Picture
 
 Your program may want to present a still picture to the user. For instance, you may want to present a series of full-frame pictures to the user. Also, in a normal game environment, before your first sprite display you may want to display a startup screen. This section describes the technique for displaying a still picture.
 
@@ -149,7 +149,7 @@ If you are double-buffering using the system's macros and you want to render a p
 
 If you have a single buffer that you want to display, use the `DISPBUF` macro. `DISPBUF` expects one argument: the address of your buffer.
 
-## Displaying a buffer
+## Displaying a Buffer
 
 To tell the hardware that you want the render buffer to be the next display buffer, use the `DISPLAY` macro.
 
@@ -157,7 +157,7 @@ The `DISPLAY` macro writes the `RenderBuffer` value `DISPADRL`,`H` registers aft
 
 Under normal system operation the `DISPLAY` macro is invoked by the system's end-of-frame handler. You shouldn't need to use `DISPLAY` yourself.
 
-## Turning the display on and off
+## Turning the Display On and Off
 
 After you've initialized the hardware, set your color palette, created a display buffer, filled it up with gorgeous imagery and told the hardware where to find it, finally you can turn on the display hardware. Aah.
 
@@ -167,7 +167,7 @@ These macros work by reading the value from `DISPCTL_RAM` which is a RAM shadow 
 
 You can call `DISPLAY_ON` and `DISPLAY_OFF` any time you want, as often as you want.
 
-## Flipping the display (and the joystick)
+## Flipping the Display (and the Joystick)
 
 To flip the Handy display 180° all you have to do is use the `FLIP` macro, which sets everything up to flip the display and sets the joystick control bit to flip the meaning of the joystick positions. This means that to flip the display, all you do is call `FLIP` and everything else works exactly the same, which makes flipping the display a complete no-brainer.
 
@@ -175,7 +175,7 @@ Note that regardless of the state of `FLIP` the `RenderBuffer` variable will con
 
 `FLIP` sets the `DISPCTL` register and `DISPCTL_RAM` variable when you call the macro. In the current implementation of the hardware, this could cause the display to flip immediately, even if the display is halfway rendered, which could cause the display to be mixed for part of a frame. If you want to avoid this effect, you should make sure that you call `FLIP` only immediately after `WAITEOF`. On the other hand, the effect is brief and therefore probably not worth mangling your logic too much.
 
-## Waiting for End Of Frame and End Of Line
+## Waiting for End of Frame and End of Line
 
 Many times you will want to do something that you shouldn't do until after the video is finished processing the last line of the display (or the last pixel of the current line). For instance, you might want to change the color palette at a time that is guaranteed to not glitch the display, or you may have finished everything you need to do for the current display and you want to wait until you're sure that the display buffers have been swapped before you start creating the next display.
 
@@ -193,7 +193,7 @@ To wait for the end of frame, you use the `WAITEOF` macro. To wait for the end o
 
 The `WAITNEOL` macro is analogous horizontally to `WAITNEOF`.
 
-## Summary of display creation macros
+## Summary of Display Creation Macros
 
 Following is an alphabetic listing and summary of all the display creation macros. For the most up-to-date list of the arguments required by these macros, refer to the `6502:macros/display.mac` and `6502:macros/sprite.mac` files.
 
@@ -245,7 +245,7 @@ These macros loop until end-of-frame or end-of-line is reached
 `WAITSUZY`  
 This macro performs the normal `CPUSLEEP` logic to keep the CPU out of Suzy's hair while she's working on sprite rendering. The `SPRITES` and `RESPRITE` macros invoke this macro for you automatically, so `WAITSUZY` is a macro that you'll probably never invoke directly
 
-## Example double-buffered sprite display
+## Example Double-Buffered Sprite Display
 
 Here's some example code that shows the steps you must take to set up the display and system to get a double-buffering display with sprite rendering.
 
@@ -280,7 +280,7 @@ Buffer1		.DS		DISPLAY BUFSIZE
 Buffer2 	.DS		DISPLAY BUFSIZE
 ```
 
-## Example still-picture display
+## Example Still-Picture Display
 
 Here's some example code that shows the steps you must take to get a still-picture display.
 

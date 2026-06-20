@@ -1,4 +1,4 @@
-# HANDY release 1.1
+# HANDY Release 1.1
 
 27-Feb-90  
 Confidential and Proprietary

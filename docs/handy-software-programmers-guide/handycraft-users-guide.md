@@ -1,4 +1,4 @@
-# Handycraft user's guide
+# Handycraft User's Guide
 
 This section, what there is of it, presents a user's guide to the *Handycraft* program.
 

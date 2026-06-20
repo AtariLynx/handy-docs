@@ -1,4 +1,4 @@
-# HSFX - Handy sound effects system
+# HSFX - Handy Sound Effects System
 
 This chapter describes most everything there is to know about *HSFX*, the Handy Sound Effects system. The topics covered in this chapter include the HSFX concept, tools, tables, and function calls.
 
@@ -73,7 +73,7 @@ If there's a free audio channel when a sound effect is submitted, the channel is
 
 But if all channels are currently in use when a request to play a sound is made, the *HSFX* driver will look through the current sounds to try to find one with a priority that's less than or equal to the the priority of the new sound. If one or more is found, the one with the lowest priority is zapped and the channel is given to the new sound. If no sound with a lower or equal priority is found, the new sound isn't played.
 
-## Data table format
+## Data Table Format
 
 When an audio channel is newly selected to play a sound effect, the channel's *HSFX* accumulators and interpolators are preset to zero. Those registers are then modified according to the specifications in the sound effect's data table. Every audio frame the channel's accumulators are converted into data that's written to the audio hardware, thereby creating the desired sound effect.
 
@@ -81,7 +81,7 @@ The *HSFX* data table is made up of one or more keyframe entries. The keyframe e
 
 A keyframe entry is comprised of three parts: a frame number, followed by specification flags, and then a block of data that's variable in size coincident with the order, number and type of specification flags.
 
-### Frame number
+### Frame Number
 
 The keyframe entry starts with a 16-bit keyframe number. This number designates the audio frame number during which the specifications of this keyframe entry should take effect. The keyframe number of a sound effect is relative to the frame during which the sound effect started to play. If an entry has a frame number of zero, then the keyframe data will be loaded during the first frame that the sound exists (there almost always is a 
 keyframe zero). Note, as described in this chapter's [Loop construct](#loop-construct) section, that the frame number is reset every time the driver takes a branch to the top of a loop.
@@ -90,7 +90,7 @@ Normally keyframe entries have ascending keyframe numbers. The only time that ad
 
 Note that restricting the number to 16 bits means that the longest a sound can live is 65536 audio frames. This shouldn't be a problem. If the audio frame time interval turns out to be 1/240 of a second, sound effects will be able to live for 273 seconds, which should be plenty.
 
-### Specification flags
+### Specification Flags
 
 Following a keyframe's frame number comes a byte that contains the keyframe specification flags. Most of these flags, if set, cause the registers of the sound effect's audio channel to be loaded with keyframe data. Other keyframe flags are used to define the beginning and end of a loop.
 
@@ -111,7 +111,7 @@ Here's the names and meanings of keyframe flags, listed in the correct high-to-l
 |FBACK_INTERP|If this bit is set, the entry includes a new feedback-enable interpolation value.|
 |VOL_INTERP|If this bit is set, the entry includes a new volume interpolation value.|
 
-### Keyframe data
+### Keyframe Data
 
 Following the keyframe specification flags are zero or more data values. The number and byte count of the keyframe data is defined by which specification flags are set and what data is supposed to accompany the flag. For example, if the frequency accumulator flag is set then immediately following the keyframe header will be a 16-bit frequency accumulator value. If the volume interpolation flag is set then the next thing in the table will be a 16-bit volume interpolation value, and so on.
 
@@ -119,7 +119,7 @@ Note that the only keyframe with zero data values is the special `end-of-sound-e
 
 A 6502 note about keyframe data that's almost not worth mentioning: whenever keyframe data fields are declared as 16-bit, the data is always stored in normal 6502 low byte/high byte fashion, of course.
 
-## Loop construct
+## Loop Construct
 
 There are 4 keyframes associated with a loop: the keyframe where the loop is initiated, a keyframe that acts as the `top-of-loop`, a keyframe that defines the `bottom-of-loop`, and the keyframe that's executed when you fall out of the bottom of a loop.
 
@@ -133,7 +133,7 @@ When you take a loop branch, the frame number of the top-of-loop keyframe become
 
 When the loop is taken, the frame number of the sound effect is set to the frame number of the top-of-loop keyframe.
 
-## An example sound effect data table
+## An Example Sound Effect Data Table
 
 ```
 SampleSFX
@@ -160,7 +160,7 @@ SampleSFX
 	.BYTE $00
 ```
 
-## Accumulation and interpolation
+## Accumulation and Interpolation
 
 Each sound effects component (except the shifter) has two 16-bit registers, an accumulator and an interpolator, which contain 16-bit signed fixed-point quantities. By fixed point we mean that each register has an integer and a fraction part, with a fixed, unchanging number of bits in each part; note that each component has its own number of bits per part. All registers are signed, allowing interpolations to be either positive or negative.
 
@@ -192,7 +192,7 @@ This accumulator has 8 bits of significant information (including a sign bit) an
 `SHIFTER`  
 The 12-bit shifter value is written directly to the Handy audio hardware. There is no accumulator or interpolation register.
 
-## Summary of the HSFX commands
+## Summary of the HSFX Commands
 
 This section is seriously preliminary. We need to decide what we really want the arguments to and results from these functions to be.
 

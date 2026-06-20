@@ -1,4 +1,4 @@
-# HANDY release 1.3a
+# HANDY Release 1.3a
 
 02-May-90  
 Confidential and Proprietary
