@@ -176,7 +176,7 @@ These are used for MATH operations. The meanings of the letters are explained in
 
 Set to 'F3' after at least 100ms after power up and before any sprites are drawn.
 
-FC84 -> FC87 = not yet allocated
+### `FC84` -> `FC87`: Not yet allocated
 
 ### `FC88` = `SUZYHREV`: Suzy Hardware Revision 
 
