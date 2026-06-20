@@ -22,7 +22,7 @@ There's a small chance that *Handycraft* now copies all settings of the selected
 
 When you paste a sprite, the sprite name and data name are initialized to the name of the file you've pasted. I debated about the suffix to add to the data name, then decided to add none for now because this will be something that you can add to the Preferences when we get them implemented.
 
-Handy sprite imagery color palette redirection is now supported by the emulator, maybe. It works with my simple test cases, but you must bang on this for me. The rule is a slightly complicated one, and can be found on the separate document [[[HANDYCRAFT EMULATION DATA DEFINITION]]].
+Handy sprite imagery color palette redirection is now supported by the emulator, maybe. It works with my simple test cases, but you must bang on this for me. The rule is a slightly complicated one, and can be found on the separate document [[[Handycraft Emulation Data Definition]]].
 
 When *Handycraft* outputs SCB and DATA files, a `.END` is written at the end of each file.
 

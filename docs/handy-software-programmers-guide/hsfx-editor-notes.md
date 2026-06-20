@@ -7,7 +7,7 @@ This document describes the *HSFX Editor*.
 
 If you haven't noticed yet, you will soon notice that this document is in-the-works.
 
-This is not intended as a stand-alone document, but rather is destined to become a chapter of the [[[Handy Software Programmer's Guide and Notes]]]. It describes only the components and usage of the HSFX Editor. It doesn't attempt to instruct on Handy audio control or sound creation techniques; before reading this you should read the [HSFX](hsfx-users-guide.md) and the [Handy Audio System Description](./handy-audio-hardware-overview.md) chapters of the Programmer's Guide.
+This is not intended as a stand-alone document, but rather is destined to become a chapter of the [Handy Software Programmer's Guide and Notes](./handy-software-programmers-guide.md). It describes only the components and usage of the HSFX Editor. It doesn't attempt to instruct on Handy audio control or sound creation techniques; before reading this you should read the [HSFX](hsfx-users-guide.md) and the [Handy Audio System Description](./handy-audio-hardware-overview.md) chapters of the Programmer's Guide.
 
 Also, not everything described in this document is implemented yet.
 

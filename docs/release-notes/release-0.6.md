@@ -13,9 +13,9 @@ This document describes the V0.6 release of Handy development environment. It in
 
 ## `6502:` and `HANDY:` changes
 
-There's lots of new display macros. It would be wasteful to try to itemize everything new and everything changed here. Instead, please erase your memory about Handy display creation and start anew with the [[[Creating Handy Display]]] chapter that's distributed with this release.
+There's lots of new display macros. It would be wasteful to try to itemize everything new and everything changed here. Instead, please erase your memory about Handy display creation and start anew with the [Creating Handy Display](../handy-software-programmers-guide/creating-a-handy-display.md) chapter that's distributed with this release.
 
-Please note at the end of the new [[[Creating Handy Display]]] chapter that there's an index. This is the first released chapter of the new [[[Handy Programmer's Guide]]]. The new Guide, which I'll be finishing during CES, will have a real index and table of content.
+Please note at the end of the new [Creating Handy Display](../handy-software-programmers-guide/creating-a-handy-display.md) chapter that there's an index. This is the first released chapter of the new [Handy Programmer's Guide](../handy-software-programmers-guide/handy-software-programmers-guide.md). The new Guide, which I'll be finishing during CES, will have a real index and table of content.
 
 The files `6502:examples/testsprite.src` and `6502:examples/video.src` illustrate the steps required to create displays using the new body of macros. These files are tested on the emulator. `video.src` is tested on Handy hardware, while `testsprite.src` is not.
 

@@ -22,7 +22,7 @@ There's a lot of stuff here. Take the time to read it all carefully, really.
 
 ## HMUSIC and New HSFX
 
-The *HMUSIC* driver now is released. See the document *HMUSIC* for a description and examples of usage. Also, `6502:examples/testhmusic.src` shows you everything you need to do to play a song or two. To learn more about *HSPL*, the Handy Sound Programming Language (our own version of Epyx' SPL), refer to the [[[HSPL document]]] distributed with this release.
+The *HMUSIC* driver now is released. See the document *HMUSIC* for a description and examples of usage. Also, `6502:examples/testhmusic.src` shows you everything you need to do to play a song or two. To learn more about *HSPL*, the Handy Sound Programming Language (our own version of Epyx' SPL), refer to the [HSPL document](../handy-software-programmers-guide/hspl-handy-sound-programming-language.md) distributed with this release.
 
 For your info, a while ago as a test case I added music to Jet (which already had *HSFX*). It worked just fine, without any display tearing. Also, I got an estimate of the sizes involved: the *HMUSIC* code was something like 1600 bytes big, and the Liberty March (Monty Python theme) song data was 2200 bytes big.
 
@@ -38,7 +38,7 @@ Also, the most recent versions of the music tools *HSPL* and *HKCS* are being di
 
 Here's the first release of the *CART* system code and the *HandyROM* cartridge image builder.
 
-To use the *CART* support macros and code, you must include `cart.mac`, `cart.src` and `cart.i`. Also, there's lots of stuff you have to know, and many things you must define. Read the document [[[CART - Game Cartridge I/O System]]] for complete details.
+To use the *CART* support macros and code, you must include `cart.mac`, `cart.src` and `cart.i`. Also, there's lots of stuff you have to know, and many things you must define. Read the document [CART - Game Cartridge I/O System](../handy-software-programmers-guide/cart-game-cartridge-io-system.md) for complete details.
 
 Currently the *CART* system works with only the cartridge `0` port, which means that currently the *CART* macros can handle only read-only carts that are a maximum size of 1M bytes. Sometime in the future port `1` will be supported too, and writing to the cartridge will be formalized.
 

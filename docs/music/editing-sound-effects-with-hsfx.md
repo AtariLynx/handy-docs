@@ -4,7 +4,7 @@ Chris Grigg
 
 ## Introduction
 
-This quickie document is intended for Lynx sound artists and programmers who need to create or edit six with the *HSFX* editor. It includes practical information not present in the other *HSFX* documents, which should also be read by such people: [[[HSFX - HANDY SOUND EFFECTS SYSTEM]]], aka. [[[HSFX Editor and Drivers]]], and [[[HSFX Editor Notes]]]. Note that even though the [[[HSFX Editor and Drivers]]] document alludes to an HSFX Editor User's Guide, I don't think it exists.
+This quickie document is intended for Lynx sound artists and programmers who need to create or edit six with the *HSFX* editor. It includes practical information not present in the other *HSFX* documents, which should also be read by such people: [HSFX - Handy Sound Effects System](../handy-software-programmers-guide/hsfx-users-guide.md), aka. HSFX Editor and Drivers, and [HSFX Editor Notes](../handy-software-programmers-guide/hsfx-editor-notes.md). Note that even though the HSFX Editor and Drivers document alludes to an HSFX Editor User's Guide, I don't think it exists.
 
 ## Getting Started
 

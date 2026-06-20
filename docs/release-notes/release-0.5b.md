@@ -48,7 +48,7 @@ When downloading in the presence of an old symbol file, old symbols are discarde
 
 When you close the *Handebug* display and reopen it, any color modifications you made are now restored.
 
-There are new and improved rules for the Structure Editor. Please refer to the new document [[[Structure Editor Rules of Engagement]]] for details.
+There are new and improved rules for the Structure Editor. Please refer to the new document [Structure Editor Rules of Engagement](../handy-software-programmers-guide/handebug-structure-editor.md) for details.
 
 ## Handycraft V1.33
 

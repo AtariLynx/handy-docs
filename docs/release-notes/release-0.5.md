@@ -120,7 +120,7 @@ To use the math you must do this:
 
 I apologize for the fact that lots of information is being thrown at you this way. It's got to be hard for you to wade through so many changes. Soon I'm going to release a new version of the programmer's doc, which will be up to date and will have an index for easy reference to the mounds of information that's coming available. Hang in there.
 
-You get new copies of [[[Handy Specification]]] and [[[Handy Appendix 2]]]. Look for the vertical bars along the left edge of the pages; these mark where text is new or changed.
+You get new copies of Handy Specification and [Handy Appendix 2](../appendices/appendix2-hardware-addresses.md). Look for the vertical bars along the left edge of the pages; these mark where text is new or changed.
 
 You get a Handy display sketch sheet, with nine rectangles that approximate the Handy display. Ruler along the bottom is a pixel ruler.
 

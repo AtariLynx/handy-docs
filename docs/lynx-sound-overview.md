@@ -1,6 +1,6 @@
 # Lynx Sound Overview
 
-This document is an overview for those who have had trouble seeing the forest for the trees. You should also read page 29 of the [[[Handy hardware specification]]] and the [[[Handy audio hardware overview]]] starting on page 35 of the [Handy software programmer's guide](./handy-software-programmers-guide/handy-software-programmers-guide.md) and notes. And of course [Handy appendix 2 hardware addresses](./appendices/appendix2-hardware-addresses.md) `FD20` through `FD50`.
+This document is an overview for those who have had trouble seeing the forest for the trees. You should also read page 29 of the Handy hardware specification and the [Handy audio hardware overview](./handy-software-programmers-guide/handy-audio-hardware-overview.md) starting on page 35 of the [Handy software programmer's guide](./handy-software-programmers-guide/handy-software-programmers-guide.md) and notes. And of course [Handy appendix 2 hardware addresses](./appendices/appendix2-hardware-addresses.md) `FD20` through `FD50`.
 
 ## 1. What in the World Were We Thinking When We Designed the Sound Hardware?
 
@@ -77,7 +77,7 @@ Bit `5` in `FD25` controls integrate mode. `FD20` is the volume control. Remembe
 
 ## 5. Stereo, Stereo Where for Art Thou Stereo.
 
-Originally Lynx was mono. After Mikey was working and ready to produce, it was decided to add simple stereo. The Howard boards were not yet finished, so we went ahead and implemented this stereo on them. This form of stereo was channel switching controlled by `FD50`. Later it was decided to add panning and attenuation registers `FD40` through `FD44`. Attached is a sheet detailing these registers to be added to your [[[Appendix 2 hardware addresses]]]. A plug in upgrade board for Howard boards was designed and is available from Atari. As of today 4/25/91 no stereo Lynx have been produced. In fact the potential existence of stereo is still confidential. Klax supports full stereo panning, and digitized sound. Xenophobe supports some amount of stereo, and maybe some other games do too - who can remember?
+Originally Lynx was mono. After Mikey was working and ready to produce, it was decided to add simple stereo. The Howard boards were not yet finished, so we went ahead and implemented this stereo on them. This form of stereo was channel switching controlled by `FD50`. Later it was decided to add panning and attenuation registers `FD40` through `FD44`. Attached is a sheet detailing these registers to be added to your [Appendix 2 hardware addresses](./appendices/appendix2-hardware-addresses.md). A plug in upgrade board for Howard boards was designed and is available from Atari. As of today 4/25/91 no stereo Lynx have been produced. In fact the potential existence of stereo is still confidential. Klax supports full stereo panning, and digitized sound. Xenophobe supports some amount of stereo, and maybe some other games do too - who can remember?
 
 ## 6. As Usual Craig, You've Taken a Difficult Subject and Made It Elegantly Simple
 

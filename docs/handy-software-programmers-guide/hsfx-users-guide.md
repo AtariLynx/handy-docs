@@ -2,7 +2,7 @@
 
 This chapter describes most everything there is to know about *HSFX*, the Handy Sound Effects system. The topics covered in this chapter include the HSFX concept, tools, tables, and function calls.
 
-But not all HSFX topics are discussed in this chapter; several of the topics are significant enough to warrant separate chapters. The HSFX editor, used to create sound effects, is described in the chapter [[[HSFX Editor User's Guide]]]. Also, the details of the Handy audio hardware are covered in the chapter [[[Overview of the Handy Audio Hardware]]]. Lastly, the *HMUSIC* (Handy Music) driver, which depends heavily on *HSFX*, is covered in the chapter [[[HMUSIC - The Handy Music System]]].
+But not all HSFX topics are discussed in this chapter; several of the topics are significant enough to warrant separate chapters. The HSFX editor, used to create sound effects, is described in the chapter [HSFX Editor User's Guide](./hsfx-editor-notes.md). Also, the details of the Handy audio hardware are covered in the chapter [Overview of the Handy Audio Hardware](./handy-audio-hardware-overview.md). Lastly, the *HMUSIC* (Handy Music) driver, which depends heavily on *HSFX*, is covered in the chapter [HMUSIC - The Handy Music System](./hmusic-handy-music-driver.md).
 
 This chapter's information is presented in these sections:
 
@@ -35,7 +35,7 @@ Sound effects (and their data tables) are created using the *HSFX* editor, which
 
 *HMUSIC*, the Handy music system, exists as a shell around the *HSFX* system. Like *HSFX*, *HMUSIC* consists of commands called by the main-line program and a driver that runs during interrupt . The *HMUSIC* driver plays a song by processing the commands in a song data table. The song table commands define music notes. *HMUSIC* plays each music note by converting it into an *HSFX* data table and then submitting the sound effect to the *HSFX* driver (in exactly the same way all other sound effects are submitted).
 
-*HMUSIC* will not be discussed further in this chapter. To learn more about it, refer to the chapter [[[HMUSIC - The Handy Music System]]].
+*HMUSIC* will not be discussed further in this chapter. To learn more about it, refer to the chapter [HMUSIC - The Handy Music System](./hmusic-handy-music-driver.md).
 
 Throughout this manual's audio system chapters the phrase audio frame is used. This refers to the system activity that takes place with each tick of the audio timer clock. With every audio frame each active component of the audio system is advanced to its next setting (e.g. you might set up an audio register's value to start at 10 and change to 30 over a span of 10 audio frames, which the driver would do for you by adding 2 to the register every audio frame). The default audio frame duration is 1/240 of a second, but the duration can be modified both at assembly time and at run time. The programmer gets final say on the audio frame duration; of course, the wise programmer always consults with the sound guys before making a decision about the audio frame rate.
 

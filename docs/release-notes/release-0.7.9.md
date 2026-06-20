@@ -24,7 +24,7 @@ To facilitate the testing of *HandyASM* you now have two new script files, `OldA
 
 Sooner or later we're going to have to make the leap and start using *HandyASM* full-time. My guess is that committing to the new assembler will be a one-way step because I'm sure that *HandyASM*'s new features will immediately pervade our code, making it impossible for us to go back. Because we won't be able to go back, we shouldn't switch until we're sure that *HandyASM* is sufficiently robust. On the other hand we have to make the switch before too long as we're counting on *HandyASM* to provide the functionality needed to create ROM images larger than 64K (not to mention satisfying our desire to tap into *HandyASM*'s great assembly speed). So we must do everything we can to help Carl work the kinks out of *HandyASM*; most importantly, as we discover bugs we must promptly provide him with thorough, detailed bug reports. As a first step in this direction, I ask each of you to do the following at your earliest possible convenience:
 
-- Start by carefully reading the [[[HandyASM Implementation Notes]]] document included with this release
+- Start by carefully reading the [HandyASM Implementation Notes](../handy-software-programmers-guide/handyasm-implementation-notes.md) document included with this release
 - If you agree with the changes that the new assembler will require you to make to your code, then make them. If you disagree, type your arguments against the changes into a file and submit the file to me right away
 - Try to assemble your code, making further changes to your code as needed, and if you have problems with the assembler then create a text file with detailed bug reports. Get this bug report file into my hands right away
 

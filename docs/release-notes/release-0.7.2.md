@@ -61,7 +61,7 @@ In case you haven't noticed, there's a new template with this release. Hope the 
 
 ## HPRINT
 
-Finally released: the `HPRINT` text generation routines. This collection of code, macros and font data declarations allow you to get easy, low-cost text into your programs. See the [[[Programmer's Guide]]] chapter [[[HPRINT - HANDY PRINT ROUTINES]]] for a description, and see `6502:examples/testhprint.src` for an example of text at work.
+Finally released: the `HPRINT` text generation routines. This collection of code, macros and font data declarations allow you to get easy, low-cost text into your programs. See the [Programmer's Guide](../handy-software-programmers-guide/handy-software-programmers-guide.md) chapter [HPRINT - Handy Print Routines](../handy-software-programmers-guide/hprint-text-routines.md) for a description, and see `6502:examples/testhprint.src` for an example of text at work.
 
 ## Display Fix?
 

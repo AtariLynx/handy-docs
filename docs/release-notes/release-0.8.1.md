@@ -73,7 +73,7 @@ New `controls.src`, with new game button/switch definitions when running under e
 
 The declaration of `sysintTable` is moved from within the `INITSYS` macro in `sys.mac` where it was stupidly placed to `sys.i` where it ought to have been defined all along.
 
-`Harddefs.i` now reflects the new sprite types required by the Shadow-E error in the chip. Hardware bug by Needle-san, ha ha, ha ha ha. For details about the bug, refer to [[[Handy Spec manual, pages 18-19]]], and [[[Handy Hardware Appendix 2, page 5]]].
+`Harddefs.i` now reflects the new sprite types required by the Shadow-E error in the chip. Hardware bug by Needle-san, ha ha, ha ha ha. For details about the bug, refer to Handy Spec manual, pages 18-19, and [Handy Hardware Appendix 2, page 5](../appendices/appendix2-hardware-addresses.md).
 
 Most of you won't feel the change of this types redefinition. However, there are two new sprite types: `XOR_SPRITE` is now `XOR_SHADOW_SPRITE` and `BACKGROUND_SPRITE` is now `BACK_SHADOW_SPRITE`. Both names for these new sprites are supported in `harddefs.i`, but with the first official release of the development environment the old, incorrect names won't be supported.
 
