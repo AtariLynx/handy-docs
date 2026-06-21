@@ -56,7 +56,7 @@ If you want, you can define the constant `ROM_SCREENBLANK_VALUE` to define the v
 
 The value that you define will be copied to all of the hardware color registers. This gives you a limited but useful set of colors that can be defined. Here's a table of examples:
 
-|If ROM SCREENBLANK VALUE is|the display will be blanked to this color|
+|If `ROM_SCREENBLANK_VALUE` is|the display will be blanked to this color|
 |---|---|
 |$00|Black (the default)|
 |$F0|Fully saturated blue|

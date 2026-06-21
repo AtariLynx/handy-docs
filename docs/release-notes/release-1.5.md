@@ -183,7 +183,7 @@ following steps are needed to get the sample data onto a game cart:
   ```
 
   for example. *DFILT* will also translate several files at once; just type additional filenames on the command line.
-- Include a file entry in your HandyROM `.hsf` file for the sample. The HandyROM `ALIGN` directive should be used to align the first byte of the file to an even cart page boundary. For example:
+- Include a file entry in your *HandyROM* `.hsf` file for the sample. The *HandyROM* `ALIGN` directive should be used to align the first byte of the file to an even cart page boundary. For example:
 
   ```
   FILE SOUND_FILE
@@ -216,4 +216,4 @@ Unfortunately, AudioMaster won't write files directly in raw format; files must 
   > DFILT -h8 bang.raw
   ```
 
-  The resulting file can be included in a cart file by `HandyROM`, as shown above.
+  The resulting file can be included in a cart file by *HandyROM*, as shown above.

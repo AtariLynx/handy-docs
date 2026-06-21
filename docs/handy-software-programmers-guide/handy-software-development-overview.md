@@ -177,7 +177,7 @@ If you do something like this, you probably should edit the `6502:` assignment i
 
 All of the Handy-specific development tools and data files are kept in a logical directory named `HANDY:`. The normal Amiga boot process assigns `HANDY:` to an actual directory and adds it to the Amiga search path. After a normal boot, any of the development tools can be invoked from any directory just by entering the name of the program.
 
-The primary `HANDY:` development tools are detailed in the chapters [HandyAsm User's Guide](./handycraft-users-guide.md), [Handycraft User's Guide](./handycraft-users-guide.md), [Handebug User's Guide](./handebug-users-guide.md), and [HSFX User's Guide](./hsfx-users-guide.md). The software tools kept in `HANDY:` include:
+The primary `HANDY:` development tools are detailed in the chapters [HandyAsm User's Guide](./handycraft-users-guide.md), [*Handycraft* User's Guide](./handycraft-users-guide.md), [*Handebug* User's Guide](./handebug-users-guide.md), and [*HSFX* User's Guide](./hsfx-users-guide.md). The software tools kept in `HANDY:` include:
 
 |||
 |---|---|

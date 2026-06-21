@@ -10,7 +10,7 @@
   `CTRL-S`: change display to `SYMBOLS` (when implemented)  
   `CTRL-T`: change display to `TRACE` (when implemented)  
   `CTRL-Q`: quit, exit, bye-bye.  
-  These keys are also supported through the Handebug-HandyCraft interface.
+  These keys are also supported through the *Handebug*-*Handycraft* interface.
 
 - Use the new `FileIO` requestor which defaults to the current directory, and remembers a specified path.
 - Improved `DownLoad` so that, if clearing old symbols, it stops processing the symbol file once all symbols are gone.
@@ -93,7 +93,7 @@ STRUCTURE NUMBER 10					STRUCTURE NUMBER 10
 
 In the first example, the `FIELD OFFSET`'s after the first one are not necessary, and are included for example purposes.
 
-Be aware of screen limitations when defining `POSITION` and `SIZE` for a `STRUCTURE`. A window that does not fit on the screen will probably crash the Amiga. Handebug screen is `640`x`200`. HandyCraft screen is `320`x`200`.
+Be aware of screen limitations when defining `POSITION` and `SIZE` for a `STRUCTURE`. A window that does not fit on the screen will probably crash the Amiga. *Handebug* screen is `640`x`200`. *Handycraft* screen is `320`x`200`.
 
 Also: Unfortunately, as of this release, an `OFFSET` of `0` means NO offset, i.e., the same as NOT specifying an `OFFSET`. This will be fixed. In the meantime, careful construction of structures can avoid the need for any `OFFSET`'s of `0`.
 
@@ -130,7 +130,7 @@ Fixed (hopefully) problem with not updating memory referenced by a string pointe
 
 - The message "`Whoa! Handy wants to update Memwatch!!!`" should, at most, happen once. It shouldn't happen at all, but at least now it shouldn't loop forever!
 
-- When `Bootloading` or `Downloading` from *HandyCraft*, *Handebug* will temporarily reset the *HandyCraft* screen colors to the `WorkBench` colors to insure that the requestor can be seen.
+- When `Bootloading` or `Downloading` from *Handycraft*, *Handebug* will temporarily reset the *Handycraft* screen colors to the `WorkBench` colors to insure that the requestor can be seen.
 
 -If a symbol matches the address in the *GO* field, it is displayed along with the hex value. It (the symbol) is not editable (yet) .
 
@@ -246,7 +246,7 @@ And, if you clear either name field of the `Bootstrap` requestor then `Bootstrap
 
 It's a feature enhancement, not a bug fix ..... OK, OK, it's a bug fix. `Upload Binary` should now work correctly for lengths greater than 255 bytes. Honest, would I lie?
 
-V1.45: In a last ditch attempt to break everybody's system, this version of *Handebug* will NOT work correctly with earlier versions of the `monitor.bin` and `bootload.bin` files that are used to bootstrap Handy (the Apple). `GO` and `CONTINUE` now do different things in the monitor code, and so Handebug now uses different commands for `GO` and `CONTINUE`.
+V1.45: In a last ditch attempt to break everybody's system, this version of *Handebug* will NOT work correctly with earlier versions of the `monitor.bin` and `bootload.bin` files that are used to bootstrap Handy (the Apple). `GO` and `CONTINUE` now do different things in the monitor code, and so *Handebug* now uses different commands for `GO` and `CONTINUE`.
 
 Don't worry. Be happy.
 

@@ -320,4 +320,4 @@ When *Handebug* polls the parallel port it directly reads the ICR (Interrupt Con
 
 ## Public Message Port
 
-It is possible to control *Handebug* from another program. For specific examples on how to do this, see the example utilites `bootdown.c` and `download.c`, and the *HandyCraft* and *HSFXEditor* sources. The possible commands are defined in the C language header file `handycmds.h`.
+It is possible to control *Handebug* from another program. For specific examples on how to do this, see the example utilites `bootdown.c` and `download.c`, and the *Handycraft* and *HSFXEditor* sources. The possible commands are defined in the C language header file `handycmds.h`.
