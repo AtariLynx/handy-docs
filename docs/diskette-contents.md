@@ -6,7 +6,7 @@ Sunnyvale, California
 
 # Diskette Contents - Lynx Development System
 
-## Handy A2000 Boot Disk: 
+## Handy A2000 Boot Disk 
 
 1 Normal AmigaDos disk. A copy of the standard development system boot disk used at Epyx. This disk is only necessary if you have a system that doesn't boot off of the hard disk.
 
@@ -14,7 +14,7 @@ Sunnyvale, California
 
 1 *Quarterback* V4.3 disk. A copy of the "boot partition" of the standard hard disk setup used in the development system. Does not contain the file devs/MountList, allowing the contents to be restored directly to a hard disk that has already been partitioned correctly ..
 
-## "Standard" System:
+## "Standard" System
 
 6 *Quarterback* V4.3.disks. A complete copy of the "standard" development system at Epyx, with the most recently used copies of the development tools,
 

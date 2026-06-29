@@ -138,7 +138,7 @@ In debug mode, the CPU is either executing special debug code or is waiting for 
 |||||`1` -> Input|
 |`1003`|`POUT`|W|`D7`|`D7` -> `POUT`|
 
-> ### Note:
+> ### Note
 > When receiving data, `DATA AVAILABLE` goes `HI` when data has been received. When sending data, `DATA AVAILABLE` goes `LOW` until the Amiga acknowledges the transfer.
 
 ### Table 3: Handy RAM Mapping

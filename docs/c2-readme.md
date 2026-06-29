@@ -65,6 +65,6 @@ This file describes the contents of the `sys:c2` directory.
 |`xicon`|Goodeve's xicon, is used to execute files associated with the icon from the *Workbench*|
 |`zapicon`|A program for creating icons out of dpaint brush files|
 
-> #### Note: 
+> #### Note
 > `*`'ed files are not publicly distributable, and are not included
 	with releases
