@@ -17,10 +17,10 @@ Last modification: 1 June 1989
 |28|[HandyAsm Implementation Notes](./handyasm-implementation-notes.md)|
 |34|[The Two Scaling Algorithms](./two-scaling-algorithms.md)|
 |35|[Handy Audio Hardware Overview](./handy-audio-hardware-overview.md)|
-|43|[Handy In)terrupts and CPU Sleep](./handy-interrupts-cpu-sleep.md)|
+|43|[Handy Interrupts and CPU Sleep](./handy-interrupts-cpu-sleep.md)|
 |47|[Creating a Handy Display](./creating-a-handy-display.md)|
 |59|[Positioning of the Handy Display and Sprites](./positioning-handy-display-sprites.md)|
 |68|[HPRINT Text Routines](./hprint-text-routines.md)|
 |73|[CART - Game Cartridge I/O System](./cart-game-cartridge-io-system.md)|
-|87|HMUSIC - The Handy Music Driver|
-|99|HSPL - The Handy Sound Programming Language|
+|87|[HMUSIC - The Handy Music Driver](./hmusic-handy-music-driver.md)|
+|99|[HSPL - The Handy Sound Programming Language](./hspl-handy-sound-programming-language.md)|
